@@ -3,15 +3,12 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-/// <summary>
-/// 
-/// </summary>
-public abstract class CodaAFriendController
+namespace CodeAFriend.DataModel
 {
-
 	/// <summary>
 	/// 
 	/// </summary>
-	public ICodeAFriendRepository Repository { get; }
-
+	public class IronPythonInterpreter
+	{
+	}
 }
