@@ -25,7 +25,7 @@ public abstract class CodaAFriendController
   /// <summary>
   /// 
   /// </summary>
-  private CodeAFriendRepository Repository;
+  private ICodeAFriendRepository Repository;
 
 
 

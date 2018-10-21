@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 
 /// </summary>
-public class CodeAFriendRepository
+public interface ICodeAFriendRepository
 {
 
   #region Aggregations
@@ -20,25 +20,25 @@ public class CodeAFriendRepository
   /// <summary>
   /// 
   /// </summary>
-  public IEnumerable<Problem> Problems { get; }
+  IEnumerable<Problem> Problems { get; }
 
 
   /// <summary>
   /// 
   /// </summary>
-  public IEnumerable<LanguageStrategy> Languages { get; }
+  IEnumerable<LanguageStrategy> Languages { get; }
 
 
   /// <summary>
   /// 
   /// </summary>
-  public IEnumerable<User> Users { get; }
+  IEnumerable<User> Users { get; }
 
 
   /// <summary>
   /// 
   /// </summary>
-  public IEnumerable<Script> Scripts { get; }
+  IEnumerable<Script> Scripts { get; }
 
 
 
