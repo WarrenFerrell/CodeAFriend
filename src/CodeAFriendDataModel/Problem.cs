@@ -11,30 +11,9 @@ public class Problem
 {
 
   #region Aggregations
-
-
   #endregion
 
   #region Compositions
-
-  /// <summary>
-  /// 
-  /// (Array of TestCase)
-  /// </summary>
-  public ArrayList UnnamedRoleB_1
-  {
-    get
-    {
-      return m_UnnamedRoleB_1;
-    }
-    set
-    {
-      m_UnnamedRoleB_1 = value;
-    }
-  }
-  private ArrayList m_UnnamedRoleB_1;
-
-
   #endregion
 
   #region Attributes
@@ -48,7 +27,7 @@ public class Problem
   /// <summary>
   /// 
   /// </summary>
-  private TestCase[ * ] TestCases;
+  public IEnumerable<TestCase> TestCases { get; }
 
 
   /// <summary>
@@ -60,13 +39,13 @@ public class Problem
   /// <summary>
   /// 
   /// </summary>
-  private Solution[ * ] Solutions;
+  public IEnumerable<Solution> Solutions { get; }
 
 
   /// <summary>
   /// 
   /// </summary>
-  private string[ * ] Tags;
+  public IEnumerable<string> Tags { get; }
 
 
 

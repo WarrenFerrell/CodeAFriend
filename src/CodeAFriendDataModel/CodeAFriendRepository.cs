@@ -11,29 +11,8 @@ public class CodeAFriendRepository
 {
 
   #region Aggregations
-
-  /// <summary>
-  /// 
-  /// </summary>
-  public LanguageStrategy UnnamedRoleB_1
-  {
-    get
-    {
-      return m_UnnamedRoleB_1;
-    }
-    set
-    {
-      m_UnnamedRoleB_1 = value;
-    }
-  }
-  private LanguageStrategy m_UnnamedRoleB_1;
-
-
   #endregion
-
   #region Compositions
-
-
   #endregion
 
   #region Attributes
@@ -41,25 +20,25 @@ public class CodeAFriendRepository
   /// <summary>
   /// 
   /// </summary>
-  private Problem[ * ] Problems;
+  public IEnumerable<Problem> Problems { get; }
 
 
   /// <summary>
   /// 
   /// </summary>
-  private LanguageStrategy[ * ] Languages;
+  public IEnumerable<LanguageStrategy> Languages { get; }
 
 
   /// <summary>
   /// 
   /// </summary>
-  private User[ * ] Users;
+  public IEnumerable<User> Users { get; }
 
 
   /// <summary>
   /// 
   /// </summary>
-  private Script[ * ] Scripts;
+  public IEnumerable<Script> Scripts { get; }
 
 
 

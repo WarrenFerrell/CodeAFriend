@@ -11,38 +11,16 @@ public class Solution : Script
 {
 
   #region Aggregations
-
-
   #endregion
 
   #region Compositions
-
-  /// <summary>
-  /// 
-  /// (Array of Vote)
-  /// </summary>
-  public ArrayList UnnamedRoleB_1
-  {
-    get
-    {
-      return m_UnnamedRoleB_1;
-    }
-    set
-    {
-      m_UnnamedRoleB_1 = value;
-    }
-  }
-  private ArrayList m_UnnamedRoleB_1;
-
-
   #endregion
-
   #region Attributes
 
   /// <summary>
   /// 
   /// </summary>
-  private Vote[ * ] Votes;
+  public IEnumerable<Vote> Votes { get; }
 
 
   /// <summary>
