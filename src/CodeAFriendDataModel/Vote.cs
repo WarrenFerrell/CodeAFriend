@@ -3,61 +3,25 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-
 /// <summary>
 /// 
 /// </summary>
 public class Vote
 {
 
-	#region Aggregations
-
-
-	#endregion
-
-	#region Compositions
-
-
-	#endregion
-
-	#region Attributes
+	/// <summary>
+	/// 
+	/// </summary>
+	public short Value { get; }
 
 	/// <summary>
 	/// 
 	/// </summary>
-	private short Value;
-
-
-	/// <summary>
-	/// 
-	/// </summary>
-	private User User;
-
+	public User User { get; }
 
 	/// <summary>
 	/// 
 	/// </summary>
-	private string Comment;
-
-
-
-	#endregion
-
-
-	#region Public methods
-
-	#endregion
-
-
-	#region Protected methods
-
-	#endregion
-
-
-	#region Private methods
-
-	#endregion
-
+	public string Comment { get; }
 
 }
-

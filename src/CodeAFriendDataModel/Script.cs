@@ -3,48 +3,25 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-
 /// <summary>
 /// 
 /// </summary>
 public class Script
 {
-
-	#region Aggregations
-
-
-	#endregion
-
-	#region Compositions
-
-
-	#endregion
-
-	#region Attributes
+	/// <summary>
+	/// 
+	/// </summary>
+	public string Body { get; }
 
 	/// <summary>
 	/// 
 	/// </summary>
-	private string Body;
-
-
-	/// <summary>
-	/// 
-	/// </summary>
-	private LanguageStrategy Language;
-
+	public LanguageStrategy Language { get; }
 
 	/// <summary>
 	/// 
 	/// </summary>
-	private Guid id;
-
-
-
-	#endregion
-
-
-	#region Public methods
+	public Guid id { get; }
 
 	/// <summary>
 	/// 
@@ -55,18 +32,4 @@ public class Script
 		throw new Exception("The method or operation is not implemented.");
 	}
 
-	#endregion
-
-
-	#region Protected methods
-
-	#endregion
-
-
-	#region Private methods
-
-	#endregion
-
-
 }
-

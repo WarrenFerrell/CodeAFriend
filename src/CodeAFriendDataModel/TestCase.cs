@@ -8,49 +8,14 @@ using System.Collections.Generic;
 /// </summary>
 public class TestCase
 {
-
-	#region Aggregations
-
-
-	#endregion
-
-	#region Compositions
-
-
-	#endregion
-
-	#region Attributes
+	/// <summary>
+	/// 
+	/// </summary>
+	public string Input { get; }
 
 	/// <summary>
 	/// 
 	/// </summary>
-	private string Input;
-
-
-	/// <summary>
-	/// 
-	/// </summary>
-	private string ExpectedOutput;
-
-
-
-	#endregion
-
-
-	#region Public methods
-
-	#endregion
-
-
-	#region Protected methods
-
-	#endregion
-
-
-	#region Private methods
-
-	#endregion
-
+	public string ExpectedOutput { get; }
 
 }
-
