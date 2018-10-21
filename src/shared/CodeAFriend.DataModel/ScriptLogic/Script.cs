@@ -18,7 +18,7 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// 
 		/// </summary>
-		public LanguageStrategy Language { get; }
+		public ILanguageStrategy Language { get; }
 
 		/// <summary>
 		/// 

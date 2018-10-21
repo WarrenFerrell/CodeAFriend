@@ -18,7 +18,7 @@ public interface ICodeAFriendRepository
 		/// <summary>
 		/// 
 		/// </summary>
-		IEnumerable<LanguageStrategy> Languages { get; }
+		IEnumerable<ILanguageStrategy> Languages { get; }
 
 		/// <summary>
 		/// 

@@ -2,8 +2,9 @@ using System;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using CodeAFriend.DataModel;
 
-namespace CodeAFriend.DataModel
+namespace CodeAFriend.ApiService.Controllers
 {
 	/// <summary>
 	/// 

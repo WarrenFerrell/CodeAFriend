@@ -8,12 +8,12 @@ namespace CodeAFriend.DataModel
 	/// <summary>
 	/// 
 	/// </summary>
-	public abstract class LanguageStrategy
+	public interface ILanguageStrategy
 	{
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Name { get; }
+		string Name { get; }
 
 		/// <summary>
 		/// 
@@ -21,7 +21,7 @@ namespace CodeAFriend.DataModel
 		/// <param name="scriptBody"></param>
 		/// <param name="parameters"></param>
 		/// <returns>ScriptEvaluation</returns>
-		abstract public ScriptEvaluation Execute(string scriptBody, RuntimeParameters parameters);
+		ScriptEvaluation Execute(string scriptBody, RuntimeParameters parameters);
 
 	}
 }
