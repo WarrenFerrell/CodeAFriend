@@ -24,13 +24,13 @@ public class RuntimeParameters
   /// <summary>
   /// 
   /// </summary>
-  private unsigned int MaxCpuTime;
+  private uint MaxCpuTime;
 
 
   /// <summary>
   /// 
   /// </summary>
-  private unsigned int MaxMemory;
+  private uint MaxMemory;
 
 
   /// <summary>

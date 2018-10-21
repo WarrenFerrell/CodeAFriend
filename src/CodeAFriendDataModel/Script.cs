@@ -37,7 +37,7 @@ public class Script
   /// <summary>
   /// 
   /// </summary>
-  private guid id;
+  private Guid id;
 
 
 

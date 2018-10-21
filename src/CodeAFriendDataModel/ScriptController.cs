@@ -53,7 +53,7 @@ public class ScriptController : CodaAFriendController
   /// </summary>
   /// <param name="id"></param>
   /// <returns></returns>
-  public void DeleteScript(guid id)
+  public void DeleteScript(Guid id)
   {
     throw new Exception("The method or operation is not implemented.");
   }
@@ -63,7 +63,7 @@ public class ScriptController : CodaAFriendController
   /// </summary>
   /// <param name="id"></param>
   /// <returns>Script</returns>
-  public Script GetScript(guid id)
+  public Script GetScript(Guid id)
   {
     throw new Exception("The method or operation is not implemented.");
   }

@@ -25,7 +25,7 @@ public class Vote
   /// <summary>
   /// 
   /// </summary>
-  private short int Value;
+  private short Value;
 
 
   /// <summary>

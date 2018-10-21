@@ -95,7 +95,7 @@ public class ProblemController : CodaAFriendController
   /// </summary>
   /// <param name="problemName"></param>
   /// <returns>Solution[ * ]</returns>
-  public Solution[ * ] GetSolutions(string problemName)
+  public IEnumerable<Solution> GetSolutions(string problemName)
   {
     throw new Exception("The method or operation is not implemented.");
   }

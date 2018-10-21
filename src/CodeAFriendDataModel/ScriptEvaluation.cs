@@ -63,13 +63,13 @@ public class ScriptEvaluation
   /// <summary>
   /// 
   /// </summary>
-  private unsigned int CpuTime;
+  private uint CpuTime;
 
 
   /// <summary>
   /// 
   /// </summary>
-  private unsigned int MemoryUsage;
+  private uint MemoryUsage;
 
 
   /// <summary>

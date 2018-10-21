@@ -3,14 +3,10 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-using Datatypes;
-
 /// <summary>
 /// 
 /// </summary>
-public class Python : undef // AND LanguageStrategy
-//WARNING: C# does not support multiple inheritance but there is more than 1 superclass defined in your UML model!
-, undef
+public class Python : LanguageStrategy
 {
 
   #region Aggregations
