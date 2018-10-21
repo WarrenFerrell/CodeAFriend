@@ -10,43 +10,43 @@ using System.Collections.Generic;
 public class User
 {
 
-  #region Aggregations
-  #endregion
+	#region Aggregations
+	#endregion
 
-  #region Compositions
-  #endregion
+	#region Compositions
+	#endregion
 
-  #region Attributes
+	#region Attributes
 
-  /// <summary>
-  /// 
-  /// </summary>
-  public IEnumerable<UserScript> Scripts { get; }
-
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private string username;
+	/// <summary>
+	/// 
+	/// </summary>
+	public IEnumerable<UserScript> Scripts { get; }
 
 
-
-  #endregion
-
-
-  #region Public methods
-
-  #endregion
+	/// <summary>
+	/// 
+	/// </summary>
+	private string username;
 
 
-  #region Protected methods
 
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Public methods
 
-  #endregion
+	#endregion
+
+
+	#region Protected methods
+
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

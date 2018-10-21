@@ -10,75 +10,75 @@ using System.Collections.Generic;
 public class ScriptController : CodaAFriendController
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
+	#region Compositions
 
 
-  #endregion
+	#endregion
+
+	#region Attributes
 
 
-  #region Public methods
-
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <param name="script"></param>
-  /// <returns>UserScript</returns>
-  public UserScript CreateScript(UserScript script)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
-
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <param name="script"></param>
-  /// <returns>UserScript</returns>
-  public UserScript UpdateScript(UserScript script)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
-
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <param name="id"></param>
-  /// <returns></returns>
-  public void DeleteScript(Guid id)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
-
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <param name="id"></param>
-  /// <returns>Script</returns>
-  public Script GetScript(Guid id)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
-
-  #endregion
+	#endregion
 
 
-  #region Protected methods
+	#region Public methods
 
-  #endregion
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="script"></param>
+	/// <returns>UserScript</returns>
+	public UserScript CreateScript(UserScript script)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="script"></param>
+	/// <returns>UserScript</returns>
+	public UserScript UpdateScript(UserScript script)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="id"></param>
+	/// <returns></returns>
+	public void DeleteScript(Guid id)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="id"></param>
+	/// <returns>Script</returns>
+	public Script GetScript(Guid id)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
+
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

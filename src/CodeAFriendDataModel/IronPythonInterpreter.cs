@@ -9,35 +9,35 @@ using System.Collections.Generic;
 public class IronPythonInterpreter
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
+	#region Compositions
 
 
-  #endregion
+	#endregion
+
+	#region Attributes
 
 
-  #region Public methods
-
-  #endregion
+	#endregion
 
 
-  #region Protected methods
+	#region Public methods
 
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

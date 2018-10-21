@@ -10,53 +10,53 @@ using System.Collections.Generic;
 public class Vote
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private short Value;
+	#region Compositions
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private User User;
+	#endregion
+
+	#region Attributes
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private short Value;
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private string Comment;
+	/// <summary>
+	/// 
+	/// </summary>
+	private User User;
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private string Comment;
 
 
 
-  #endregion
+	#endregion
 
 
-  #region Public methods
+	#region Public methods
 
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

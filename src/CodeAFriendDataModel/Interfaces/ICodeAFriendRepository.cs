@@ -10,54 +10,54 @@ using System.Collections.Generic;
 public interface ICodeAFriendRepository
 {
 
-  #region Aggregations
-  #endregion
-  #region Compositions
-  #endregion
+	#region Aggregations
+	#endregion
+	#region Compositions
+	#endregion
 
-  #region Attributes
+	#region Attributes
 
-  /// <summary>
-  /// 
-  /// </summary>
-  IEnumerable<Problem> Problems { get; }
-
-
-  /// <summary>
-  /// 
-  /// </summary>
-  IEnumerable<LanguageStrategy> Languages { get; }
+	/// <summary>
+	/// 
+	/// </summary>
+	IEnumerable<Problem> Problems { get; }
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  IEnumerable<User> Users { get; }
+	/// <summary>
+	/// 
+	/// </summary>
+	IEnumerable<LanguageStrategy> Languages { get; }
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  IEnumerable<Script> Scripts { get; }
+	/// <summary>
+	/// 
+	/// </summary>
+	IEnumerable<User> Users { get; }
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	IEnumerable<Script> Scripts { get; }
 
 
 
-  #endregion
+	#endregion
 
 
-  #region Public methods
+	#region Public methods
 
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

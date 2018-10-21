@@ -10,55 +10,55 @@ using System.Collections.Generic;
 public class UserController : CodaAFriendController
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
+	#region Compositions
 
 
-  #endregion
+	#endregion
+
+	#region Attributes
 
 
-  #region Public methods
-
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <param name="user"></param>
-  /// <returns>User</returns>
-  public User CreateUser(User user)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
-
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <param name="userName"></param>
-  /// <returns>User</returns>
-  public User GetUser(string userName)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
-
-  #endregion
+	#endregion
 
 
-  #region Protected methods
+	#region Public methods
 
-  #endregion
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="user"></param>
+	/// <returns>User</returns>
+	public User CreateUser(User user)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="userName"></param>
+	/// <returns>User</returns>
+	public User GetUser(string userName)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
+
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

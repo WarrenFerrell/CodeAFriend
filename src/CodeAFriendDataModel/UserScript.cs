@@ -10,47 +10,47 @@ using System.Collections.Generic;
 public class UserScript : Script
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private string ScriptName;
+	#region Compositions
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private string UserName;
+	#endregion
+
+	#region Attributes
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private string ScriptName;
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private string UserName;
 
 
 
-  #endregion
+	#endregion
 
 
-  #region Public methods
+	#region Public methods
 
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

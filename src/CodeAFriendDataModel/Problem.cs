@@ -10,71 +10,71 @@ using System.Collections.Generic;
 public class Problem
 {
 
-  #region Aggregations
-  #endregion
+	#region Aggregations
+	#endregion
 
-  #region Compositions
-  #endregion
+	#region Compositions
+	#endregion
 
-  #region Attributes
+	#region Attributes
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private string Description;
-
-
-  /// <summary>
-  /// 
-  /// </summary>
-  public IEnumerable<TestCase> TestCases { get; }
+	/// <summary>
+	/// 
+	/// </summary>
+	private string Description;
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private string Name;
+	/// <summary>
+	/// 
+	/// </summary>
+	public IEnumerable<TestCase> TestCases { get; }
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  public IEnumerable<Solution> Solutions { get; }
+	/// <summary>
+	/// 
+	/// </summary>
+	private string Name;
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  public IEnumerable<string> Tags { get; }
+	/// <summary>
+	/// 
+	/// </summary>
+	public IEnumerable<Solution> Solutions { get; }
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	public IEnumerable<string> Tags { get; }
 
 
 
-  #endregion
+	#endregion
 
 
-  #region Public methods
+	#region Public methods
 
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <param name="script"></param>
-  /// <returns>bool</returns>
-  public bool TestScript(UserScript script)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="script"></param>
+	/// <returns>bool</returns>
+	public bool TestScript(UserScript script)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
 
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

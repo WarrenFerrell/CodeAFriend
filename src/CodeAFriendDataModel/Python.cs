@@ -9,56 +9,56 @@ using System.Collections.Generic;
 public class Python : LanguageStrategy
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private IronPythonInterpreter Interpreter;
+	#region Compositions
 
 
+	#endregion
 
-  #endregion
+	#region Attributes
 
-
-  #region undef members
-
-  #endregion
-
-
-  #region Public methods
-
-  #endregion
+	/// <summary>
+	/// 
+	/// </summary>
+	private IronPythonInterpreter Interpreter;
 
 
-  #region Protected methods
 
-  #endregion
-
-
-  #region Private methods
-
-  #endregion
+	#endregion
 
 
-  #region LanguageStrategy members
+	#region undef members
 
-  public override ScriptEvaluation Execute(string scriptBody, RuntimeParameters parameters)
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
+	#endregion
 
-  #endregion
+
+	#region Public methods
+
+	#endregion
+
+
+	#region Protected methods
+
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
+
+
+	#region LanguageStrategy members
+
+	public override ScriptEvaluation Execute(string scriptBody, RuntimeParameters parameters)
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
+
+	#endregion
 
 
 }

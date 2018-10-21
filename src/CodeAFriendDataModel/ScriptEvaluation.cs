@@ -10,91 +10,91 @@ using System.Collections.Generic;
 public class ScriptEvaluation
 {
 
-  #region Aggregations
+	#region Aggregations
 
-  /// <summary>
-  /// 
-  /// </summary>
-  public LanguageStrategy UnnamedRoleB_1
-  {
-    get
-    {
-      return m_UnnamedRoleB_1;
-    }
-    set
-    {
-      m_UnnamedRoleB_1 = value;
-    }
-  }
-  private LanguageStrategy m_UnnamedRoleB_1;
+	/// <summary>
+	/// 
+	/// </summary>
+	public LanguageStrategy UnnamedRoleB_1
+	{
+		get
+		{
+			return m_UnnamedRoleB_1;
+		}
+		set
+		{
+			m_UnnamedRoleB_1 = value;
+		}
+	}
+	private LanguageStrategy m_UnnamedRoleB_1;
 
-  /// <summary>
-  /// 
-  /// </summary>
-  public LanguageStrategy UnnamedRoleB_2
-  {
-    get
-    {
-      return m_UnnamedRoleB_2;
-    }
-    set
-    {
-      m_UnnamedRoleB_2 = value;
-    }
-  }
-  private LanguageStrategy m_UnnamedRoleB_2;
-
-
-  #endregion
-
-  #region Compositions
+	/// <summary>
+	/// 
+	/// </summary>
+	public LanguageStrategy UnnamedRoleB_2
+	{
+		get
+		{
+			return m_UnnamedRoleB_2;
+		}
+		set
+		{
+			m_UnnamedRoleB_2 = value;
+		}
+	}
+	private LanguageStrategy m_UnnamedRoleB_2;
 
 
-  #endregion
+	#endregion
 
-  #region Attributes
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private string Output;
+	#region Compositions
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private uint CpuTime;
+	#endregion
+
+	#region Attributes
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private string Output;
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private uint MemoryUsage;
+	/// <summary>
+	/// 
+	/// </summary>
+	private uint CpuTime;
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private RuntimeParameters Parameters;
+	/// <summary>
+	/// 
+	/// </summary>
+	private uint MemoryUsage;
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private RuntimeParameters Parameters;
 
 
 
-  #endregion
+	#endregion
 
 
-  #region Public methods
+	#region Public methods
 
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

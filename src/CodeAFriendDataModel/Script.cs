@@ -10,62 +10,62 @@ using System.Collections.Generic;
 public class Script
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private string Body;
+	#region Compositions
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private LanguageStrategy Language;
+	#endregion
+
+	#region Attributes
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private string Body;
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private Guid id;
+	/// <summary>
+	/// 
+	/// </summary>
+	private LanguageStrategy Language;
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private Guid id;
 
 
 
-  #endregion
+	#endregion
 
 
-  #region Public methods
+	#region Public methods
 
-  /// <summary>
-  /// 
-  /// </summary>
-  /// <returns>Script</returns>
-  public Script Clone()
-  {
-    throw new Exception("The method or operation is not implemented.");
-  }
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <returns>Script</returns>
+	public Script Clone()
+	{
+		throw new Exception("The method or operation is not implemented.");
+	}
 
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

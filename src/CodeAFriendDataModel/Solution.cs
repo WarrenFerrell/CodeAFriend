@@ -10,42 +10,42 @@ using System.Collections.Generic;
 public class Solution : Script
 {
 
-  #region Aggregations
-  #endregion
+	#region Aggregations
+	#endregion
 
-  #region Compositions
-  #endregion
-  #region Attributes
+	#region Compositions
+	#endregion
+	#region Attributes
 
-  /// <summary>
-  /// 
-  /// </summary>
-  public IEnumerable<Vote> Votes { get; }
-
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private User Submitter;
+	/// <summary>
+	/// 
+	/// </summary>
+	public IEnumerable<Vote> Votes { get; }
 
 
-
-  #endregion
-
-
-  #region Public methods
-
-  #endregion
+	/// <summary>
+	/// 
+	/// </summary>
+	private User Submitter;
 
 
-  #region Protected methods
 
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Public methods
 
-  #endregion
+	#endregion
+
+
+	#region Protected methods
+
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

@@ -9,53 +9,53 @@ using System.Collections.Generic;
 public class RuntimeParameters
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private uint MaxCpuTime;
+	#region Compositions
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private uint MaxMemory;
+	#endregion
+
+	#region Attributes
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private uint MaxCpuTime;
 
 
-  /// <summary>
-  /// 
-  /// </summary>
-  private string Input;
+	/// <summary>
+	/// 
+	/// </summary>
+	private uint MaxMemory;
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	private string Input;
 
 
 
-  #endregion
+	#endregion
 
 
-  #region Public methods
+	#region Public methods
 
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	#endregion
 
 
-  #region Private methods
+	#region Protected methods
 
-  #endregion
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }

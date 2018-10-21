@@ -10,41 +10,41 @@ using System.Collections.Generic;
 public abstract class CodaAFriendController
 {
 
-  #region Aggregations
+	#region Aggregations
 
 
-  #endregion
+	#endregion
 
-  #region Compositions
-
-
-  #endregion
-
-  #region Attributes
-
-  /// <summary>
-  /// 
-  /// </summary>
-  private ICodeAFriendRepository Repository;
+	#region Compositions
 
 
+	#endregion
 
-  #endregion
+	#region Attributes
 
-
-  #region Public methods
-
-  #endregion
-
-
-  #region Protected methods
-
-  #endregion
+	/// <summary>
+	/// 
+	/// </summary>
+	private ICodeAFriendRepository Repository;
 
 
-  #region Private methods
 
-  #endregion
+	#endregion
+
+
+	#region Public methods
+
+	#endregion
+
+
+	#region Protected methods
+
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 
 
 }
