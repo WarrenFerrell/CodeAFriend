@@ -10,6 +10,13 @@ namespace CodeAFriend.DataModel
 	/// </summary>
 	public class ScriptEvaluation
 	{
+		public ScriptEvaluation(string output, double cpuTime, long memoryUsage, RuntimeParameters parameters)
+		{
+			Output = output;
+			CpuTime = cpuTime;
+			MemoryUsage = memoryUsage;
+			Parameters = parameters;
+		}
 
 		/// <summary>
 		/// 
@@ -19,17 +26,16 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// 
 		/// </summary>
-		public uint CpuTime { get; }
+		public double CpuTime { get; }
 
 		/// <summary>
 		/// 
 		/// </summary>
-		public uint MemoryUsage { get; }
+		public long MemoryUsage { get; }
 
 		/// <summary>
 		/// 
 		/// </summary>
 		public RuntimeParameters Parameters { get; }
-
 	}
 }

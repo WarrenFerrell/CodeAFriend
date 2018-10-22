@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CodeAFriend.DataModel
 {
@@ -21,7 +22,7 @@ namespace CodeAFriend.DataModel
 		/// <param name="scriptBody"></param>
 		/// <param name="parameters"></param>
 		/// <returns>ScriptEvaluation</returns>
-		ScriptEvaluation Execute(string scriptBody, RuntimeParameters parameters);
+		Task<ScriptEvaluation> ExecuteAsync(RuntimeParameters parameters);
 
 	}
 }

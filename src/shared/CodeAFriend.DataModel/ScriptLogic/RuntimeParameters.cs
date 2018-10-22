@@ -10,15 +10,28 @@ namespace CodeAFriend.DataModel
 	/// </summary>
 	public class RuntimeParameters
 	{
-		/// <summary>
-		/// 
-		/// </summary>
-		public uint MaxCpuTime { get; }
+		public RuntimeParameters(string scriptBody, double maxCpuTime, long maxMemory, string input)
+		{
+			ScriptBody = scriptBody;
+			MaxCpuTime = maxCpuTime;
+			MaxMemory = maxMemory;
+			Input = input;
+		}
 
 		/// <summary>
 		/// 
 		/// </summary>
-		public uint MaxMemory { get; }
+		public string ScriptBody { get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		public double MaxCpuTime { get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		public long MaxMemory { get; }
 
 		/// <summary>
 		/// 
