@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAFriend.Languages.Pytho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAFriend.Languages.Python3.UnitTests", "test\unit\CodeAFriend.Languages.Python3.UnitTests\CodeAFriend.Languages.Python3.UnitTests.csproj", "{C5EF6319-B763-4FE6-BF3E-68843EE55EEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAFriend.Languages.Core", "src\shared\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.csproj", "{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C5EF6319-B763-4FE6-BF3E-68843EE55EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5EF6319-B763-4FE6-BF3E-68843EE55EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5EF6319-B763-4FE6-BF3E-68843EE55EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{B0E77C65-8CF0-4F48-A5E2-BE70EEAD094D} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
 		{C92A2384-EE52-4E9D-9609-79DFB9B69A2B} = {64032CAA-C91F-48C6-ABEC-5ABE0EBEF1A1}
 		{C5EF6319-B763-4FE6-BF3E-68843EE55EEB} = {64032CAA-C91F-48C6-ABEC-5ABE0EBEF1A1}
+		{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CB7CB96-02F4-4860-A99C-3F96D6F985DA}
