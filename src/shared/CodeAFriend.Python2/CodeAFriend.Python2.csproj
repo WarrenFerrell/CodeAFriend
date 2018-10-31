@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <Win32Resource />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="2.7.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeAFriend.DataModel\CodeAFriend.DataModel.csproj" />
+  </ItemGroup>
+
+</Project>
