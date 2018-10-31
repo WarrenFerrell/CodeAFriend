@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Reflection;
 using CodeAFriend.DataModel.Constants;
+using System.Text.RegularExpressions;
 
 namespace CodeAFriend.Languages.Python3
 {
@@ -55,6 +56,12 @@ namespace CodeAFriend.Languages.Python3
 
 			using (var process = Process.Start(startInfo))
 			{
+				using (StreamWriter input = process.StandardInput)
+				{
+					await input.WriteAsync(parameters.Input.AsMemory());
+				}
+
+
 				Debug.WriteLine(process.ProcessName);
 				Debug.WriteLine(process.Id);
 				string error = await process.StandardError.ReadToEndAsync();
@@ -62,11 +69,9 @@ namespace CodeAFriend.Languages.Python3
 				{
 					throw new Exception(error);
 				}
-				//process.StandardOutput.BaseStream.Seek(0, SeekOrigin.Begin);
 				using (StreamReader reader = process.StandardOutput)
 				{
 					
-					//reader.BaseStream.Seek(0, SeekOrigin.Begin);
 					string result = await reader.ReadToEndAsync();
 					return new ScriptEvaluation(
 						output: result,
@@ -76,9 +81,6 @@ namespace CodeAFriend.Languages.Python3
 				);
 				}
 
-					process.Start();
-				
-				await process.StandardInput.WriteAsync(parameters.Input.AsMemory());
 
 				CancellationTokenSource source = new CancellationTokenSource();
 				Task processTask = new Task(async () => await Task.Delay((int) 1000, source.Token));
