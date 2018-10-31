@@ -13,13 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\shared\CodeAFriend.Python2\CodeAFriend.Python2.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="CodeAFriend.LanguageStrategy.Python.runtimeconfig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\..\..\src\shared\CodeAFriend.Languages.Python3\CodeAFriend.Languages.Python3.csproj" />
   </ItemGroup>
 
 </Project>

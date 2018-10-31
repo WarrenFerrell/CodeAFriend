@@ -11,7 +11,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Reflection;
 
-namespace CodeAFriend.LanguageStrategy.Python
+namespace CodeAFriend.Languages.Python2
 {
 	/// <summary>
 	/// 

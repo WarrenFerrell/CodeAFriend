@@ -4,9 +4,8 @@ using System.Threading.Tasks;
 using Xunit;
 using System.IO;
 using System.Runtime.InteropServices;
-using CodeAFriend.Python3;
 
-namespace CodeAFriend.Python.UnitTests
+namespace CodeAFriend.Languages.Python3.UnitTests
 {
 	public class Python3InterpreterTests
 	{

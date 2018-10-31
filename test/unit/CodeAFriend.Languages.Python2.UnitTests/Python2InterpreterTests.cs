@@ -1,13 +1,12 @@
-using CodeAFriend.LanguageStrategy;
 using CodeAFriend.DataModel;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 using System.IO;
-using CodeAFriend.LanguageStrategy.Python;
+using CodeAFriend.Languages.Python2;
 using System.Runtime.InteropServices;
 
-namespace CodeAFriend.Python.UnitTests
+namespace CodeAFriend.Languages.Python2.UnitTests
 {
 	public class Python2InterpreterTests
 	{

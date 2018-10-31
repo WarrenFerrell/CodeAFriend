@@ -12,7 +12,7 @@ using System.Threading;
 using System.Reflection;
 using CodeAFriend.DataModel.Constants;
 
-namespace CodeAFriend.Python3
+namespace CodeAFriend.Languages.Python3
 {
 	/// <summary>
 	/// 
