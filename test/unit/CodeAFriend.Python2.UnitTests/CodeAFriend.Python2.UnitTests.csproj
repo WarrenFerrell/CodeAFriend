@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\shared\CodeAFriend.Python\CodeAFriend.LanguageStrategy.Python.csproj" />
+    <ProjectReference Include="..\..\..\src\shared\CodeAFriend.Python2\CodeAFriend.Python2.csproj" />
   </ItemGroup>
 
   <ItemGroup>

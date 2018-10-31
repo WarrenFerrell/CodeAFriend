@@ -9,7 +9,7 @@ namespace CodeAFriend.DataModel
 	/// <summary>
 	/// 
 	/// </summary>
-	public interface ILanguageStrategy
+	public interface ILanguageInterpreter
 	{
 		/// <summary>
 		/// 

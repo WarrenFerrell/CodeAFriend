@@ -16,7 +16,7 @@ namespace CodeAFriend.LanguageStrategy.Python
 	/// <summary>
 	/// 
 	/// </summary>
-	public class PythonInterpreter : ILanguageStrategy
+	public class Python2Interpreter : ILanguageInterpreter
 	{
 		public string Name { get; } = nameof(Python);
 
@@ -85,7 +85,7 @@ namespace CodeAFriend.LanguageStrategy.Python
 		/// <returns></returns>
 		private async Task<ScriptEvaluation> RunProcessAsync(RuntimeParameters parameters)
 		{
-			var thisAssembly = typeof(PythonInterpreter).Assembly;
+			var thisAssembly = typeof(Python2Interpreter).Assembly;
 			var arguments = $"{thisAssembly.ManifestModule.Name} {Convert.ToBase64String(Encoding.UTF8.GetBytes(parameters.ScriptBody))}";
 
 			ProcessStartInfo startInfo = new ProcessStartInfo("dotnet", arguments);
