@@ -10,8 +10,8 @@ namespace CodeAFriend.Languages.Python3.UnitTests
 	public class Python3InterpreterTests
 	{
 
+		public static string HelloWorldScript = $@"print(""Hello World"")";
 		public static string HelloWorldOutput = @"Hello World";
-		public static string HelloWorldScript = $"print(\"{HelloWorldOutput}\")";
 
 		[Fact]
 		public async Task Python3InterpreterRunsHelloWorld()
@@ -27,18 +27,18 @@ namespace CodeAFriend.Languages.Python3.UnitTests
 			Assert.Equal(HelloWorldOutput, results.Output.Trim());
 		}
 
+		public static string HelloGorillaScript = $@"
+import sys
+for line in sys.stdin:
+	print(line.replace(""World"", ""Gorilla""), end='')".Trim();
 		public static string HelloGorillaInput = @"
 Hello World!
 Goodnight World!".Trim();
 		public static string HelloGorillaOutput = @"
 Hello Gorilla!
 Goodnight Gorilla!".Trim();
-		public static string HelloGorillaScript = $@"
-import sys
-for line in sys.stdin:
-	print(line.replace(""World"", ""Gorilla""), end='')".Trim();
 
-	[Fact]
+		[Fact]
 		public async Task Python3InterpreterRunsHelloGorilla()
 		{
 			// Arrange
