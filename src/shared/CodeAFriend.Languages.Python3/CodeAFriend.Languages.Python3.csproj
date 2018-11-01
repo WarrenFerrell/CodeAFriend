@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CodeAFriend.DataModel\CodeAFriend.DataModel.csproj" />
+    <ProjectReference Include="..\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.csproj" />
   </ItemGroup>
 
 </Project>
