@@ -17,7 +17,7 @@ using CodeAFriend.Languages.Core;
 namespace CodeAFriend.Languages.Python3
 {
 	/// <summary>
-	/// 
+	/// Implementation of <see cref="ILanguageInterpreter"/> for Python programming language.
 	/// </summary>
 	public class Python3Interpreter : InterpreterTemplate
 	{

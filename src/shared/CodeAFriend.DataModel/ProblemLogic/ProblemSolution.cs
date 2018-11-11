@@ -8,7 +8,7 @@ namespace CodeAFriend.DataModel
 	/// <summary>
 	/// 
 	/// </summary>
-	public class Solution : Script
+	public class ProblemSolution : Script
 	{
 		/// <summary>
 		/// 

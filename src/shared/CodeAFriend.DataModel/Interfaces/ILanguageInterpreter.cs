@@ -7,20 +7,19 @@ using System.Threading.Tasks;
 namespace CodeAFriend.DataModel
 {
 	/// <summary>
-	/// 
+	/// Exposes the ability to compile and execute a specific language.
 	/// </summary>
 	public interface ILanguageInterpreter
 	{
 		/// <summary>
-		/// 
+		/// The language this <see cref="ILanguageInterpreter"/> interprets.
 		/// </summary>
 		string Name { get; }
 
 		/// <summary>
-		/// 
+		/// Execute code written in <see cref="Name"/> language using the specified <see cref="RuntimeParameters"/>. 
 		/// </summary>
-		/// <param name="scriptBody"></param>
-		/// <param name="parameters"></param>
+		/// <param name="parameters">The <see cref="RuntimeParameters'"/> to use for code compilation and execution.</param>
 		/// <returns>ScriptEvaluation</returns>
 		Task<ScriptEvaluation> ExecuteAsync(RuntimeParameters parameters);
 

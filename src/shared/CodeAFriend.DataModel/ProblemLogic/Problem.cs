@@ -6,41 +6,39 @@ using System.Collections.Generic;
 namespace CodeAFriend.DataModel
 {
 	/// <summary>
-	/// 
+	/// A problem with a set of <see cref="TestCase"/>s to determine if a <see cref="Script"/> solves the <see cref="Problem"/>.
 	/// </summary>
 	public class Problem
 	{
-
-		#region Aggregations
-		#endregion
-
-		#region Compositions
-		#endregion
-
 		/// <summary>
-		/// 
-		/// </summary>
-		public string Description { get; }
-
-		/// <summary>
-		/// 
-		/// </summary>
-		public IEnumerable<TestCase> TestCases { get; }
-
-		/// <summary>
-		/// 
+		/// Unique name of the Problem.
 		/// </summary>
 		public string Name { get; }
 
 		/// <summary>
-		/// 
+		/// Description of this <see cref="Problem"/>.
 		/// </summary>
-		public IEnumerable<Solution> Solutions { get; }
+		public string Description { get; }
 
 		/// <summary>
-		/// 
+		/// User who submitted this <see cref="Problem"/>.
 		/// </summary>
-		public IEnumerable<string> Tags { get; }
+		public User User { get; }
+
+		/// <summary>
+		/// <see cref="TestCase"/>s for this problem.
+		/// </summary>
+		public IEnumerable<TestCase> TestCases { get; }
+
+		/// <summary>
+		/// <see cref="Script"/>s that passed all <see cref="TestCases"/>.
+		/// </summary>
+		public IEnumerable<ProblemSolution> Solutions { get; }
+
+		/// <summary>
+		/// Optional tags to use to search for this problem.
+		/// </summary>
+		public IEnumerable<Tag> Tags { get; }
 
 		/// <summary>
 		/// 
