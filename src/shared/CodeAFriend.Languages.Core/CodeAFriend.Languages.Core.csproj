@@ -8,6 +8,10 @@
     <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\CodeAFriend.DataModel\CodeAFriend.DataModel.csproj" />
   </ItemGroup>

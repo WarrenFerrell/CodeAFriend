@@ -8,6 +8,10 @@
     <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\apps\CodeAFriend.ApiService\CodeAFriend.ApiService.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\apps\CodeAFriend.ApiService\CodeAFriend.ApiService.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>

@@ -8,4 +8,8 @@
     <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.DataModel\CodeAFriend.DataModel.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.DataModel\CodeAFriend.DataModel.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
