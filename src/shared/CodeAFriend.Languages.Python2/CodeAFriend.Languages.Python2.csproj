@@ -9,6 +9,10 @@
     <Win32Resource />
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Python2\CodeAFriend.Languages.Python2.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="IronPython" Version="2.7.9" />
   </ItemGroup>
