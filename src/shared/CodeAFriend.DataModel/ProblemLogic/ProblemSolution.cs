@@ -5,19 +5,17 @@ using System.Collections.Generic;
 
 namespace CodeAFriend.DataModel
 {
-	/// <summary>
-	/// 
-	/// </summary>
+
 	public class ProblemSolution : Script
 	{
-		/// <summary>
-		/// 
-		/// </summary>
+		public ProblemSolution(IEnumerable<Vote> votes, User submitter, string body, ILanguageInterpreter language, Guid id) : base(body, language, id)
+		{
+			Votes = votes;
+			Submitter = submitter;
+		}
+
 		public IEnumerable<Vote> Votes { get; }
 
-		/// <summary>
-		/// 
-		/// </summary>
 		public User Submitter { get; }
 
 	}

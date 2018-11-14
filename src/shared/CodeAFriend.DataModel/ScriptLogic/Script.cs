@@ -10,28 +10,36 @@ namespace CodeAFriend.DataModel
 	/// </summary>
 	public class Script
 	{
+		public Script(string body, ILanguageInterpreter language, Guid id)
+		{
+			Body = body;
+			Language = language;
+			Id = id;
+		}
+
 		/// <summary>
 		/// Code.
 		/// </summary>
-		public string Body { get; }
+		public virtual string Body { get;  }
 
 		/// <summary>
 		/// Language to compile code in.
 		/// </summary>
-		public ILanguageInterpreter Language { get; }
+		public virtual ILanguageInterpreter Language { get; }
 
 		/// <summary>
 		/// Unique Id assigned to the Script during creation.
 		/// </summary>
-		public Guid Id { get; }
+		public virtual Guid Id { get; }
 
 		/// <summary>
-		/// Create a deep copy of this <see cref="Script"/>.
+		/// Create a deep copy of this <see cref="Script"/>. 
 		/// </summary>
+		/// <remarks>Employs the Prototype design pattern.</remarks>
 		/// <returns><see cref="Script"/> object that is a deep copy of this <see cref="Script"/>.</returns>
 		public Script Clone()
 		{
-			throw new Exception("The method or operation is not implemented.");
+			return new Script(Body, Language, Id);
 		}
 
 	}

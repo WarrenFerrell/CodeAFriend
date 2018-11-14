@@ -13,17 +13,17 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// Value of this vote.
 		/// </summary>
-		public short Value { get; }
+		public virtual short Value { get; }
 
 		/// <summary>
 		/// <see cref="User"/> who submitted this vote.
 		/// </summary>
-		public User Submitter { get; }
+		public virtual User Submitter { get; }
 
 		/// <summary>
 		/// Optional comment that the submitter included with his vote. 
 		/// </summary>
-		public string Comment { get; }
+		public virtual string Comment { get; }
 
 	}
 }

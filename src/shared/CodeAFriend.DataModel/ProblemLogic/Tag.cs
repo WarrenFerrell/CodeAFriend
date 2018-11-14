@@ -12,12 +12,12 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// Problem this <see cref="Tag"/> is for.
 		/// </summary>
-		public Problem Problem { get; }
+		public virtual Problem Problem { get; }
 
 		/// <summary>
 		/// Text of this tag.
 		/// </summary>
-		public string Text { get; } 
+		public virtual string Text { get; } 
 
 	}
 }

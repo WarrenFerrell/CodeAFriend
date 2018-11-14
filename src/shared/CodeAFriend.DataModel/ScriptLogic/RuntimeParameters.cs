@@ -36,7 +36,7 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// Input to provide to stdin during program execution. 
 		/// </summary>
-		public string Input { get; }
+		public string Input { get; set; }
 
 	}
 }

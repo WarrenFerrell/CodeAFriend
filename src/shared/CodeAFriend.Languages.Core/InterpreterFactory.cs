@@ -5,14 +5,10 @@ using System.Text;
 
 namespace CodeAFriend.Languages.Core
 {
-	/// <summary>
-	/// 
-	/// </summary>
+
 	public class InterpreterFactory
 	{
-		/// <summary>
-		/// 
-		/// </summary>
+
 		IEnumerable<ILanguageInterpreter> Languages { get; }
 
 	}
