@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\CodeAFriend.DataModel\CodeAFriend.DataModel.csproj" />
   </ItemGroup>

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace CodeAFriend.DataModel
 {
 	/// <summary>
-	/// 
+	/// Results from executing a script using specified <see cref="RuntimeParameters"/>.
 	/// </summary>
 	public class ScriptEvaluation
 	{
@@ -19,22 +19,22 @@ namespace CodeAFriend.DataModel
 		}
 
 		/// <summary>
-		/// 
+		/// Characters printed to stdout by the program during execution. 
 		/// </summary>
 		public string Output { get; }
 
 		/// <summary>
-		/// 
+		/// Amount of time that the program took to complete execution.
 		/// </summary>
 		public double CpuTime { get; }
 
 		/// <summary>
-		/// 
+		/// Peak memory usage, by the program, during execution.
 		/// </summary>
 		public long MemoryUsage { get; }
 
 		/// <summary>
-		/// 
+		/// Parameters used during program executions.
 		/// </summary>
 		public RuntimeParameters Parameters { get; }
 	}
