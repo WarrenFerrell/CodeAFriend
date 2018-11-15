@@ -18,7 +18,7 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// <see cref="Script"/>s that this user has written.
 		/// </summary>
-		public virtual ICollection<Script> Scripts => _scripts;
+		public virtual IEnumerable<Script> Scripts => _scripts;
 
 		protected HashSet<Script> _scripts;
 

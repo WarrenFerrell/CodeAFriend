@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAFriend.Languages.Core"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAFriend.Repository", "src\shared\CodeAFriend.Repository\CodeAFriend.Repository.csproj", "{DAC069E0-B1C7-4114-B75D-51D86C17D96D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAFriend.Repository.UnitTests", "test\unit\CodeAFriend.Repository.UnitTests\CodeAFriend.Repository.UnitTests.csproj", "{58CE9930-7DE5-433C-A290-6A69067ED297}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{DAC069E0-B1C7-4114-B75D-51D86C17D96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAC069E0-B1C7-4114-B75D-51D86C17D96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAC069E0-B1C7-4114-B75D-51D86C17D96D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CE9930-7DE5-433C-A290-6A69067ED297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CE9930-7DE5-433C-A290-6A69067ED297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CE9930-7DE5-433C-A290-6A69067ED297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CE9930-7DE5-433C-A290-6A69067ED297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{C5EF6319-B763-4FE6-BF3E-68843EE55EEB} = {64032CAA-C91F-48C6-ABEC-5ABE0EBEF1A1}
 		{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
 		{DAC069E0-B1C7-4114-B75D-51D86C17D96D} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
+		{58CE9930-7DE5-433C-A290-6A69067ED297} = {64032CAA-C91F-48C6-ABEC-5ABE0EBEF1A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CB7CB96-02F4-4860-A99C-3F96D6F985DA}
