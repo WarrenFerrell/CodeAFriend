@@ -8,14 +8,7 @@
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <Win32Resource />
     <StartupObject />
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Python3\CodeAFriend.Languages.Python3.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\warre\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Python3\CodeAFriend.Languages.Python3.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
