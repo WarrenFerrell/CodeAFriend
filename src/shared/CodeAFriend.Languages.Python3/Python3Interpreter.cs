@@ -21,11 +21,12 @@ namespace CodeAFriend.Languages.Python3
 	/// </summary>
 	public class Python3Interpreter : InterpreterTemplate
 	{
-		public override string Name { get; } = nameof(Python3Interpreter);
+		public override SupportedLanguage Name { get; } = SupportedLanguage.Python37;
 
 		/// <remarks>run to create an alias  
 		/// doskey python3="C:\Program Files\Python37\python.exe"
 		/// </remarks>
+		/// <inheritdoc/>
 		public override ProcessStartInfo GetProcessStartInfo(string scriptFilePath)
 		{
 			return new ProcessStartInfo(@"C:\Program Files\Python37\python.exe", scriptFilePath);

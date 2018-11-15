@@ -10,14 +10,16 @@ namespace CodeAFriend.DataModel
 	public class Tag
 	{
 		/// <summary>
-		/// Problem this <see cref="Tag"/> is for.
-		/// </summary>
-		public virtual Problem Problem { get; }
-
-		/// <summary>
 		/// Text of this tag.
 		/// </summary>
-		public virtual string Text { get; } 
+		public virtual string Text { get; private set; } 
+
+		protected Tag() { }
+
+		public Tag(string text)
+		{
+			Text = text;
+		}
 
 	}
 }

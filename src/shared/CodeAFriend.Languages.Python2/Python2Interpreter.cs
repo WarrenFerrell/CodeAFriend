@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Reflection;
 using CodeAFriend.Languages.Core;
+using CodeAFriend.DataModel.Constants;
 
 namespace CodeAFriend.Languages.Python2
 {
@@ -19,12 +20,14 @@ namespace CodeAFriend.Languages.Python2
 	/// </summary>
 	public class Python2Interpreter : InterpreterTemplate
 	{
-		public override string Name { get; } = nameof(Python2Interpreter);
+		/// <inheritdoc/>
+		public override SupportedLanguage Name { get; } = SupportedLanguage.Python2;
 
 		/// <remarks>from 
 		/// https://medium.com/emoney-engineering/running-python-script-from-c-and-working-with-the-results-843e68d230e5 .
 		/// https://kimsereyblog.blogspot.com/2018/01/start-processes-from-c-in-dotnet-core.html 
 		/// </remarks>
+		/// <inheritdoc/>
 		public override ProcessStartInfo GetProcessStartInfo(string scriptFilePath)
 		{
 			var thisAssembly = typeof(Python2Interpreter).Assembly;

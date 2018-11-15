@@ -21,21 +21,21 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// Characters printed to stdout by the program during execution. 
 		/// </summary>
-		public string Output { get; }
+		public string Output { get; set; }
 
 		/// <summary>
 		/// Amount of time that the program took to complete execution.
 		/// </summary>
-		public double CpuTime { get; }
+		public double CpuTime { get; set; }
 
 		/// <summary>
 		/// Peak memory usage, by the program, during execution.
 		/// </summary>
-		public long MemoryUsage { get; }
+		public long MemoryUsage { get; set; }
 
 		/// <summary>
 		/// Parameters used during program executions.
 		/// </summary>
-		public RuntimeParameters Parameters { get; }
+		public RuntimeParameters Parameters { get; set; }
 	}
 }
