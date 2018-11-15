@@ -16,7 +16,7 @@ namespace CodeAFriend.Repository.DbEntity
 		/// </summary>
 		/// <param name="script"></param>
 		/// <param name="context"></param>
-		/// <remarks>some code from https://github.com/JonPSmith/EfCore.GenericBizRunner/blob/master/DataLayer/EfClasses/Book.cs</remarks>
+		/// <remarks>some code from https://github.com/JonPSmith/EfCore.GenericBizRunner/blob/master/DataLayer/EfClasses/Book.cs </remarks>
 		public void AddScript(Script script, CodeAFriendContext context = null)
 		{
 			//base.AddScript(script);
