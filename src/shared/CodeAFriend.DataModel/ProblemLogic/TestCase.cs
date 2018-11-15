@@ -13,12 +13,20 @@ namespace CodeAFriend.DataModel
 		/// <summary>
 		/// Input for the test case.
 		/// </summary>
-		public virtual string Input { get; }
+		public virtual string Input { get; private set; }
 
 		/// <summary>
 		/// Expected output from the program during execution.
 		/// </summary>
-		public virtual string ExpectedOutput { get; }
+		public virtual string ExpectedOutput { get; private set; }
+
+		protected TestCase() { }
+
+		public TestCase(string input, string expectedOutput)
+		{
+			Input = input;
+			ExpectedOutput = expectedOutput;
+		}
 
 	}
 }

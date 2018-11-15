@@ -17,7 +17,7 @@ namespace CodeAFriend.ApiService.Controllers
 		/// </summary>
 		/// <param name="script"></param>
 		/// <returns>UserScript</returns>
-		public UserScript CreateScript(UserScript script)
+		public Script CreateScript(Script script)
 		{
 			throw new Exception("The method or operation is not implemented.");
 		}
@@ -27,7 +27,7 @@ namespace CodeAFriend.ApiService.Controllers
 		/// </summary>
 		/// <param name="script"></param>
 		/// <returns>UserScript</returns>
-		public UserScript UpdateScript(UserScript script)
+		public Script UpdateScript(Script script)
 		{
 			throw new Exception("The method or operation is not implemented.");
 		}

@@ -66,7 +66,7 @@ namespace CodeAFriend.ApiService.Controllers
 		/// <param name="problemName"></param>
 		/// <returns>bool</returns>
 		[HttpPost("{problemName}")]
-		public bool TestScript(string problemName, UserScript script)
+		public bool TestScript(string problemName, Script script)
 		{
 			throw new Exception("The method or operation is not implemented.");
 		}
