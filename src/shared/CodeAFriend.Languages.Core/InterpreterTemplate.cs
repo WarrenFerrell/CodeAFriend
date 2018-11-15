@@ -12,7 +12,7 @@ namespace CodeAFriend.Languages.Core
 	public abstract class InterpreterTemplate : ILanguageInterpreter
 	{
 		/// <inheritdoc/>
-		public abstract string Name { get; }
+		public abstract SupportedLanguage Name { get; }
 
 		/// <inheritdoc/>
 		public async Task<ScriptEvaluation> ExecuteAsync(RuntimeParameters parameters)
