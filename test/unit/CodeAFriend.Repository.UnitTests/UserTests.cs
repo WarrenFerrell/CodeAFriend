@@ -1,4 +1,4 @@
-using CodeAFriend.Repository.DbEntity;
+using CodeAFriend.DataModel;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -21,7 +21,7 @@ namespace CodeAFriend.Repository.UnitTests
 				// Run the test against one instance of the context
 				using (var context = database.NewContext())
 				{
-					context.Add(new DbUser(User1Id));
+					context.Add(new User(User1Id));
 					await context.SaveChangesAsync();
 				}
 
@@ -30,7 +30,7 @@ namespace CodeAFriend.Repository.UnitTests
 				{
 					var user = await context.Users.FindAsync(User1Id);
 					Assert.Equal(1, context.Users.Count());
-					Assert.Equal(User1Id, user.Username);
+					Assert.Equal(User1Id, user.Name);
 				}
 			}
 		}
@@ -38,6 +38,7 @@ namespace CodeAFriend.Repository.UnitTests
 		[Fact]
 		public async Task AddScriptAddsScriptToNewUser()
 		{
+			var scriptName = @"myFirstScript";
 			var scriptBody = @"print(""Hello World"")";
 			using (var database = new InMemorySqlDatabase())
 			{
@@ -48,14 +49,14 @@ namespace CodeAFriend.Repository.UnitTests
 				using (var context = database.NewContext())
 				{
 					var user = await context.Users.FindAsync(User1Id);
-					user.AddScript(new DataModel.Script(scriptBody, DataModel.Constants.SupportedLanguage.Python37, Guid.NewGuid()));
+					user.AddScript(new UserScript(scriptName, scriptBody, DataModel.Constants.SupportedLanguage.Python37));
 					await context.SaveChangesAsync();
 				}
 
 				// Use a separate instance of the context to verify correct data was saved to database
 				using (var context = database.NewContext())
 				{
-					var user = await context.Users.Include(u => u.Scripts).SingleAsync(u => u.Username == User1Id);
+					var user = await context.Users.Include(u => u.Scripts).SingleAsync(u => u.Name == User1Id);
 					Assert.Single(user.Scripts);
 					Assert.Equal(scriptBody, user.Scripts.Single().Body);
 				}
@@ -95,7 +96,7 @@ namespace CodeAFriend.Repository.UnitTests
 			{
 				using (var context = NewContext())
 				{
-					context.Add(new DbUser(userId));
+					context.Add(new User(userId));
 					await context.SaveChangesAsync();
 				}
 			}

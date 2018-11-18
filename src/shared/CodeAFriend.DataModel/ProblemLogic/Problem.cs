@@ -12,42 +12,32 @@ namespace CodeAFriend.DataModel
 	/// </summary>
 	public class Problem
 	{
-		/// <summary>
-		/// Unique name of the Problem.
-		/// </summary>
+		/// <summary>Unique name of the Problem.</summary>
 		public virtual string Name { get; private set; }
 
-		/// <summary>
-		/// Description of this <see cref="Problem"/>.
-		/// </summary>
+		/// <summary>Description of this <see cref="Problem"/>.</summary>
 		public virtual string Description { get; private set; }
 
-		/// <summary>
-		/// User who submitted this <see cref="Problem"/>.
-		/// </summary>
+		/// <summary>User who submitted this <see cref="Problem"/>.</summary>
 		public virtual User User { get; private set; }
 
-		/// <summary>
-		/// <see cref="TestCase"/>s for this problem.
-		/// </summary>
+		/// <summary><see cref="TestCase"/>s for this problem.</summary>
 		public virtual IEnumerable<TestCase> TestCases => _testCases?.ToList();
 
-		/// <summary>
-		/// <see cref="Script"/>s that passed all <see cref="TestCases"/>.
-		/// </summary>
+		/// <summary><see cref="Script"/>s that passed all <see cref="TestCases"/>.</summary>
 		public virtual IEnumerable<ProblemSolution> Solutions => _solutions?.ToList();
 
-		/// <summary>
-		/// Optional tags to use to search for this problem.
-		/// </summary>
+		/// <summary>Optional tags to use to search for this problem.</summary>
 		public virtual IEnumerable<Tag> Tags => _tags?.ToList();
 
 		private HashSet<TestCase> _testCases;
 		private HashSet<ProblemSolution> _solutions;
 		private HashSet<Tag> _tags;
 
+		/// <summary>Parameterless Constructor required for EF.</summary>
 		private Problem() { }
 
+		/// <summary>Constructor for creating new <see cref="Problem"/>.</summary>
 		public Problem(string name, string description, User user)
 		{
 			Name = name;
@@ -59,9 +49,10 @@ namespace CodeAFriend.DataModel
 		}
 
 		/// <summary>
-		/// 
+		/// Test if a script is a <see cref="ProblemSolution"/>.
 		/// </summary>
-		/// <param name="script"></param>
+		/// <param name="script"><see cref="Script"/> to run.</param>
+		/// <param name="interpreter"></param>
 		/// <returns>bool</returns>
 		public async Task<bool> TestScript(Script script, ILanguageInterpreter interpreter)
 		{

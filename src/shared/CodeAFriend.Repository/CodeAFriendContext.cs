@@ -4,25 +4,54 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using CodeAFriend.DataModel;
 
 namespace CodeAFriend.Repository
 {
+	/// <inheritdoc/>
+	/// <summary>EF Core object used to configure and access stored business objects in the CodeAFriend system.</summary>
 	public class CodeAFriendContext : DbContext
 	{
-		public CodeAFriendContext() { }
+		/// <summary>Name that should be given to any column that refers back to a Problem.</summary>
+		private const string ProblemName = nameof(Problem) + nameof(Problem.Name);
 
+		/// <summary>Name that should be given to any column that refers back to a User.</summary>
+		private const string UserName = nameof(User) + nameof(User.Name);
+
+		/// <summary>Name that should be given to any column that refers back to a User.</summary>
+		private const string ProblemSolutionId = nameof(ProblemSolution) + nameof(ProblemSolution.Id);
+
+		/// <inheritdoc/>
+		/// <summary></summary>
+		public CodeAFriendContext(){ }
+
+		/// <inheritdoc/>
 		public CodeAFriendContext(DbContextOptions<CodeAFriendContext> options) : base(options)
 		{
 		}
 
-		public DbSet<DataModel.Problem> Problems { get; set; }
-		public DbSet<DataModel.ProblemSolution> ProblemSolutions { get; set; }
-		public DbSet<DataModel.Script> Scripts { get; set; }
-		public DbSet<DataModel.Tag> Tags { get; set; }
-		public DbSet<DataModel.TestCase> TestCases { get; set; }
-		public DbSet<DbEntity.DbUser> Users { get; set; }
-		public DbSet<DataModel.Vote> Votes { get; set; }
+		/// <summary>Table that holds Problems.</summary>
+		public DbSet<Problem> Problems { get; set; }
 
+		/// <summary>Table that holds Problem Solutions.</summary>
+		public DbSet<ProblemSolution> ProblemSolutions { get; set; }
+
+		/// <summary>Table that holds Problem Solutions.</summary>
+		public DbSet<Vote> ProblemSolutionVotes { get; set; }
+
+		/// <summary>Table that holds Problem TestCases.</summary>
+		public DbSet<TestCase> ProblemTestCases { get; set; }
+
+		/// <summary>Table that holds Problem Tags.</summary>
+		public DbSet<Tag> ProblemTags { get; set; }
+
+		/// <summary>Table that holds Users.</summary>
+		public DbSet<User> Users { get; set; }
+
+		/// <summary>Table that holds User Scripts.</summary>
+		public DbSet<UserScript> UserScripts { get; set; }
+
+		/// <inheritdoc/>
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			if (!optionsBuilder.IsConfigured)
@@ -32,65 +61,72 @@ namespace CodeAFriend.Repository
 			}
 		}
 
+		/// <inheritdoc/>
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<DataModel.Problem>(entity =>
+			// Additional index given to Tag to improve lookup speed.
+			modelBuilder.Entity<Tag>().HasIndex(nameof(Tag.Text));
+
+			modelBuilder.Entity<Problem>(entity =>
 			{
 				entity.HasKey(e => e.Name);
 
-				entity.HasMany(e => e.Solutions)
-					.WithOne();
+				entity.HasOne(e => e.User)
+					.WithMany()
+					.OnDelete(DeleteBehavior.SetNull)
+					;
 
-				entity.Metadata.FindNavigation(nameof(DataModel.Problem.Solutions))
+				entity.OwnsMany<ProblemSolution>(e => e.Solutions)
+					.HasForeignKey(ProblemName)
+					.HasKey(ProblemName, nameof(ProblemSolution.Id));
+
+				entity.Metadata.FindNavigation(nameof(Problem.Solutions))
 					.SetPropertyAccessMode(PropertyAccessMode.Field);
 
-				entity.HasMany(e => e.Tags)
-					.WithOne();
+				entity.OwnsMany<Tag>(e => e.Tags)
+					.HasForeignKey(ProblemName)
+					.HasKey(ProblemName, nameof(Tag.Text));
 
-				entity.Metadata.FindNavigation(nameof(DataModel.Problem.Tags))
+				entity.Metadata.FindNavigation(nameof(Problem.Tags))
 					.SetPropertyAccessMode(PropertyAccessMode.Field);
 
-				entity.HasMany(e => e.TestCases)
-					.WithOne();
+				entity.OwnsMany<TestCase>(e => e.TestCases)
+					.HasForeignKey(ProblemName)
+					.HasKey(ProblemName, nameof(TestCase.Number));
 
-				entity.Metadata.FindNavigation(nameof(DataModel.Problem.TestCases))
+				entity.Metadata.FindNavigation(nameof(Problem.TestCases))
 					.SetPropertyAccessMode(PropertyAccessMode.Field);
 			});
 
-			modelBuilder.Entity<DataModel.ProblemSolution>(entity =>
-			{
-				entity.HasMany(e => e.Votes)
-					.WithOne();
 
-				entity.Metadata.FindNavigation(nameof(DataModel.ProblemSolution.Votes))
-					.SetPropertyAccessMode(PropertyAccessMode.Field);
-			});
-
-			modelBuilder.Entity<DataModel.Script>(entity =>
+			modelBuilder.Entity<ProblemSolution>(entity =>
 			{
 				entity.HasKey(e => e.Id);
-			});
 
-			modelBuilder.Ignore<DataModel.Tag>();
+				entity.HasOne(e => e.Submitter)
+					.WithMany()
+					.OnDelete(DeleteBehavior.SetNull);
 
-			modelBuilder.Ignore<DataModel.TestCase>();
+				entity.OwnsMany<Vote>(e => e.Votes)
+					.HasForeignKey(ProblemSolutionId)
+					.HasForeignKey(UserName)
+					.HasKey(ProblemSolutionId, UserName);
 
-			modelBuilder.Entity<DataModel.User>(entity =>
-			{
-				entity.HasKey(e => e.Username);
-			});
-			modelBuilder.Entity<DbEntity.DbUser>(entity =>
-			{
-				entity.HasMany(e => e.Scripts)
-					.WithOne();
-
-				entity.Metadata.FindNavigation(nameof(DataModel.User.Scripts))
+				entity.Metadata.FindNavigation(nameof(ProblemSolution.Votes))
 					.SetPropertyAccessMode(PropertyAccessMode.Field);
 			});
 
-			modelBuilder.Ignore<DataModel.Vote>();
+			modelBuilder.Entity<User>(entity =>
+			{
+				entity.HasKey(e => e.Name);
 
+				entity.OwnsMany<UserScript>(e => e.Scripts)
+					.HasForeignKey(UserName)
+					.HasKey(UserName, nameof(Script.Name));
 
+				entity.Metadata.FindNavigation(nameof(User.Scripts))
+					.SetPropertyAccessMode(PropertyAccessMode.Field);
+			});
 		}
 	}
 }

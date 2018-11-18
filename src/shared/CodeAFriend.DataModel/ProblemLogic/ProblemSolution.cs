@@ -7,18 +7,22 @@ using System.Linq;
 
 namespace CodeAFriend.DataModel
 {
-
+	/// <summary>A script that ran and successfully passed all test cases for a <see cref="Problem"/>.</summary>
 	public class ProblemSolution : Script
 	{
+		/// <summary>User who submitted this <see cref="ProblemSolution"/>.</summary>
 		public User Submitter { get; private set; }
 
+		/// <summary>All votes submitted for this solution.</summary>
 		public IEnumerable<Vote> Votes => _votes?.ToList();
 
 		private HashSet<Vote> _votes;
 
+		/// <summary>Parameterless Constructor required for EF.</summary>
 		protected ProblemSolution() { }
 
-		public ProblemSolution(User submitter, string body, SupportedLanguage language, Guid id) : base(body, language, id)
+		/// <summary>Constructor for creating new <see cref="ProblemSolution"/>.</summary>
+		public ProblemSolution(User submitter, Script script) : base(script.Name, script.Body, script.Language)
 		{
 			Submitter = submitter;
 			_votes = new HashSet<Vote>();
