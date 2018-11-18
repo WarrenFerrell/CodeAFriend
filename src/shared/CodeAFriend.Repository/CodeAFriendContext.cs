@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using CodeAFriend.DataModel;
+using CodeAFriend.DataModel.Constants;
 
 namespace CodeAFriend.Repository
 {
@@ -64,9 +65,6 @@ namespace CodeAFriend.Repository
 		/// <inheritdoc/>
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			// Additional index given to Tag to improve lookup speed.
-			modelBuilder.Entity<Tag>().HasIndex(nameof(Tag.Text));
-
 			modelBuilder.Entity<Problem>(entity =>
 			{
 				entity.HasKey(e => e.Name);
@@ -126,6 +124,11 @@ namespace CodeAFriend.Repository
 
 				entity.Metadata.FindNavigation(nameof(User.Scripts))
 					.SetPropertyAccessMode(PropertyAccessMode.Field);
+			});
+
+			modelBuilder.Entity<UserScript>(entity =>
+			{
+				entity.HasKey(e => e.Id);
 			});
 		}
 	}

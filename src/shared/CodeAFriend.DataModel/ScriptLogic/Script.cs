@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using CodeAFriend.DataModel.Constants;
+using System.ComponentModel.DataAnnotations;
 
 namespace CodeAFriend.DataModel
 {
@@ -18,6 +19,7 @@ namespace CodeAFriend.DataModel
 		public string Name { get; private set; }
 
 		/// <summary>Code.</summary>
+		[Required]
 		public string Body { get; private set; }
 
 		/// <summary>Language to compile code in.</summary>
