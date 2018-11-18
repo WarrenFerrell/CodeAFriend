@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace CodeAFriend.Languages.Python2.UnitTests
 {
-	public class Python2InterpreterTests
+	public class Python27InterpreterTests
 	{
 
 		public static string HelloWorldOutput = @"Hello World";
@@ -18,7 +18,7 @@ namespace CodeAFriend.Languages.Python2.UnitTests
 		public async Task Python2InterpreterRunsHelloWorld()
 		{
 			// Arrange
-			Python2Interpreter interpreter = new Python2Interpreter();
+			Python27Interpreter interpreter = new Python27Interpreter();
 			RuntimeParameters parameters = new RuntimeParameters(HelloWorldScript, 10000, 10000, "");
 
 			// Act
@@ -35,7 +35,7 @@ namespace CodeAFriend.Languages.Python2.UnitTests
 			string output;
 
 			// Act
-			output = await Python2Interpreter.RunEngineAsync(HelloWorldScript);
+			output = await Python27Interpreter.RunEngineAsync(HelloWorldScript);
 
 			// Assert
 			Assert.Equal(HelloWorldOutput, output.Trim());

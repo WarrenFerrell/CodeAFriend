@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace CodeAFriend.Languages.Python3.UnitTests
 {
-	public class Python3InterpreterTests
+	public class Python37InterpreterTests
 	{
 
 		public static string HelloWorldScript = $@"print(""Hello World"")";
@@ -17,7 +17,7 @@ namespace CodeAFriend.Languages.Python3.UnitTests
 		public async Task Python3InterpreterRunsHelloWorld()
 		{
 			// Arrange
-			var interpreter = new Python3Interpreter();
+			var interpreter = new Python37Interpreter();
 			RuntimeParameters parameters = new RuntimeParameters(HelloWorldScript, 10000, 10000, "");
 
 			// Act
@@ -42,7 +42,7 @@ Goodnight Gorilla!".Trim();
 		public async Task Python3InterpreterRunsHelloGorilla()
 		{
 			// Arrange
-			var interpreter = new Python3Interpreter();
+			var interpreter = new Python37Interpreter();
 			RuntimeParameters parameters = new RuntimeParameters(HelloGorillaScript, 10000, 10000, HelloGorillaInput);
 
 			// Act
