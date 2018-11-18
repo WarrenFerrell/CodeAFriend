@@ -1,9 +1,6 @@
-using System;
-using System.Text;
-using System.Collections;
 using System.Collections.Generic;
-using CodeAFriend.DataModel.Constants;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeAFriend.DataModel
 {
@@ -16,6 +13,7 @@ namespace CodeAFriend.DataModel
 		/// <summary>All votes submitted for this solution.</summary>
 		public IEnumerable<Vote> Votes => _votes?.ToList();
 
+		// Field Collections for EF (Cannot be readonly)
 		private HashSet<Vote> _votes;
 
 		/// <summary>Parameterless Constructor required for EF.</summary>
@@ -28,5 +26,14 @@ namespace CodeAFriend.DataModel
 			_votes = new HashSet<Vote>();
 		}
 
+		/// <summary>
+		/// Add a <see cref="Vote"/> to this <see cref="ProblemSolution"/>.
+		/// </summary>
+		/// <param name="vote"><see cref="Vote"/> to add.</param>
+		/// <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+		public void Add(Vote vote, DbContext context = null)
+		{
+			this.Add(_votes, vote, context);
+		}
 	}
 }

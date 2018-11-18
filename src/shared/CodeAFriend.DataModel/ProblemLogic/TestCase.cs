@@ -1,7 +1,4 @@
 using System;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace CodeAFriend.DataModel
 {
@@ -11,7 +8,7 @@ namespace CodeAFriend.DataModel
 	public class TestCase
 	{
 		/// <summary>Order in which test case should be run.</summary>
-		public int Number { get; private set; }
+		public uint Number { get; private set; }
 
 		/// <summary>Input for the test case.</summary>
 		public string Input { get; private set; }
@@ -23,7 +20,7 @@ namespace CodeAFriend.DataModel
 		private TestCase() { }
 
 		/// <summary>Constructor for creating new test case.</summary>
-		public TestCase(int number, string input, string expectedOutput)
+		public TestCase(uint number, string input, string expectedOutput)
 		{
 			Number = number;
 			Input = input;

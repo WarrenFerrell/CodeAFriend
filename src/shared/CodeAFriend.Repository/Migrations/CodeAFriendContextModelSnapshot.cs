@@ -45,7 +45,7 @@ namespace CodeAFriend.Repository.Migrations
             modelBuilder.Entity("CodeAFriend.DataModel.Problem", b =>
                 {
                     b.HasOne("CodeAFriend.DataModel.User", "User")
-                        .WithMany()
+                        .WithMany("Problems")
                         .HasForeignKey("UserName")
                         .OnDelete(DeleteBehavior.SetNull);
 
@@ -126,7 +126,7 @@ namespace CodeAFriend.Repository.Migrations
                         {
                             b1.Property<string>("ProblemName");
 
-                            b1.Property<int>("Number");
+                            b1.Property<uint>("Number");
 
                             b1.Property<string>("ExpectedOutput");
 

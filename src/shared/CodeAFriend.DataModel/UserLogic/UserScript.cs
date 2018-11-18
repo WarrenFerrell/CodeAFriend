@@ -1,7 +1,4 @@
 using System;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
 using CodeAFriend.DataModel.Constants;
 
 namespace CodeAFriend.DataModel
@@ -18,8 +15,5 @@ namespace CodeAFriend.DataModel
 		public UserScript(string name, string body, SupportedLanguage language) : base(name, body, language)
 		{
 		}
-
-
-
 	}
 }

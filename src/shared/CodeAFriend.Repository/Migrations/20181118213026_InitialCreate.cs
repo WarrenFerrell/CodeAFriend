@@ -109,7 +109,7 @@ namespace CodeAFriend.Repository.Migrations
                 name: "ProblemTestCases",
                 columns: table => new
                 {
-                    Number = table.Column<int>(nullable: false),
+                    Number = table.Column<uint>(nullable: false),
                     Input = table.Column<string>(nullable: true),
                     ExpectedOutput = table.Column<string>(nullable: true),
                     ProblemName = table.Column<string>(nullable: false)

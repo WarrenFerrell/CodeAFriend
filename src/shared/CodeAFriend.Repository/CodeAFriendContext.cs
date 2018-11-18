@@ -70,7 +70,7 @@ namespace CodeAFriend.Repository
 				entity.HasKey(e => e.Name);
 
 				entity.HasOne(e => e.User)
-					.WithMany()
+					.WithMany(d => d.Problems)
 					.OnDelete(DeleteBehavior.SetNull)
 					;
 
@@ -123,6 +123,9 @@ namespace CodeAFriend.Repository
 					.HasKey(UserName, nameof(Script.Name));
 
 				entity.Metadata.FindNavigation(nameof(User.Scripts))
+					.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+				entity.Metadata.FindNavigation(nameof(User.Problems))
 					.SetPropertyAccessMode(PropertyAccessMode.Field);
 			});
 

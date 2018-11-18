@@ -1,8 +1,7 @@
 using System;
-using System.Text;
-using System.Collections;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace CodeAFriend.DataModel
 {
@@ -10,47 +9,48 @@ namespace CodeAFriend.DataModel
 	public class User
 	{
 		/// <summary>This user's unique name.</summary>
-		public virtual string Name { get; private set; }
+		public string Name { get; private set; }
 
 		/// <summary><see cref="UserScript"/>s that this user has written.</summary>
-		public virtual IEnumerable<UserScript> Scripts => _scripts;
+		public IEnumerable<UserScript> Scripts => _scripts?.ToList();
 
-		protected HashSet<UserScript> _scripts;
+		/// <summary><see cref="Problem"/>s that this user has written.</summary>
+		public IEnumerable<Problem> Problems => _problems?.ToList();
 
+		// Field Collections for EF (Cannot be readonly)
+		private HashSet<UserScript> _scripts;
+		private HashSet<Problem> _problems;
+
+		/// <summary>Parameterless Constructor required for EF.</summary>
 		private User() { }
 
+		/// <summary>Constructor for creating new <see cref="User"/>.</summary>
 		public User(string name)
 		{
 			if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException(nameof(name));
 			Name = name;
 			_scripts = new HashSet<UserScript>();
+			_problems = new HashSet<Problem>();
 		}
 
 		/// <summary>
-		/// 
+		/// Add a <see cref="UserScript"/> to this <see cref="User"/>.
 		/// </summary>
-		/// <param name="script"></param>
-		/// <param name="context"></param>
-		/// <remarks>some code from https://github.com/JonPSmith/EfCore.GenericBizRunner/blob/master/DataLayer/EfClasses/Book.cs </remarks>
-		public void AddScript(UserScript script, DbContext context = null)
+		/// <param name="script"><see cref="UserScript"/> to add.</param>
+		/// <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+		public void Add(UserScript script, DbContext context = null)
 		{
-			if (_scripts != null)
-			{
-				_scripts.Add(script);
-			}
-			else if (context == null)
-			{
-				throw new ArgumentNullException(nameof(context),
-					"You must provide a context if the Scripts collection isn't valid.");
-			}
-			else if (context.Entry(this).IsKeySet)
-			{
-				context.Add(script);
-			}
-			else
-			{
-				throw new InvalidOperationException("Unable to save script for user.");
-			}
+			this.Add(_scripts, script, context);
+		}
+
+		/// <summary>
+		/// Add a <see cref="Problem"/> to this <see cref="User"/>.
+		/// </summary>
+		/// <param name="problem"><see cref="Problem"/> to add.</param>
+		/// <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+		public void Add(Problem problem, DbContext context = null)
+		{
+			this.Add(_problems, problem, context);
 		}
 	}
 }

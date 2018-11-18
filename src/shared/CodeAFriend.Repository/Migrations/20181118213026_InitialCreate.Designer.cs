@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodeAFriend.Repository.Migrations
 {
     [DbContext(typeof(CodeAFriendContext))]
-    [Migration("20181118201144_InitialCreate")]
+    [Migration("20181118213026_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,7 @@ namespace CodeAFriend.Repository.Migrations
             modelBuilder.Entity("CodeAFriend.DataModel.Problem", b =>
                 {
                     b.HasOne("CodeAFriend.DataModel.User", "User")
-                        .WithMany()
+                        .WithMany("Problems")
                         .HasForeignKey("UserName")
                         .OnDelete(DeleteBehavior.SetNull);
 
@@ -128,7 +128,7 @@ namespace CodeAFriend.Repository.Migrations
                         {
                             b1.Property<string>("ProblemName");
 
-                            b1.Property<int>("Number");
+                            b1.Property<uint>("Number");
 
                             b1.Property<string>("ExpectedOutput");
 
