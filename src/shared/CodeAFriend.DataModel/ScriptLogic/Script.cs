@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using CodeAFriend.DataModel.Constants;
+using System.ComponentModel.DataAnnotations;
 
 namespace CodeAFriend.DataModel
 {
@@ -11,28 +12,29 @@ namespace CodeAFriend.DataModel
 	/// </summary>
 	public class Script
 	{
-		/// <summary>
-		/// Code.
-		/// </summary>
-		public virtual string Body { get; private set; }
+		/// <summary>Unique Id assigned to the Script during creation.</summary>
+		public Guid Id { get; private set; }
 
-		/// <summary>
-		/// Language to compile code in.
-		/// </summary>
-		public virtual SupportedLanguage Language { get; private set; }
+		/// <summary>Name given to this script by the user who created it.</summary>
+		public string Name { get; private set; }
 
-		/// <summary>
-		/// Unique Id assigned to the Script during creation.
-		/// </summary>
-		public virtual Guid Id { get; private set; }
+		/// <summary>Code.</summary>
+		[Required]
+		public string Body { get; private set; }
 
+		/// <summary>Language to compile code in.</summary>
+		public SupportedLanguage Language { get; private set; }
+
+		/// <summary>Parameterless Constructor required for EF.</summary>
 		protected Script() { }
 
-		public Script(string body, SupportedLanguage language, Guid id)
+		/// <summary>Constructor for creating new <see cref="Script"/>.</summary>
+		public Script(string name, string body, SupportedLanguage language)
 		{
+			Name = name;
 			Body = body;
 			Language = language;
-			Id = id;
+			Id = Guid.NewGuid();
 		}
 
 		/// <summary>
@@ -42,7 +44,7 @@ namespace CodeAFriend.DataModel
 		/// <returns><see cref="Script"/> object that is a deep copy of this <see cref="Script"/>.</returns>
 		public Script Clone()
 		{
-			return new Script(Body, Language, Id);
+			return new Script(Name, Body, Language);
 		}
 
 	}

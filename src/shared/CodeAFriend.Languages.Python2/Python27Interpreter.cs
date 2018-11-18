@@ -18,10 +18,10 @@ namespace CodeAFriend.Languages.Python2
 	/// <summary>
 	/// 
 	/// </summary>
-	public class Python2Interpreter : InterpreterTemplate
+	public class Python27Interpreter : InterpreterTemplate
 	{
 		/// <inheritdoc/>
-		public override SupportedLanguage Name { get; } = SupportedLanguage.Python2;
+		public override SupportedLanguage Name { get; } = SupportedLanguage.Python27;
 
 		/// <remarks>from 
 		/// https://medium.com/emoney-engineering/running-python-script-from-c-and-working-with-the-results-843e68d230e5 .
@@ -30,7 +30,7 @@ namespace CodeAFriend.Languages.Python2
 		/// <inheritdoc/>
 		public override ProcessStartInfo GetProcessStartInfo(string scriptFilePath)
 		{
-			var thisAssembly = typeof(Python2Interpreter).Assembly;
+			var thisAssembly = typeof(Python27Interpreter).Assembly;
 			var arguments = $"{thisAssembly.ManifestModule.Name} {scriptFilePath}";
 
 			return new ProcessStartInfo("dotnet", arguments);

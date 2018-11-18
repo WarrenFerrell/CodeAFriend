@@ -1,7 +1,4 @@
 using System;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace CodeAFriend.DataModel
 {
@@ -10,20 +7,22 @@ namespace CodeAFriend.DataModel
 	/// </summary>
 	public class TestCase
 	{
-		/// <summary>
-		/// Input for the test case.
-		/// </summary>
-		public virtual string Input { get; private set; }
+		/// <summary>Order in which test case should be run.</summary>
+		public uint Number { get; private set; }
 
-		/// <summary>
-		/// Expected output from the program during execution.
-		/// </summary>
-		public virtual string ExpectedOutput { get; private set; }
+		/// <summary>Input for the test case.</summary>
+		public string Input { get; private set; }
 
-		protected TestCase() { }
+		/// <summary>Expected output from the program during execution.</summary>
+		public string ExpectedOutput { get; private set; }
 
-		public TestCase(string input, string expectedOutput)
+		/// <summary>Parameterless Constructor required for EF.</summary>
+		private TestCase() { }
+
+		/// <summary>Constructor for creating new test case.</summary>
+		public TestCase(uint number, string input, string expectedOutput)
 		{
+			Number = number;
 			Input = input;
 			ExpectedOutput = expectedOutput;
 		}

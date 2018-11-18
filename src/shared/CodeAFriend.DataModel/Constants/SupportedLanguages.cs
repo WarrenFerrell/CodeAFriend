@@ -4,9 +4,14 @@ using System.Text;
 
 namespace CodeAFriend.DataModel.Constants
 {
+	/// <summary>
+	/// All currently supported Languages in the CodeAFriend system 
+	/// </summary>
 	public enum SupportedLanguage
 	{
-		Python2,
-		Python37
+		/// <summary>Python 2.7</summary>
+		Python27 = 0,
+		/// <summary>Python 3.7</summary>
+		Python37 = 1
 	}
 }
