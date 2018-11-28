@@ -50,11 +50,11 @@ namespace CodeAFriend.Repository.UnitTests
 
 		public async Task CreateScriptForUser(string userName, string scriptName, string scriptBody, SupportedLanguage language)
 		{
-			var newScript = new UserScript(scriptName, scriptBody, language);
+			var newScript = new UserScript.CreateCommand(scriptName, scriptBody, language);
 			using (var context = NewContext())
 			{
 				var user = await context.Users.FindAsync(userName);
-				user.Add(newScript, context);
+				user.AddAsync(newScript, context);
 				await context.SaveChangesAsync();
 			}
 		}
@@ -64,8 +64,8 @@ namespace CodeAFriend.Repository.UnitTests
 			using (var context = NewContext())
 			{
 				var user = await context.Users.FindAsync(userName);
-				var newProblem = new Problem(problemName, problemDescription, user);
-				user.Add(newProblem, context);
+				var newProblem = new Problem.CreateCommand(problemName, problemDescription);
+				await user.AddAsync(newProblem, context);
 				await context.SaveChangesAsync();
 			}
 		}

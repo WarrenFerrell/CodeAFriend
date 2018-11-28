@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeAFriend.Languages.Python2\CodeAFriend.Languages.Python2.csproj" />
+    <ProjectReference Include="..\CodeAFriend.Languages.Python3\CodeAFriend.Languages.Python3.csproj" />
+  </ItemGroup>
+
+</Project>

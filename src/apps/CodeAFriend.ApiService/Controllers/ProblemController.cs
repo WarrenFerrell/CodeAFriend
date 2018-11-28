@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using CodeAFriend.DataModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using CodeAFriend.Facade;
 
 namespace CodeAFriend.ApiService.Controllers
 {
@@ -14,6 +15,11 @@ namespace CodeAFriend.ApiService.Controllers
 	[Route("[controller]")]
 	public class ProblemController : CodaAFriendController
 	{
+		/// <inheritdoc />
+		public ProblemController(ICodeAFriendFacade facade) : base(facade)
+		{
+		}
+
 		/// <summary>
 		/// Create the specifed <see cref="Problem"/>.
 		/// </summary>
@@ -26,7 +32,7 @@ namespace CodeAFriend.ApiService.Controllers
 		}
 
 		/// <summary>
-		/// Update the specifed <see cref="Problem"/>.
+		/// Update the specified <see cref="Problem"/>.
 		/// </summary>
 		/// <param name="problemName">Name of problem to update.</param>
 		/// <param name="problem">New Properties for problem.</param>
@@ -77,7 +83,8 @@ namespace CodeAFriend.ApiService.Controllers
 		/// <param name="vote"></param>
 		/// <param name="solution"></param>
 		/// <returns></returns>
-		public void Vote(Vote vote, ProblemSolution solution)
+		[HttpPost("{problemName}/vote")]
+		public void Vote(string problemName, Vote vote)
 		{
 			throw new Exception("The method or operation is not implemented.");
 		}
@@ -87,6 +94,7 @@ namespace CodeAFriend.ApiService.Controllers
 		/// </summary>
 		/// <param name="problemName"></param>
 		/// <returns>Solution[ * ]</returns>
+		[HttpGet("{problemName}/solutions")]
 		public IEnumerable<ProblemSolution> GetSolutions(string problemName)
 		{
 			throw new Exception("The method or operation is not implemented.");

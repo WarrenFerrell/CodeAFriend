@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CodeAFriend.Core\CodeAFriend.Core.csproj" />
     <ProjectReference Include="..\CodeAFriend.DataModel\CodeAFriend.DataModel.csproj" />
+    <ProjectReference Include="..\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.csproj" />
   </ItemGroup>
 
 </Project>

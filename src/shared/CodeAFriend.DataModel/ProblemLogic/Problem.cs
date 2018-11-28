@@ -8,7 +8,7 @@ namespace CodeAFriend.DataModel
 	/// <summary>
 	/// A problem with a set of <see cref="TestCase"/>s to determine if a <see cref="Script"/> solves the <see cref="Problem"/>.
 	/// </summary>
-	public class Problem
+	public partial class Problem
 	{
 		/// <summary>Unique name of the Problem.</summary>
 		public virtual string Name { get; private set; }
@@ -97,5 +97,7 @@ namespace CodeAFriend.DataModel
 		{
 			this.Add(_tags, tag, context);
 		}
+
+		
 	}
 }

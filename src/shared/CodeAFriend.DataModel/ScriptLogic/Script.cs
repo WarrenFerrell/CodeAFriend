@@ -46,6 +46,5 @@ namespace CodeAFriend.DataModel
 		{
 			return new Script(Name, Body, Language);
 		}
-
 	}
 }

@@ -25,7 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAFriend.Languages.Core"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAFriend.Repository", "src\shared\CodeAFriend.Repository\CodeAFriend.Repository.csproj", "{DAC069E0-B1C7-4114-B75D-51D86C17D96D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAFriend.Repository.UnitTests", "test\unit\CodeAFriend.Repository.UnitTests\CodeAFriend.Repository.UnitTests.csproj", "{58CE9930-7DE5-433C-A290-6A69067ED297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAFriend.Repository.UnitTests", "test\unit\CodeAFriend.Repository.UnitTests\CodeAFriend.Repository.UnitTests.csproj", "{58CE9930-7DE5-433C-A290-6A69067ED297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAFriend.Facade", "src\shared\CodeAFriend.Facade\CodeAFriend.Facade.csproj", "{AAB9A03F-A396-45EB-9F2C-9ACA1218D18D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAFriend.Core", "src\shared\CodeAFriend.Core\CodeAFriend.Core.csproj", "{49FA5D8B-C70B-4C29-8750-90D670ADD8CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAFriend.Languages.Factory", "src\shared\CodeAFriend.Languages.Factory\CodeAFriend.Languages.Factory.csproj", "{075567E7-FBBD-4936-8EA5-629FCF6F3400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +75,18 @@ Global
 		{58CE9930-7DE5-433C-A290-6A69067ED297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58CE9930-7DE5-433C-A290-6A69067ED297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58CE9930-7DE5-433C-A290-6A69067ED297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB9A03F-A396-45EB-9F2C-9ACA1218D18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB9A03F-A396-45EB-9F2C-9ACA1218D18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB9A03F-A396-45EB-9F2C-9ACA1218D18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB9A03F-A396-45EB-9F2C-9ACA1218D18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49FA5D8B-C70B-4C29-8750-90D670ADD8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FA5D8B-C70B-4C29-8750-90D670ADD8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FA5D8B-C70B-4C29-8750-90D670ADD8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FA5D8B-C70B-4C29-8750-90D670ADD8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{075567E7-FBBD-4936-8EA5-629FCF6F3400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075567E7-FBBD-4936-8EA5-629FCF6F3400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075567E7-FBBD-4936-8EA5-629FCF6F3400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075567E7-FBBD-4936-8EA5-629FCF6F3400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +101,9 @@ Global
 		{64D0A3D1-ACEC-4EC9-8AC2-8C663974D14C} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
 		{DAC069E0-B1C7-4114-B75D-51D86C17D96D} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
 		{58CE9930-7DE5-433C-A290-6A69067ED297} = {64032CAA-C91F-48C6-ABEC-5ABE0EBEF1A1}
+		{AAB9A03F-A396-45EB-9F2C-9ACA1218D18D} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
+		{49FA5D8B-C70B-4C29-8750-90D670ADD8CA} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
+		{075567E7-FBBD-4936-8EA5-629FCF6F3400} = {8AFD81F7-0648-48F7-BE55-D24919619FC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CB7CB96-02F4-4860-A99C-3F96D6F985DA}
