@@ -15,9 +15,9 @@ namespace CodeAFriend.Languages.Core
 		public abstract SupportedLanguage Name { get; }
 
 		/// <inheritdoc/>
-		public async Task<ScriptEvaluation> ExecuteAsync(RuntimeParameters parameters)
+		public async Task<ScriptEvaluation> ExecuteAsync(string body, ExecutionParameters parameters)
 		{
-			var scriptFilePath = await WriteScriptToFileAsync(parameters.ScriptBody);
+			var scriptFilePath = await WriteScriptToFileAsync(body);
 
 			ProcessStartInfo startInfo = GetProcessStartInfo(scriptFilePath);
 
@@ -36,7 +36,7 @@ namespace CodeAFriend.Languages.Core
 
 		public abstract ProcessStartInfo GetProcessStartInfo(string scriptFilePath);
 
-		public virtual async Task<ScriptEvaluation> RunProcessAsync(RuntimeParameters parameters, ProcessStartInfo startInfo, string scriptFilePath)
+		public virtual async Task<ScriptEvaluation> RunProcessAsync(ExecutionParameters parameters, ProcessStartInfo startInfo, string scriptFilePath)
 		{
 			startInfo.CreateNoWindow = true;
 			startInfo.UseShellExecute = false;

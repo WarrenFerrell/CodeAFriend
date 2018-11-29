@@ -9,11 +9,17 @@ namespace CodeAFriend.DataModel
 	public class UserScript : Script
 	{
 		/// <summary>Parameterless Constructor required for EF.</summary>
-		protected UserScript() { }
+		internal UserScript() { }
 
 		/// <summary>Constructor for creating new <see cref="UserScript"/>.</summary>
 		public UserScript(string name, string body, SupportedLanguage language) : base(name, body, language)
 		{
 		}
+
+		internal UserScript(Guid id, string name, string body, SupportedLanguage language) : base(id, name, body, language)
+		{
+		}
+
+		internal UserScript(Guid id) : base (id, name) { }
 	}
 }

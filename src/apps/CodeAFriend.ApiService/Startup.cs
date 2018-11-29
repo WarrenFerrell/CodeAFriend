@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using CodeAFriend.Core;
+using CodeAFriend.Facade;
+using CodeAFriend.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +13,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CodeAFriend.ApiService
 {
@@ -31,6 +36,29 @@ namespace CodeAFriend.ApiService
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 
+			services.AddDbContext<CodeAFriendContext>();
+			services.AddScoped<ICodeAFriendFacade, CodeAFriend.Facade.CodeAFriendFacade>();
+
+
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new Info { Title = "CodeAFriend API", Version = "v1", Description = "REST API to Manage CodeAFriend data" });
+
+
+				c.CustomSchemaIds(x => x.FullName);
+
+				c.DescribeAllEnumsAsStrings();
+
+				try
+				{
+					c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{typeof(Program).Assembly.FullName.UpToFirst(',')}.xml"));
+					c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{typeof(DataModel.User).Assembly.FullName.UpToFirst(',')}.xml"));
+				}
+				catch (FileNotFoundException)
+				{
+					// not finding xml files sucks but is not a critical problem.
+				}
+			});
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
@@ -57,6 +85,13 @@ namespace CodeAFriend.ApiService
 				routes.MapRoute(
 					name: "default",
 					template: "{controller=Home}/{action=Index}/{id?}");
+			});
+
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("v1/swagger.json", "CodeAFriend API v1");
+				//c.DocExpansion("none");
 			});
 		}
 	}

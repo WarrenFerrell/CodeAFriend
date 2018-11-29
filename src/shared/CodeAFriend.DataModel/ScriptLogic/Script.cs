@@ -10,7 +10,7 @@ namespace CodeAFriend.DataModel
 	/// <summary>
 	/// A piece of code to be compiled in a specified language.
 	/// </summary>
-	public class Script
+	public partial class Script
 	{
 		/// <summary>Unique Id assigned to the Script during creation.</summary>
 		public Guid Id { get; private set; }
@@ -26,7 +26,7 @@ namespace CodeAFriend.DataModel
 		public SupportedLanguage Language { get; private set; }
 
 		/// <summary>Parameterless Constructor required for EF.</summary>
-		protected Script() { }
+		internal Script() { }
 
 		/// <summary>Constructor for creating new <see cref="Script"/>.</summary>
 		public Script(string name, string body, SupportedLanguage language)
@@ -35,6 +35,16 @@ namespace CodeAFriend.DataModel
 			Body = body;
 			Language = language;
 			Id = Guid.NewGuid();
+		}
+
+		internal Script(Guid id, string name, string body, SupportedLanguage language) : this(name, body, language)
+		{
+			Id = id;
+		}
+
+		internal Script(Guid id)
+		{
+			Id = id;
 		}
 
 		/// <summary>
@@ -46,6 +56,5 @@ namespace CodeAFriend.DataModel
 		{
 			return new Script(Name, Body, Language);
 		}
-
 	}
 }

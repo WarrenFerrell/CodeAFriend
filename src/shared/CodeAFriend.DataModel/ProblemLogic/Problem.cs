@@ -8,7 +8,7 @@ namespace CodeAFriend.DataModel
 	/// <summary>
 	/// A problem with a set of <see cref="TestCase"/>s to determine if a <see cref="Script"/> solves the <see cref="Problem"/>.
 	/// </summary>
-	public class Problem
+	public partial class Problem
 	{
 		/// <summary>Unique name of the Problem.</summary>
 		public virtual string Name { get; private set; }
@@ -37,7 +37,7 @@ namespace CodeAFriend.DataModel
 		private Problem() { }
 
 		/// <summary>Constructor for creating new <see cref="Problem"/>.</summary>
-		public Problem(string name, string description, User user)
+		public Problem(string name, string description, User user) 
 		{
 			Name = name;
 			Description = description;
@@ -47,6 +47,11 @@ namespace CodeAFriend.DataModel
 			_tags = new HashSet<Tag>();
 		}
 
+		internal Problem(string name, string description = null) : this(name, description, null) { }
+
+		internal Problem(string name) : this(name, null, null) { }
+
+
 		/// <summary>
 		/// Test if a script is a <see cref="ProblemSolution"/>.
 		/// </summary>
@@ -55,13 +60,13 @@ namespace CodeAFriend.DataModel
 		/// <returns>bool</returns>
 		public async Task<bool> TestScript(Script script, ILanguageInterpreter interpreter)
 		{
-			var parameters = new RuntimeParameters(script.Body, 2000, 200000, null);
+			var parameters = new ExecutionParameters(2000, 200000, null);
 			var results = new List<ScriptEvaluation>();
 			bool pass = true;
 			foreach (var testCase in TestCases)
 			{
 				parameters.Input = testCase.Input;
-				var result = await interpreter.ExecuteAsync(parameters);
+				var result = await interpreter.ExecuteAsync(script.Body, parameters);
 				results.Add(result);
 				pass = pass && result.Output.Trim() == testCase.ExpectedOutput;
 			}
@@ -97,5 +102,7 @@ namespace CodeAFriend.DataModel
 		{
 			this.Add(_tags, tag, context);
 		}
+
+		
 	}
 }

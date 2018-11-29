@@ -6,16 +6,18 @@ using System.Collections.Generic;
 namespace CodeAFriend.DataModel
 {
 	/// <summary>
-	/// Results from executing a script using specified <see cref="RuntimeParameters"/>.
+	/// Results from executing a <see cref="Script"/> using specified <see cref="ExecutionParameters"/>.
 	/// </summary>
 	public class ScriptEvaluation
 	{
-		public ScriptEvaluation(string output, double cpuTime, long memoryUsage, RuntimeParameters parameters)
+		/// <summary>
+		/// All Properties constructor.
+		/// </summary>
+		public ScriptEvaluation(string output, double cpuTime, long memoryUsage)
 		{
 			Output = output;
 			CpuTime = cpuTime;
 			MemoryUsage = memoryUsage;
-			Parameters = parameters;
 		}
 
 		/// <summary>
@@ -32,10 +34,5 @@ namespace CodeAFriend.DataModel
 		/// Peak memory usage, by the program, during execution.
 		/// </summary>
 		public long MemoryUsage { get; set; }
-
-		/// <summary>
-		/// Parameters used during program executions.
-		/// </summary>
-		public RuntimeParameters Parameters { get; set; }
 	}
 }

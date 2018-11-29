@@ -50,23 +50,21 @@ namespace CodeAFriend.Repository.UnitTests
 
 		public async Task CreateScriptForUser(string userName, string scriptName, string scriptBody, SupportedLanguage language)
 		{
-			var newScript = new UserScript(scriptName, scriptBody, language);
+			var newScript = new User.AddScriptCommand(userName, scriptName, scriptBody, language);
 			using (var context = NewContext())
 			{
 				var user = await context.Users.FindAsync(userName);
-				user.Add(newScript, context);
-				await context.SaveChangesAsync();
+				await user.AddAsync(newScript, context);
 			}
 		}
 
-		public async Task CreateProblemForUser(string userName, string problemName, string problemDescription)
+		public async Task CreateProblemForUser(string username, string problemName, string problemDescription)
 		{
 			using (var context = NewContext())
 			{
-				var user = await context.Users.FindAsync(userName);
-				var newProblem = new Problem(problemName, problemDescription, user);
-				user.Add(newProblem, context);
-				await context.SaveChangesAsync();
+				var user = await context.Users.FindAsync(username);
+				var newProblem = new User.AddProblemCommand(username, problemName, problemDescription);
+				await user.AddAsync(newProblem, context);
 			}
 		}
 

@@ -18,10 +18,10 @@ namespace CodeAFriend.Languages.Python3.UnitTests
 		{
 			// Arrange
 			var interpreter = new Python37Interpreter();
-			RuntimeParameters parameters = new RuntimeParameters(HelloWorldScript, 10000, 10000, "");
+			ExecutionParameters parameters = new ExecutionParameters(10000, 10000, "");
 
 			// Act
-			ScriptEvaluation results = await interpreter.ExecuteAsync(parameters);
+			ScriptEvaluation results = await interpreter.ExecuteAsync(HelloWorldScript, parameters);
 
 			// Assert
 			Assert.Equal(HelloWorldOutput, results.Output.Trim());
@@ -43,10 +43,10 @@ Goodnight Gorilla!".Trim();
 		{
 			// Arrange
 			var interpreter = new Python37Interpreter();
-			RuntimeParameters parameters = new RuntimeParameters(HelloGorillaScript, 10000, 10000, HelloGorillaInput);
+			ExecutionParameters parameters = new ExecutionParameters(10000, 10000, HelloGorillaInput);
 
 			// Act
-			ScriptEvaluation results = await interpreter.ExecuteAsync(parameters);
+			ScriptEvaluation results = await interpreter.ExecuteAsync(HelloGorillaScript, parameters);
 
 			// Assert
 			Assert.Equal(HelloGorillaOutput, results.Output.Trim());

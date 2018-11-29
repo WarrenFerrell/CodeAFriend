@@ -7,10 +7,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\shared\CodeAFriend.Core\CodeAFriend.Core.csproj" />
     <ProjectReference Include="..\..\shared\CodeAFriend.DataModel\CodeAFriend.DataModel.csproj" />
+    <ProjectReference Include="..\..\shared\CodeAFriend.Facade\CodeAFriend.Facade.csproj" />
+    <ProjectReference Include="..\..\shared\CodeAFriend.Languages.Factory\CodeAFriend.Languages.Factory.csproj" />
+    <ProjectReference Include="..\..\shared\CodeAFriend.Languages.Python3\CodeAFriend.Languages.Python3.csproj" />
     <ProjectReference Include="..\..\shared\CodeAFriend.Repository\CodeAFriend.Repository.csproj" />
   </ItemGroup>
 

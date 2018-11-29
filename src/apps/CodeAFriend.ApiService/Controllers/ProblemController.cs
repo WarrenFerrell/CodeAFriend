@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using CodeAFriend.DataModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using System.Threading.Tasks;
+using CodeAFriend.Facade;
 
 namespace CodeAFriend.ApiService.Controllers
 {
@@ -14,27 +16,46 @@ namespace CodeAFriend.ApiService.Controllers
 	[Route("[controller]")]
 	public class ProblemController : CodaAFriendController
 	{
-		/// <summary>
-		/// Create the specifed <see cref="Problem"/>.
-		/// </summary>
-		/// <param name="problem">Properties for the <see cref="Problem"/>.</param>
-		/// <returns><see cref="HttpStatusCode.Created"/> and created <see cref="Problem"/>.</returns>
-		[HttpPost]
-		public Problem CreateProblem(Problem problem)
+		/// <inheritdoc />
+		public ProblemController(ICodeAFriendFacade facade) : base(facade)
 		{
-			throw new Exception("The method or operation is not implemented.");
 		}
 
 		/// <summary>
-		/// Update the specifed <see cref="Problem"/>.
+		/// Create the specified <see cref="Problem"/>.
+		/// </summary>
+		/// <param name="command">Properties for the <see cref="Problem"/>.</param>
+		/// <returns><see cref="HttpStatusCode.Created"/> and created <see cref="Problem"/>.</returns>
+		[HttpPost]
+		public async Task<IActionResult> AddProblemForUser(User.AddProblemCommand command)
+		{
+			var result = await Facade.ExecuteCommandAsync(command);
+			return CreatedAtAction(nameof(GetProblem), result.Name, result);
+		}
+
+		/// <summary>
+		/// Update the specified <see cref="Problem"/>.
 		/// </summary>
 		/// <param name="problemName">Name of problem to update.</param>
 		/// <param name="problem">New Properties for problem.</param>
 		/// <returns><see cref="HttpStatusCode.OK"/> and updated <see cref="Problem"/>.</returns>
-		[HttpPut("{problemName}")]
-		public Problem UpdateProblem(string problemName, Problem problem)
+		[HttpPut]
+		public async Task<IActionResult> UpdateProblem(User.UpdateProblemCommand command)
 		{
-			throw new Exception("The method or operation is not implemented.");
+			var result = await Facade.ExecuteCommandAsync(command);
+			return Ok(result);
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="problemName">Name of problem to delete.</param>
+		/// <returns>><see cref="HttpStatusCode.NoContent"/>.</returns>
+		[HttpDelete]
+		public async Task<IActionResult> DeleteProblem(User.DeleteProblemCommand command)
+		{
+			var result = await Facade.ExecuteCommandAsync(command);
+			return NoContent();
 		}
 
 		/// <summary>
@@ -43,20 +64,10 @@ namespace CodeAFriend.ApiService.Controllers
 		/// <param name="problemName">Name of problem to retrieve.</param>
 		/// <returns><see cref="HttpStatusCode.OK"/> and specified <see cref="Problem"/>.</returns>
 		[HttpGet("{problemName}")]
-		public Problem GetProblem(string problemName)
+		public async Task<IActionResult> GetProblem(string problemName)
 		{
-			throw new Exception("The method or operation is not implemented.");
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="problemName">Name of problem to delete.</param>
-		/// <returns>><see cref="HttpStatusCode.NoContent"/>.</returns>
-		[HttpDelete("{problemName}")]
-		public void DeleteProblem(string problemName)
-		{
-			throw new Exception("The method or operation is not implemented.");
+			var result = await Facade.GetProblem(problemName);
+			return Ok(result);
 		}
 
 		/// <summary>
@@ -65,8 +76,8 @@ namespace CodeAFriend.ApiService.Controllers
 		/// <param name="script"></param>
 		/// <param name="problemName"></param>
 		/// <returns>bool</returns>
-		[HttpPost("{problemName}")]
-		public bool TestScript(string problemName, Script script)
+		[HttpPost("{problemName}/TestScript/{scriptId:guid}")]
+		public async Task<IActionResult> TestScript(string problemName, Guid scriptId)
 		{
 			throw new Exception("The method or operation is not implemented.");
 		}
@@ -77,7 +88,8 @@ namespace CodeAFriend.ApiService.Controllers
 		/// <param name="vote"></param>
 		/// <param name="solution"></param>
 		/// <returns></returns>
-		public void Vote(Vote vote, ProblemSolution solution)
+		[HttpPost("{problemName}/vote")]
+		public async Task<IActionResult> Vote(string problemName, Vote vote)
 		{
 			throw new Exception("The method or operation is not implemented.");
 		}
@@ -87,10 +99,10 @@ namespace CodeAFriend.ApiService.Controllers
 		/// </summary>
 		/// <param name="problemName"></param>
 		/// <returns>Solution[ * ]</returns>
+		[HttpGet("{problemName}/solutions")]
 		public IEnumerable<ProblemSolution> GetSolutions(string problemName)
 		{
 			throw new Exception("The method or operation is not implemented.");
 		}
-
 	}
 }

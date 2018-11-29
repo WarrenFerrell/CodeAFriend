@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using CodeAFriend.DataModel;
+using CodeAFriend.Facade;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeAFriend.ApiService.Controllers
@@ -12,11 +13,18 @@ namespace CodeAFriend.ApiService.Controllers
 	/// </summary>
 	public abstract class CodaAFriendController : ControllerBase
 	{
+		/// <summary>
+		/// DI constructor.
+		/// </summary>
+		protected CodaAFriendController(ICodeAFriendFacade facade)
+		{
+			Facade = facade;
+		}
 
 		/// <summary>
-		/// <see cref="ICodeAFriendRepository"/> where all CodAFriend objects are stored.
+		/// <see cref="ICodeAFriendFacade"/> where all CodAFriend objects are stored.
 		/// </summary>
-		public ICodeAFriendRepository Repository { get; }
+		protected ICodeAFriendFacade Facade;
 
 	}
 }

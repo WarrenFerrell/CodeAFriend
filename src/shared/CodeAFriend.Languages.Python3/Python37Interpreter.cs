@@ -21,6 +21,7 @@ namespace CodeAFriend.Languages.Python3
 	/// </summary>
 	public class Python37Interpreter : InterpreterTemplate
 	{
+		/// <inheritdoc/>
 		public override SupportedLanguage Name { get; } = SupportedLanguage.Python37;
 
 		/// <remarks>run to create an alias  

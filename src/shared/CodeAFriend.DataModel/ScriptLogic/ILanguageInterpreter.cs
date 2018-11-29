@@ -18,11 +18,12 @@ namespace CodeAFriend.DataModel
 		SupportedLanguage Name { get; }
 
 		/// <summary>
-		/// Execute code written in <see cref="Name"/> language using the specified <see cref="RuntimeParameters"/>. 
+		/// Execute code written in <see cref="Name"/> language using the specified <see cref="ExecutionParameters"/>. 
 		/// </summary>
-		/// <param name="parameters">The <see cref="RuntimeParameters"/> to use for code compilation and execution.</param>
+		/// <param name="body"></param>
+		/// <param name="parameters">The <see cref="ExecutionParameters"/> to use for code compilation and execution.</param>
 		/// <returns>ScriptEvaluation</returns>
-		Task<ScriptEvaluation> ExecuteAsync(RuntimeParameters parameters);
+		Task<ScriptEvaluation> ExecuteAsync(string body, ExecutionParameters parameters);
 
 	}
 }

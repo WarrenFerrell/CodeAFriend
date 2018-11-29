@@ -19,10 +19,10 @@ namespace CodeAFriend.Languages.Python2.UnitTests
 		{
 			// Arrange
 			Python27Interpreter interpreter = new Python27Interpreter();
-			RuntimeParameters parameters = new RuntimeParameters(HelloWorldScript, 10000, 10000, "");
+			ExecutionParameters parameters = new ExecutionParameters(10000, 10000, "");
 
 			// Act
-			ScriptEvaluation results = await interpreter.ExecuteAsync(parameters);
+			ScriptEvaluation results = await interpreter.ExecuteAsync(HelloWorldScript, parameters);
 
 			// Assert
 			Assert.Equal(HelloWorldOutput, results.Output.Trim());
