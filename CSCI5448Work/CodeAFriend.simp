@@ -38,7 +38,7 @@
       </counter>
       <counter>
         <item-type type-id="" type="AbstractElementGroup" />
-        <value>992</value>
+        <value>1002</value>
       </counter>
       <counter>
         <item-type type-id="universal-connector" type="UniversalConnector" />
@@ -52,7 +52,7 @@
       </counter>
       <counter>
         <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
-        <value>17</value>
+        <value>18</value>
       </counter>
     </diagrams>
     <fields>
@@ -4566,7 +4566,7 @@ namespace CodeAFriend.Languages.Core
           </item>
         </layer>
       </diagram>
-      <diagram type="uml-class" id="p5dfe83db9026479da0799fac4bed9597_875276509" name="FacadeDesignPattern" order-index="5" overview-order-index="2" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="74,-134">
+      <diagram type="uml-class" id="p5dfe83db9026479da0799fac4bed9597_875276509" name="FacadeDesignPattern" order-index="5" overview-order-index="2" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="0,-100">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -4654,6 +4654,34 @@ namespace CodeAFriend.Languages.Core
               </points>
             </layout>
             <relation from="4748ec0434c74d58aeda6329b25238b4" from-iid="af1b0c6ce47942bea53775423f858880" to="b8d43fcc3c18458bb0cc7fa6469bb138" to-iid="fd7d5d2b604c4ad98baa2df0e65d03a6" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="p3b02be60b3a74f24abd7f12704bc0eda_404950263" name="CommandDesignPattern" order-index="6" overview-order-index="3" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="0,-29">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>11/29/2018 05:46:02</creation-date>
+          <change-date>11/29/2018 05:46:02</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items />
+        <layer id="54e4a60dd82e4fcfaba10f47357c78cb" name="Default" visible="true" enabled="true" locked="false">
+          <item id="ac66246cd3c341f497be27e818fe5cf2" iid="5ef18912f59e4b89b140aafa494e23ba" creation-date="11/29/2018 05:46:23" order-index="0" type="entity">
+            <layout ax="948" ay="82" awidth="140" aheight="160" x="948" y="82" width="140" height="160" />
+            <class />
+          </item>
+          <item id="cd073bced8884b989daeb33bcab2b645" iid="9c93c03d5ec0435e84fa80f2b0e4e7ac" creation-date="11/29/2018 05:46:38" order-index="0" type="entity">
+            <layout ax="692" ay="204" awidth="549" aheight="160" x="692" y="204" width="549" height="160" />
+            <class />
           </item>
         </layer>
       </diagram>
