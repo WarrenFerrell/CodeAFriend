@@ -50,5 +50,13 @@ namespace CodeAFriend.Facade
 			await _dbContext.SaveChangesAsync();
 			return updateEntity.Entity;
 		}
+
+
+		/// <inheritdoc />
+		public async Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command)
+		{
+			var result = await command.ExecuteAsync(_dbContext);
+			return result;
+		}
 	}
 }

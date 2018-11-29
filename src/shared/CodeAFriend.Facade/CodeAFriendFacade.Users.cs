@@ -12,33 +12,31 @@ namespace CodeAFriend.Facade
 	public partial class CodeAFriendFacade
 	{
 		/// <inheritdoc />
-		public async Task<User> CreateUser(User.CreateCommand user)
-		{
-			return await CreateAsync(new User(user.Name));
-		}
-
-		/// <inheritdoc />
 		public async Task<User> GetUser(string username)
 		{
 			return await _dbContext.FindAsync<User>(username);
 		}
 
+		
+
 		/// <inheritdoc />
-		public async Task<Script> AddScriptForUser(string username, UserScript.CreateCommand script)
+		public async Task<IEnumerable<Script>> GetScriptsForUser(string username)
 		{
-			var user = await _dbContext.FindAsync<User>(username);
-			var newScript = await user.AddAsync(script, _dbContext);
-			return newScript;
+			var result = await _dbContext.Query<User>().Where(u => u.Name == username).Select(u => u.Scripts).SingleOrDefaultAsync();
+			return result;
 		}
 
 		/// <inheritdoc />
-		public async Task<Script> GetScriptForUser(string username, Guid scriptId)
+		public async Task<Script> GetScriptAsync(Guid scriptId)
 		{
-			return await _dbContext.FindAsync<UserScript>(scriptId);
+			Script result = await _dbContext.FindAsync<UserScript>(scriptId) ?? 
+			                (Script) await _dbContext.FindAsync<ProblemSolution>(scriptId);
+			if (result == null) throw new Exception("");
+			return result;
 		}
 
 		/// <inheritdoc />
-		public async Task<ScriptEvaluation> ExecuteScriptForUser(string username, Guid scriptId, RuntimeParameters parameters)
+		public async Task<ScriptEvaluation> ExecuteScript(string username, Guid scriptId, ExecutionParameters parameters)
 		{
 			throw new NotImplementedException();
 		}

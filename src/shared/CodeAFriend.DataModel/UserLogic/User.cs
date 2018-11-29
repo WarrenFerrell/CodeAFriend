@@ -39,7 +39,7 @@ namespace CodeAFriend.DataModel
 		/// </summary>
 		/// <param name="script"><see cref="UserScript"/> to add.</param>
 		/// <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
-		public async Task<UserScript> AddAsync(UserScript.CreateCommand script, DbContext context = null)
+		public async Task<UserScript> AddAsync(AddScriptCommand script, DbContext context = null)
 		{
 			var entity = new UserScript(script.Name, script.Body, script.Language);
 			this.Add(_scripts, entity, context);
@@ -53,7 +53,7 @@ namespace CodeAFriend.DataModel
 		/// </summary>
 		/// <param name="problem"><see cref="Problem"/> to add.</param>
 		/// <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
-		public async Task<Problem> AddAsync(Problem.CreateCommand problem, DbContext context = null)
+		public async Task<Problem> AddAsync(AddProblemCommand problem, DbContext context = null)
 		{
 			var entity = new Problem(problem.Name, problem.Description, this);
 			this.Add(_problems, entity, context);

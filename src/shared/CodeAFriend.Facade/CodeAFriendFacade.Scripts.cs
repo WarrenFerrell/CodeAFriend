@@ -11,7 +11,6 @@ namespace CodeAFriend.Facade
 {
 	public partial class CodeAFriendFacade
 	{
-
 		/// <inheritdoc />
 		public async Task<ScriptEvaluation> ExecuteScript(Guid scriptId, ExecutionParameters parameters)
 		{

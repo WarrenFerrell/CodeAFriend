@@ -55,13 +55,13 @@ namespace CodeAFriend.DataModel
 		/// <returns>bool</returns>
 		public async Task<bool> TestScript(Script script, ILanguageInterpreter interpreter)
 		{
-			var parameters = new RuntimeParameters(script.Body, 2000, 200000, null);
+			var parameters = new ExecutionParameters(2000, 200000, null);
 			var results = new List<ScriptEvaluation>();
 			bool pass = true;
 			foreach (var testCase in TestCases)
 			{
 				parameters.Input = testCase.Input;
-				var result = await interpreter.ExecuteAsync(parameters);
+				var result = await interpreter.ExecuteAsync(script.Body, parameters);
 				results.Add(result);
 				pass = pass && result.Output.Trim() == testCase.ExpectedOutput;
 			}
