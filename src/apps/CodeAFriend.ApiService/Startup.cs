@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CodeAFriend.Core;
 using CodeAFriend.Facade;
+using CodeAFriend.Languages.Core;
 using CodeAFriend.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -38,6 +39,7 @@ namespace CodeAFriend.ApiService
 
 			services.AddDbContext<CodeAFriendContext>();
 			services.AddScoped<ICodeAFriendFacade, CodeAFriend.Facade.CodeAFriendFacade>();
+			services.AddScoped<IInterpreterFactory, InterpreterFactory>();
 
 
 			services.AddSwaggerGen(c =>
