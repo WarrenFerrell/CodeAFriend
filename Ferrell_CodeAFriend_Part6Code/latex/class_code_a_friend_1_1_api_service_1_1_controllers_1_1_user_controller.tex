@@ -1,0 +1,105 @@
+\hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller}{}\section{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller Class Reference}
+\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller}\index{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller@{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller}}
+
+
+ 
+
+
+Inheritance diagram for Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_a62af772aa676edcc545ffb0aa0cb9bc9}{User\+Controller}} (\mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}{I\+Code\+A\+Friend\+Facade}} facade)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_acd97e404e641c3acfe8a0b5d4a34e4ef}{Create}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_create_command}{User.\+Create\+Command}} command)
+\begin{DoxyCompactList}\small\item\em Create a new user. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_aa4579aedefb04bb5916153a2bb9f42a2}{Get\+User}} (string username)
+\begin{DoxyCompactList}\small\item\em Get a user by username. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_a2bcc77065fde0735cf40b6cb38ce97d3}{Get\+Scripts}} (string username)
+\begin{DoxyCompactList}\small\item\em Get all of a user\textquotesingle{}s scripts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_a62af772aa676edcc545ffb0aa0cb9bc9}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_a62af772aa676edcc545ffb0aa0cb9bc9}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}!User\+Controller@{User\+Controller}}
+\index{User\+Controller@{User\+Controller}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}}
+\subsubsection{\texorpdfstring{User\+Controller()}{UserController()}}
+{\footnotesize\ttfamily Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller.\+User\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}{I\+Code\+A\+Friend\+Facade}}}]{facade }\end{DoxyParamCaption})}
+
+
+
+
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_acd97e404e641c3acfe8a0b5d4a34e4ef}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_acd97e404e641c3acfe8a0b5d4a34e4ef}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}!Create@{Create}}
+\index{Create@{Create}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_create_command}{User.\+Create\+Command}}}]{command }\end{DoxyParamCaption})}
+
+
+
+Create a new user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & command to create a new User.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Created User and the uri where it now resides.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_a2bcc77065fde0735cf40b6cb38ce97d3}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_a2bcc77065fde0735cf40b6cb38ce97d3}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}!Get\+Scripts@{Get\+Scripts}}
+\index{Get\+Scripts@{Get\+Scripts}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}}
+\subsubsection{\texorpdfstring{Get\+Scripts()}{GetScripts()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller.\+Get\+Scripts (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Get all of a user\textquotesingle{}s scripts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+Enumerable$<$\+Script$>$
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_aa4579aedefb04bb5916153a2bb9f42a2}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_user_controller_aa4579aedefb04bb5916153a2bb9f42a2}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}!Get\+User@{Get\+User}}
+\index{Get\+User@{Get\+User}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+User\+Controller}}
+\subsubsection{\texorpdfstring{Get\+User()}{GetUser()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+User\+Controller.\+Get\+User (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Get a user by username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & user\textquotesingle{}s username\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+apps/\+Code\+A\+Friend.\+Api\+Service/\+Controllers/\mbox{\hyperlink{_user_controller_8cs}{User\+Controller.\+cs}}\end{DoxyCompactItemize}

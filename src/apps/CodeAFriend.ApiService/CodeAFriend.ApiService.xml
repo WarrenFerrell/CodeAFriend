@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.ApiService</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.ApiService.Controllers.CodaAFriendController">
+            <summary>
+            Set of Api methods for manipulating CodAFriend objects.
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.CodaAFriendController.#ctor(CodeAFriend.Facade.ICodeAFriendFacade)">
+            <summary>
+            DI constructor.
+            </summary>
+        </member>
+        <member name="F:CodeAFriend.ApiService.Controllers.CodaAFriendController.Facade">
+            <summary>
+            <see cref="T:CodeAFriend.Facade.ICodeAFriendFacade"/> where all CodAFriend objects are stored.
+            </summary>
+        </member>
+        <member name="T:CodeAFriend.ApiService.Controllers.ProblemController">
+            <summary>
+            Api Methods dealing with <see cref="T:CodeAFriend.DataModel.Problem"/>s.
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.#ctor(CodeAFriend.Facade.ICodeAFriendFacade)">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.AddProblemForUser(CodeAFriend.DataModel.User.AddProblemCommand)">
+            <summary>
+            Create the specified <see cref="T:CodeAFriend.DataModel.Problem"/>.
+            </summary>
+            <param name="command">Properties for the <see cref="T:CodeAFriend.DataModel.Problem"/>.</param>
+            <returns><see cref="F:System.Net.HttpStatusCode.Created"/> and created <see cref="T:CodeAFriend.DataModel.Problem"/>.</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.UpdateProblem(CodeAFriend.DataModel.User.UpdateProblemCommand)">
+            <summary>
+            Update the specified <see cref="T:CodeAFriend.DataModel.Problem"/>.
+            </summary>
+            <param name="problemName">Name of problem to update.</param>
+            <param name="problem">New Properties for problem.</param>
+            <returns><see cref="F:System.Net.HttpStatusCode.OK"/> and updated <see cref="T:CodeAFriend.DataModel.Problem"/>.</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.DeleteProblem(CodeAFriend.DataModel.User.DeleteProblemCommand)">
+            <summary>
+            
+            </summary>
+            <param name="problemName">Name of problem to delete.</param>
+            <returns>><see cref="F:System.Net.HttpStatusCode.NoContent"/>.</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.GetProblem(System.String)">
+            <summary>
+            Get a specified problem.
+            </summary>
+            <param name="problemName">Name of problem to retrieve.</param>
+            <returns><see cref="F:System.Net.HttpStatusCode.OK"/> and specified <see cref="T:CodeAFriend.DataModel.Problem"/>.</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.TestScript(System.String,System.Guid)">
+            <summary>
+            Submit a <see cref="T:CodeAFriend.DataModel.Script"/> to be considered a <see cref="T:CodeAFriend.DataModel.ProblemSolution"/>.
+            </summary>
+            <param name="script"></param>
+            <param name="problemName"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.Vote(System.String,CodeAFriend.DataModel.Vote)">
+            <summary>
+            
+            </summary>
+            <param name="vote"></param>
+            <param name="solution"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ProblemController.GetSolutions(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="problemName"></param>
+            <returns>Solution[ * ]</returns>
+        </member>
+        <member name="T:CodeAFriend.ApiService.Controllers.ScriptsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ScriptsController.AddUserScript(CodeAFriend.DataModel.User.AddScriptCommand)">
+            <summary>
+            Add a script for a particular user
+            </summary>
+            <returns><see cref="T:CodeAFriend.DataModel.UserScript"/></returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ScriptsController.GetScript(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="scriptId"></param>
+            <returns><see cref="T:CodeAFriend.DataModel.Script"/></returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ScriptsController.UpdateUserScript(CodeAFriend.DataModel.User.UpdateScriptCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command">Operation to perform</param>
+            <returns><see cref="T:CodeAFriend.DataModel.Script"/>.</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ScriptsController.DeleteScript(CodeAFriend.DataModel.User.DeleteScriptCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command">Operation to perform</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ScriptsController.ExecuteScript(System.Guid,System.String[])">
+            <summary>
+            Execute a script and see its outputs for a set of specified inputs.
+            </summary>
+            <param name="scriptId">Id of the script to use for execution.</param>
+            <param name="inputs">set of inputs to run the script with.</param>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"/></returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.ScriptsController.#ctor(CodeAFriend.Facade.ICodeAFriendFacade)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.ApiService.Controllers.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.UserController.#ctor(CodeAFriend.Facade.ICodeAFriendFacade)">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.UserController.Create(CodeAFriend.DataModel.User.CreateCommand)">
+            <summary>
+            Create a new user.
+            </summary>
+            <param name="command">command to create a new <see cref="T:CodeAFriend.DataModel.User"/>.</param>
+            <returns>Created User and the uri where it now resides.</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.UserController.GetUser(System.String)">
+            <summary>
+            Get a user by username.
+            </summary>
+            <param name="username">user's username</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:CodeAFriend.ApiService.Controllers.UserController.GetScripts(System.String)">
+            <summary>
+            Get all of a user's scripts.
+            </summary>
+            <param name="username"></param>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"/></returns>
+        </member>
+    </members>
+</doc>

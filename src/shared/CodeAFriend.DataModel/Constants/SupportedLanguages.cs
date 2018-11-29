@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CodeAFriend.DataModel.Constants
+namespace CodeAFriend.DataModel
 {
 	/// <summary>
 	/// All currently supported Languages in the CodeAFriend system 

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.Core</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.Core.Helpers.ObjectHelpers">
+            <summary>
+            Helper methods for working with objects.
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.Core.Helpers.ObjectHelpers.GetBytes(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeAFriend.Core.Helpers.ObjectHelpers.GetHash(System.Object)">
+            <summary>
+            Get the hash of a serializable object using a SHA256 hash
+            </summary>
+            <param name="obj">object to hash.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeAFriend.Core.Helpers.ObjectHelpers.GetHash(System.Object,System.Security.Cryptography.HashAlgorithm)">
+            <summary>
+            Get the hash of a serializable object using a specified hash
+            </summary>
+            <param name="obj">object to hash.</param>
+            <param name="hashAlgorithm">Hash algorithm to use.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,81 @@
+\hypertarget{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template}{}\section{Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template Class Reference}
+\label{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template}\index{Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template@{Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template}}
+Inheritance diagram for Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.560976cm]{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_ae2cf761e61f7b6b6fc553703ea3ba3c5}{Execute\+Async}} (string body, \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}} parameters)
+\begin{DoxyCompactList}\small\item\em Execute code written in \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_ab8d4ee55278929fb59f3f015789aaa36}{Name}} language using the specified \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}.  \end{DoxyCompactList}\item 
+virtual async Task$<$ string $>$ \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_aedeed04eb6f14cb6bec2a9f250b71ebb}{Write\+Script\+To\+File\+Async}} (string script\+Body)
+\item 
+abstract Process\+Start\+Info \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_a2f8560fba2e22a9cdf22c8d2f7bb849f}{Get\+Process\+Start\+Info}} (string script\+File\+Path)
+\item 
+virtual async Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_aa76d5e57b00dfa82862362288d140e1b}{Run\+Process\+Async}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}} parameters, Process\+Start\+Info start\+Info, string script\+File\+Path)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+abstract \mbox{\hyperlink{namespace_code_a_friend_1_1_data_model_a13e088c525db1b03a4de75420ced79b2}{Supported\+Language}} \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_a7c5eeadd02916f2e314f3290d1dbdc8c}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_ae2cf761e61f7b6b6fc553703ea3ba3c5}\label{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_ae2cf761e61f7b6b6fc553703ea3ba3c5}} 
+\index{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}!Execute\+Async@{Execute\+Async}}
+\index{Execute\+Async@{Execute\+Async}!Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}}
+\subsubsection{\texorpdfstring{Execute\+Async()}{ExecuteAsync()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}}$>$ Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template.\+Execute\+Async (\begin{DoxyParamCaption}\item[{string}]{body,  }\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}}]{parameters }\end{DoxyParamCaption})}
+
+
+
+Execute code written in \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_ab8d4ee55278929fb59f3f015789aaa36}{Name}} language using the specified \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}.  
+
+
+
+Implements \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_a3003897aaa13ee672b6157c584e46898}{Code\+A\+Friend.\+Data\+Model.\+I\+Language\+Interpreter}}.
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_a2f8560fba2e22a9cdf22c8d2f7bb849f}\label{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_a2f8560fba2e22a9cdf22c8d2f7bb849f}} 
+\index{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}!Get\+Process\+Start\+Info@{Get\+Process\+Start\+Info}}
+\index{Get\+Process\+Start\+Info@{Get\+Process\+Start\+Info}!Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}}
+\subsubsection{\texorpdfstring{Get\+Process\+Start\+Info()}{GetProcessStartInfo()}}
+{\footnotesize\ttfamily abstract Process\+Start\+Info Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template.\+Get\+Process\+Start\+Info (\begin{DoxyParamCaption}\item[{string}]{script\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_python2_1_1_python27_interpreter_a24b4f1f296ab282b0fcac3951af0a73b}{Code\+A\+Friend.\+Languages.\+Python2.\+Python27\+Interpreter}}, and \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_python3_1_1_python37_interpreter_a61f777c41849f97cd94eccee5fe7c617}{Code\+A\+Friend.\+Languages.\+Python3.\+Python37\+Interpreter}}.
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_aa76d5e57b00dfa82862362288d140e1b}\label{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_aa76d5e57b00dfa82862362288d140e1b}} 
+\index{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}!Run\+Process\+Async@{Run\+Process\+Async}}
+\index{Run\+Process\+Async@{Run\+Process\+Async}!Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}}
+\subsubsection{\texorpdfstring{Run\+Process\+Async()}{RunProcessAsync()}}
+{\footnotesize\ttfamily virtual async Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}}$>$ Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template.\+Run\+Process\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}}]{parameters,  }\item[{Process\+Start\+Info}]{start\+Info,  }\item[{string}]{script\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_aedeed04eb6f14cb6bec2a9f250b71ebb}\label{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_aedeed04eb6f14cb6bec2a9f250b71ebb}} 
+\index{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}!Write\+Script\+To\+File\+Async@{Write\+Script\+To\+File\+Async}}
+\index{Write\+Script\+To\+File\+Async@{Write\+Script\+To\+File\+Async}!Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}}
+\subsubsection{\texorpdfstring{Write\+Script\+To\+File\+Async()}{WriteScriptToFileAsync()}}
+{\footnotesize\ttfamily virtual async Task$<$string$>$ Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template.\+Write\+Script\+To\+File\+Async (\begin{DoxyParamCaption}\item[{string}]{script\+Body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_a7c5eeadd02916f2e314f3290d1dbdc8c}\label{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_a7c5eeadd02916f2e314f3290d1dbdc8c}} 
+\index{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}!Name@{Name}}
+\index{Name@{Name}!Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template@{Code\+A\+Friend\+::\+Languages\+::\+Core\+::\+Interpreter\+Template}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{namespace_code_a_friend_1_1_data_model_a13e088c525db1b03a4de75420ced79b2}{Supported\+Language}} Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shared/\+Code\+A\+Friend.\+Languages.\+Core/\mbox{\hyperlink{_interpreter_template_8cs}{Interpreter\+Template.\+cs}}\end{DoxyCompactItemize}

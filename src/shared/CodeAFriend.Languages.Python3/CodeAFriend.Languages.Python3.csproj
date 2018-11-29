@@ -8,7 +8,7 @@
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <Win32Resource />
     <StartupObject />
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Python3\CodeAFriend.Languages.Python3.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

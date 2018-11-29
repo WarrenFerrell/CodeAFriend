@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.Languages.Python2</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.Languages.Python2.Python27Interpreter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.Languages.Python2.Python27Interpreter.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:CodeAFriend.Languages.Python2.Python27Interpreter.GetProcessStartInfo(System.String)">
+            <remarks>from 
+            https://medium.com/emoney-engineering/running-python-script-from-c-and-working-with-the-results-843e68d230e5 .
+            https://kimsereyblog.blogspot.com/2018/01/start-processes-from-c-in-dotnet-core.html 
+            </remarks>
+            <inheritdoc/>
+        </member>
+        <member name="M:CodeAFriend.Languages.Python2.Python27Interpreter.RunEngineAsync(System.String)">
+            <remarks>from https://medium.com/emoney-engineering/running-python-script-from-c-and-working-with-the-results-843e68d230e5 </remarks>
+        </member>
+    </members>
+</doc>

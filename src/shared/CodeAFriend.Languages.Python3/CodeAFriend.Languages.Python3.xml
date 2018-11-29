@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.Languages.Python3</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.Languages.Python3.Python37Interpreter">
+            <summary>
+            Implementation of <see cref="T:CodeAFriend.DataModel.ILanguageInterpreter"/> for Python programming language.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.Languages.Python3.Python37Interpreter.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:CodeAFriend.Languages.Python3.Python37Interpreter.GetProcessStartInfo(System.String)">
+            <remarks>run to create an alias  
+            doskey python3="C:\Program Files\Python37\python.exe"
+            </remarks>
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

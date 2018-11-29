@@ -1,0 +1,142 @@
+\hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller}{}\section{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller Class Reference}
+\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller}\index{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller@{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller}}
+
+
+ 
+
+
+Inheritance diagram for Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a65b4e550a6af06c510d0b4427c7fb7c6}{Add\+User\+Script}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_script_command}{User.\+Add\+Script\+Command}} command)
+\begin{DoxyCompactList}\small\item\em Add a script for a particular user \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_af4d9665d07b1507138c3ef182b95e65b}{Get\+Script}} (Guid script\+Id)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a8eb92a154466710b2f9ad5def9c11503}{Update\+User\+Script}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_update_script_command}{User.\+Update\+Script\+Command}} command)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a61268991951cf0238062fa5761971262}{Delete\+Script}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_delete_script_command}{User.\+Delete\+Script\+Command}} command)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_ae6302cfb412c5d21e540ed70809c9549}{Execute\+Script}} (Guid script\+Id, \mbox{[}From\+Body\mbox{]} string\mbox{[}$\,$\mbox{]} inputs)
+\begin{DoxyCompactList}\small\item\em Execute a script and see its outputs for a set of specified inputs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_ace1f2b593b4304ffdc5ae60af5288df8}{Scripts\+Controller}} (\mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}{I\+Code\+A\+Friend\+Facade}} facade)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_ace1f2b593b4304ffdc5ae60af5288df8}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_ace1f2b593b4304ffdc5ae60af5288df8}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}!Scripts\+Controller@{Scripts\+Controller}}
+\index{Scripts\+Controller@{Scripts\+Controller}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}}
+\subsubsection{\texorpdfstring{Scripts\+Controller()}{ScriptsController()}}
+{\footnotesize\ttfamily Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller.\+Scripts\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}{I\+Code\+A\+Friend\+Facade}}}]{facade }\end{DoxyParamCaption})}
+
+
+
+
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a65b4e550a6af06c510d0b4427c7fb7c6}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a65b4e550a6af06c510d0b4427c7fb7c6}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}!Add\+User\+Script@{Add\+User\+Script}}
+\index{Add\+User\+Script@{Add\+User\+Script}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}}
+\subsubsection{\texorpdfstring{Add\+User\+Script()}{AddUserScript()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller.\+Add\+User\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_script_command}{User.\+Add\+Script\+Command}}}]{command }\end{DoxyParamCaption})}
+
+
+
+Add a script for a particular user 
+
+\begin{DoxyReturn}{Returns}
+User\+Script
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a61268991951cf0238062fa5761971262}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a61268991951cf0238062fa5761971262}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}!Delete\+Script@{Delete\+Script}}
+\index{Delete\+Script@{Delete\+Script}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}}
+\subsubsection{\texorpdfstring{Delete\+Script()}{DeleteScript()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller.\+Delete\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_delete_script_command}{User.\+Delete\+Script\+Command}}}]{command }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Operation to perform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_ae6302cfb412c5d21e540ed70809c9549}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_ae6302cfb412c5d21e540ed70809c9549}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}!Execute\+Script@{Execute\+Script}}
+\index{Execute\+Script@{Execute\+Script}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}}
+\subsubsection{\texorpdfstring{Execute\+Script()}{ExecuteScript()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller.\+Execute\+Script (\begin{DoxyParamCaption}\item[{Guid}]{script\+Id,  }\item[{\mbox{[}\+From\+Body\mbox{]} string \mbox{[}$\,$\mbox{]}}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Execute a script and see its outputs for a set of specified inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script\+Id} & Id of the script to use for execution.\\
+\hline
+{\em inputs} & set of inputs to run the script with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+Enumerable$<$\+Script\+Evaluation$>$
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_af4d9665d07b1507138c3ef182b95e65b}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_af4d9665d07b1507138c3ef182b95e65b}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}!Get\+Script@{Get\+Script}}
+\index{Get\+Script@{Get\+Script}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}}
+\subsubsection{\texorpdfstring{Get\+Script()}{GetScript()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller.\+Get\+Script (\begin{DoxyParamCaption}\item[{Guid}]{script\+Id }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em script\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Script
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a8eb92a154466710b2f9ad5def9c11503}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_scripts_controller_a8eb92a154466710b2f9ad5def9c11503}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}!Update\+User\+Script@{Update\+User\+Script}}
+\index{Update\+User\+Script@{Update\+User\+Script}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Scripts\+Controller}}
+\subsubsection{\texorpdfstring{Update\+User\+Script()}{UpdateUserScript()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Scripts\+Controller.\+Update\+User\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_update_script_command}{User.\+Update\+Script\+Command}}}]{command }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Operation to perform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Script.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+apps/\+Code\+A\+Friend.\+Api\+Service/\+Controllers/\mbox{\hyperlink{_scripts_controller_8cs}{Scripts\+Controller.\+cs}}\end{DoxyCompactItemize}

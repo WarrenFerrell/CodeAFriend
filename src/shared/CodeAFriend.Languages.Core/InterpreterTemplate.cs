@@ -61,8 +61,7 @@ namespace CodeAFriend.Languages.Core
 						return new ScriptEvaluation(
 							output: result,
 							cpuTime: process.UserProcessorTime.TotalMilliseconds,
-							memoryUsage: process.PeakPagedMemorySize64 + process.PeakVirtualMemorySize64,
-							parameters: parameters
+							memoryUsage: process.PeakPagedMemorySize64 + process.PeakVirtualMemorySize64
 						);
 					}
 				}

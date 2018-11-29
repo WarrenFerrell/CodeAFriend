@@ -1,0 +1,144 @@
+\hypertarget{class_code_a_friend_1_1_data_model_1_1_user}{}\section{Code\+A\+Friend.\+Data\+Model.\+User Class Reference}
+\label{class_code_a_friend_1_1_data_model_1_1_user}\index{Code\+A\+Friend.\+Data\+Model.\+User@{Code\+A\+Friend.\+Data\+Model.\+User}}
+
+
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} in the \mbox{\hyperlink{namespace_code_a_friend}{Code\+A\+Friend}} system. 
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_problem_command}{Add\+Problem\+Command}}
+\begin{DoxyCompactList}\small\item\em Properties someone can specify on \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}} creation.\end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_script_command}{Add\+Script\+Command}}
+\begin{DoxyCompactList}\small\item\em Properties someone can specify on script creation.\end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_create_command}{Create\+Command}}
+\begin{DoxyCompactList}\small\item\em Properties someone can specify on user creation.\end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_delete_problem_command}{Delete\+Problem\+Command}}
+\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_delete_script_command}{Delete\+Script\+Command}}
+\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_for_user_command}{For\+User\+Command}}
+\begin{DoxyCompactList}\small\item\em Command being performed on behalf of a specific user.\end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_update_problem_command}{Update\+Problem\+Command}}
+\item 
+class \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_update_script_command}{Update\+Script\+Command}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_a5604cc5f196cf59ac2b4b036d20b2227}{User}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor for creating new \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}.\end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_accaaafd48c85875b1d61622c4e58db05}{Add\+Async}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_script_command}{Add\+Script\+Command}} script, Db\+Context context=null)
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_a15aa0e1bb20abcd45da38e11f30bb6e4}{Add\+Async}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_problem_command}{Add\+Problem\+Command}} problem, Db\+Context context=null)
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_ae1e8268cdd9f9abffcf602146de030f5}{Scripts}} =$>$ \+\_\+scripts?.To\+List()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}}s that this user has written.\end{DoxyCompactList}\item 
+I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_afdc167d3127eb8aae3d5754642b6eff0}{Problems}} =$>$ \+\_\+problems?.To\+List()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}s that this user has written.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_ab32bf10478eb4276407dd192fa313954}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This user\textquotesingle{}s unique name.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} in the \mbox{\hyperlink{namespace_code_a_friend}{Code\+A\+Friend}} system.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_user_a5604cc5f196cf59ac2b4b036d20b2227}\label{class_code_a_friend_1_1_data_model_1_1_user_a5604cc5f196cf59ac2b4b036d20b2227}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}!User@{User}}
+\index{User@{User}!Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}}
+\subsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily Code\+A\+Friend.\+Data\+Model.\+User.\+User (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor for creating new \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_user_accaaafd48c85875b1d61622c4e58db05}\label{class_code_a_friend_1_1_data_model_1_1_user_accaaafd48c85875b1d61622c4e58db05}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}!Add\+Async@{Add\+Async}}
+\index{Add\+Async@{Add\+Async}!Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}}
+\subsubsection{\texorpdfstring{Add\+Async()}{AddAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}}$>$ Code\+A\+Friend.\+Data\+Model.\+User.\+Add\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_script_command}{Add\+Script\+Command}}}]{script,  }\item[{Db\+Context}]{context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}} to add.\\
+\hline
+{\em context} & Database to save the updated state to. (When Save\+Changes is called).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_user_a15aa0e1bb20abcd45da38e11f30bb6e4}\label{class_code_a_friend_1_1_data_model_1_1_user_a15aa0e1bb20abcd45da38e11f30bb6e4}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}!Add\+Async@{Add\+Async}}
+\index{Add\+Async@{Add\+Async}!Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}}
+\subsubsection{\texorpdfstring{Add\+Async()}{AddAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}$>$ Code\+A\+Friend.\+Data\+Model.\+User.\+Add\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_problem_command}{Add\+Problem\+Command}}}]{problem,  }\item[{Db\+Context}]{context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}} to add.\\
+\hline
+{\em context} & Database to save the updated state to. (When Save\+Changes is called).\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_user_afdc167d3127eb8aae3d5754642b6eff0}\label{class_code_a_friend_1_1_data_model_1_1_user_afdc167d3127eb8aae3d5754642b6eff0}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}!Problems@{Problems}}
+\index{Problems@{Problems}!Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}}
+\subsubsection{\texorpdfstring{Problems}{Problems}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}$>$ Code\+A\+Friend.\+Data\+Model.\+User.\+Problems =$>$ \+\_\+problems?.To\+List()}
+
+
+
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}s that this user has written.
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_user_ae1e8268cdd9f9abffcf602146de030f5}\label{class_code_a_friend_1_1_data_model_1_1_user_ae1e8268cdd9f9abffcf602146de030f5}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}!Scripts@{Scripts}}
+\index{Scripts@{Scripts}!Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}}
+\subsubsection{\texorpdfstring{Scripts}{Scripts}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}}$>$ Code\+A\+Friend.\+Data\+Model.\+User.\+Scripts =$>$ \+\_\+scripts?.To\+List()}
+
+
+
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_script}{User\+Script}}s that this user has written.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_user_ab32bf10478eb4276407dd192fa313954}\label{class_code_a_friend_1_1_data_model_1_1_user_ab32bf10478eb4276407dd192fa313954}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}!Name@{Name}}
+\index{Name@{Name}!Code\+A\+Friend\+::\+Data\+Model\+::\+User@{Code\+A\+Friend\+::\+Data\+Model\+::\+User}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Code\+A\+Friend.\+Data\+Model.\+User.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+This user\textquotesingle{}s unique name.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+shared/\+Code\+A\+Friend.\+Data\+Model/\+User\+Logic/\mbox{\hyperlink{_user_8_commands_8cs}{User.\+Commands.\+cs}}\item 
+shared/\+Code\+A\+Friend.\+Data\+Model/\+User\+Logic/\mbox{\hyperlink{_user_8cs}{User.\+cs}}\end{DoxyCompactItemize}

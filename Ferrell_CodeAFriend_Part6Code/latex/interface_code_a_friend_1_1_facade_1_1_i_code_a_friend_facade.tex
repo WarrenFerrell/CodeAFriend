@@ -1,0 +1,141 @@
+\hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}{}\section{Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade Interface Reference}
+\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}\index{Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade}}
+
+
+Exposes stored user objects for the \mbox{\hyperlink{namespace_code_a_friend}{Code\+A\+Friend}} website.  
+
+
+Inheritance diagram for Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a2f9f5a0cf07b54b171af4770e519c30b}{Get\+User}} (string username)
+\begin{DoxyCompactList}\small\item\em Get a user by their username.\end{DoxyCompactList}\item 
+Task$<$ I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}} $>$ $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_acc0a8e1606ff89320a2cdbcb69f9d338}{Get\+Scripts\+For\+User}} (string username)
+\begin{DoxyCompactList}\small\item\em Get all scripts for a user.\end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}} $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_af180522d16e16c3c7eb69324d87278c0}{Get\+Script\+Async}} (Guid script\+Id)
+\begin{DoxyCompactList}\small\item\em Get a user script.\end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}} $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_abd81f62f5431cd404c9503ff2cfe7e9f}{Execute\+Script\+Async}} (Guid script\+Id, \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}} parameters)
+\begin{DoxyCompactList}\small\item\em Execute a user Script with the specified parameters.\end{DoxyCompactList}\item 
+Task$<$ I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}} $>$ $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a7a3f1a746d41872d14197a8949781ce2}{Execute\+Script\+Async}} (Guid script\+Id, \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}} parameters, params string\mbox{[}$\,$\mbox{]} inputs)
+\begin{DoxyCompactList}\small\item\em Execute a Script several times with a specified set of inputs.\end{DoxyCompactList}\item 
+Task$<$ T\+Result $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a028d0f66e63a4977451e15a0a79c7f19}{Execute\+Command\+Async$<$ T\+Result $>$}} (\mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_command}{I\+Command}}$<$ T\+Result $>$ command)
+\begin{DoxyCompactList}\small\item\em Execute I\+Command$<$\+T\+Return$>$.\end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}} $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a044ae5a5e7d55904f0fd43eca50650cb}{Get\+Problem}} (string problem\+Name)
+\begin{DoxyCompactList}\small\item\em Get a problem by its name.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exposes stored user objects for the \mbox{\hyperlink{namespace_code_a_friend}{Code\+A\+Friend}} website. 
+
+Makes use of the facade design pattern.
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a028d0f66e63a4977451e15a0a79c7f19}\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a028d0f66e63a4977451e15a0a79c7f19}} 
+\index{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}!Execute\+Command\+Async$<$ T\+Result $>$@{Execute\+Command\+Async$<$ T\+Result $>$}}
+\index{Execute\+Command\+Async$<$ T\+Result $>$@{Execute\+Command\+Async$<$ T\+Result $>$}!Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}}
+\subsubsection{\texorpdfstring{Execute\+Command\+Async$<$ T\+Result $>$()}{ExecuteCommandAsync< TResult >()}}
+{\footnotesize\ttfamily Task$<$T\+Result$>$ Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade.\+Execute\+Command\+Async$<$ T\+Result $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_command}{I\+Command}}$<$ T\+Result $>$}]{command }\end{DoxyParamCaption})}
+
+
+
+Execute I\+Command$<$\+T\+Return$>$.
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_facade_1_1_code_a_friend_facade_a183e234ee3e7de4e25fb30121dd39891}{Code\+A\+Friend.\+Facade.\+Code\+A\+Friend\+Facade}}.
+
+\mbox{\Hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_abd81f62f5431cd404c9503ff2cfe7e9f}\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_abd81f62f5431cd404c9503ff2cfe7e9f}} 
+\index{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}!Execute\+Script\+Async@{Execute\+Script\+Async}}
+\index{Execute\+Script\+Async@{Execute\+Script\+Async}!Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}}
+\subsubsection{\texorpdfstring{Execute\+Script\+Async()}{ExecuteScriptAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}}$>$ Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade.\+Execute\+Script\+Async (\begin{DoxyParamCaption}\item[{Guid}]{script\+Id,  }\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}}]{parameters }\end{DoxyParamCaption})}
+
+
+
+Execute a user Script with the specified parameters.
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_facade_1_1_code_a_friend_facade_a04883cd14eb596a9f9113c24aa06e34b}{Code\+A\+Friend.\+Facade.\+Code\+A\+Friend\+Facade}}.
+
+\mbox{\Hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a7a3f1a746d41872d14197a8949781ce2}\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a7a3f1a746d41872d14197a8949781ce2}} 
+\index{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}!Execute\+Script\+Async@{Execute\+Script\+Async}}
+\index{Execute\+Script\+Async@{Execute\+Script\+Async}!Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}}
+\subsubsection{\texorpdfstring{Execute\+Script\+Async()}{ExecuteScriptAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}}$>$ $>$ Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade.\+Execute\+Script\+Async (\begin{DoxyParamCaption}\item[{Guid}]{script\+Id,  }\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}}]{parameters,  }\item[{params string \mbox{[}$\,$\mbox{]}}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Execute a Script several times with a specified set of inputs.
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_facade_1_1_code_a_friend_facade_abcd7e13b8e5a7accbcd56b4f7eee8934}{Code\+A\+Friend.\+Facade.\+Code\+A\+Friend\+Facade}}.
+
+\mbox{\Hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a044ae5a5e7d55904f0fd43eca50650cb}\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a044ae5a5e7d55904f0fd43eca50650cb}} 
+\index{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}!Get\+Problem@{Get\+Problem}}
+\index{Get\+Problem@{Get\+Problem}!Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}}
+\subsubsection{\texorpdfstring{Get\+Problem()}{GetProblem()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}$>$ Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade.\+Get\+Problem (\begin{DoxyParamCaption}\item[{string}]{problem\+Name }\end{DoxyParamCaption})}
+
+
+
+Get a problem by its name.
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_facade_1_1_code_a_friend_facade_a0fd5153f295a66388ef6a6d4880f32bd}{Code\+A\+Friend.\+Facade.\+Code\+A\+Friend\+Facade}}.
+
+\mbox{\Hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_af180522d16e16c3c7eb69324d87278c0}\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_af180522d16e16c3c7eb69324d87278c0}} 
+\index{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}!Get\+Script\+Async@{Get\+Script\+Async}}
+\index{Get\+Script\+Async@{Get\+Script\+Async}!Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}}
+\subsubsection{\texorpdfstring{Get\+Script\+Async()}{GetScriptAsync()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}}$>$ Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade.\+Get\+Script\+Async (\begin{DoxyParamCaption}\item[{Guid}]{script\+Id }\end{DoxyParamCaption})}
+
+
+
+Get a user script.
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_facade_1_1_code_a_friend_facade_aaf0ac4c19567b0078140ab3d6a457e15}{Code\+A\+Friend.\+Facade.\+Code\+A\+Friend\+Facade}}.
+
+\mbox{\Hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_acc0a8e1606ff89320a2cdbcb69f9d338}\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_acc0a8e1606ff89320a2cdbcb69f9d338}} 
+\index{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}!Get\+Scripts\+For\+User@{Get\+Scripts\+For\+User}}
+\index{Get\+Scripts\+For\+User@{Get\+Scripts\+For\+User}!Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}}
+\subsubsection{\texorpdfstring{Get\+Scripts\+For\+User()}{GetScriptsForUser()}}
+{\footnotesize\ttfamily Task$<$I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}}$>$ $>$ Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade.\+Get\+Scripts\+For\+User (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Get all scripts for a user.
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_facade_1_1_code_a_friend_facade_a77cd5040946e3a1feaac9fc03cfdb372}{Code\+A\+Friend.\+Facade.\+Code\+A\+Friend\+Facade}}.
+
+\mbox{\Hypertarget{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a2f9f5a0cf07b54b171af4770e519c30b}\label{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade_a2f9f5a0cf07b54b171af4770e519c30b}} 
+\index{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}!Get\+User@{Get\+User}}
+\index{Get\+User@{Get\+User}!Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade@{Code\+A\+Friend\+::\+Facade\+::\+I\+Code\+A\+Friend\+Facade}}
+\subsubsection{\texorpdfstring{Get\+User()}{GetUser()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}$>$ Code\+A\+Friend.\+Facade.\+I\+Code\+A\+Friend\+Facade.\+Get\+User (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Get a user by their username.
+
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_facade_1_1_code_a_friend_facade_a5cc08aa0377f29fd3f80e1d880059951}{Code\+A\+Friend.\+Facade.\+Code\+A\+Friend\+Facade}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shared/\+Code\+A\+Friend.\+Facade/\mbox{\hyperlink{_i_code_a_friend_facade_8cs}{I\+Code\+A\+Friend\+Facade.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,191 @@
+\hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller}{}\section{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller Class Reference}
+\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller}\index{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller@{Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller}}
+
+
+Api Methods dealing with Problems.  
+
+
+Inheritance diagram for Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a2f0d98d308a3adc0712b52b4fd3945de}{Problem\+Controller}} (\mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}{I\+Code\+A\+Friend\+Facade}} facade)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a9f87dcfa7186b6ea75f2ac690a06cdbe}{Add\+Problem\+For\+User}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_problem_command}{User.\+Add\+Problem\+Command}} command)
+\begin{DoxyCompactList}\small\item\em Create the specified Problem. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a3ae37d2a578e67e48c1b1a91894c61b0}{Update\+Problem}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_update_problem_command}{User.\+Update\+Problem\+Command}} command)
+\begin{DoxyCompactList}\small\item\em Update the specified Problem. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a2b8c284c32ccf82a763ee27a349d72b3}{Delete\+Problem}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_delete_problem_command}{User.\+Delete\+Problem\+Command}} command)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a27d7c0de93899d3c5a702ee508e909e8}{Get\+Problem}} (string problem\+Name)
+\begin{DoxyCompactList}\small\item\em Get a specified problem. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a4107f49ce21903685fb213a32e62234e}{Test\+Script}} (string problem\+Name, Guid script\+Id)
+\begin{DoxyCompactList}\small\item\em Submit a Script to be considered a Problem\+Solution. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a45c84969b2e5ac1fc9fd5c6c35627068}{Vote}} (string problem\+Name, \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_vote}{Vote}} vote)
+\item 
+I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a025801b9dc8ac12ae97bab9bdf81a494}{Get\+Solutions}} (string problem\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Api Methods dealing with Problems. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a2f0d98d308a3adc0712b52b4fd3945de}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a2f0d98d308a3adc0712b52b4fd3945de}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Problem\+Controller@{Problem\+Controller}}
+\index{Problem\+Controller@{Problem\+Controller}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Problem\+Controller()}{ProblemController()}}
+{\footnotesize\ttfamily Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Problem\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_code_a_friend_1_1_facade_1_1_i_code_a_friend_facade}{I\+Code\+A\+Friend\+Facade}}}]{facade }\end{DoxyParamCaption})}
+
+
+
+
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a9f87dcfa7186b6ea75f2ac690a06cdbe}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a9f87dcfa7186b6ea75f2ac690a06cdbe}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Add\+Problem\+For\+User@{Add\+Problem\+For\+User}}
+\index{Add\+Problem\+For\+User@{Add\+Problem\+For\+User}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Add\+Problem\+For\+User()}{AddProblemForUser()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Add\+Problem\+For\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_add_problem_command}{User.\+Add\+Problem\+Command}}}]{command }\end{DoxyParamCaption})}
+
+
+
+Create the specified Problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Properties for the Problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Http\+Status\+Code.\+Created and created Problem.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a2b8c284c32ccf82a763ee27a349d72b3}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a2b8c284c32ccf82a763ee27a349d72b3}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Delete\+Problem@{Delete\+Problem}}
+\index{Delete\+Problem@{Delete\+Problem}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Delete\+Problem()}{DeleteProblem()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Delete\+Problem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_delete_problem_command}{User.\+Delete\+Problem\+Command}}}]{command }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem\+Name} & Name of problem to delete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$>$Http\+Status\+Code.\+No\+Content.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a27d7c0de93899d3c5a702ee508e909e8}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a27d7c0de93899d3c5a702ee508e909e8}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Get\+Problem@{Get\+Problem}}
+\index{Get\+Problem@{Get\+Problem}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Get\+Problem()}{GetProblem()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Get\+Problem (\begin{DoxyParamCaption}\item[{string}]{problem\+Name }\end{DoxyParamCaption})}
+
+
+
+Get a specified problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem\+Name} & Name of problem to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Http\+Status\+Code.\+OK and specified Problem.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a025801b9dc8ac12ae97bab9bdf81a494}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a025801b9dc8ac12ae97bab9bdf81a494}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Get\+Solutions@{Get\+Solutions}}
+\index{Get\+Solutions@{Get\+Solutions}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Get\+Solutions()}{GetSolutions()}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}}$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Get\+Solutions (\begin{DoxyParamCaption}\item[{string}]{problem\+Name }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Solution\mbox{[} $\ast$ \mbox{]}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a4107f49ce21903685fb213a32e62234e}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a4107f49ce21903685fb213a32e62234e}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Test\+Script@{Test\+Script}}
+\index{Test\+Script@{Test\+Script}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Test\+Script()}{TestScript()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Test\+Script (\begin{DoxyParamCaption}\item[{string}]{problem\+Name,  }\item[{Guid}]{script\+Id }\end{DoxyParamCaption})}
+
+
+
+Submit a Script to be considered a Problem\+Solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & \\
+\hline
+{\em problem\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a3ae37d2a578e67e48c1b1a91894c61b0}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a3ae37d2a578e67e48c1b1a91894c61b0}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Update\+Problem@{Update\+Problem}}
+\index{Update\+Problem@{Update\+Problem}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Update\+Problem()}{UpdateProblem()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Update\+Problem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user_1_1_update_problem_command}{User.\+Update\+Problem\+Command}}}]{command }\end{DoxyParamCaption})}
+
+
+
+Update the specified Problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem\+Name} & Name of problem to update.\\
+\hline
+{\em problem} & New Properties for problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Http\+Status\+Code.\+OK and updated Problem.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a45c84969b2e5ac1fc9fd5c6c35627068}\label{class_code_a_friend_1_1_api_service_1_1_controllers_1_1_problem_controller_a45c84969b2e5ac1fc9fd5c6c35627068}} 
+\index{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}!Vote@{Vote}}
+\index{Vote@{Vote}!Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller@{Code\+A\+Friend\+::\+Api\+Service\+::\+Controllers\+::\+Problem\+Controller}}
+\subsubsection{\texorpdfstring{Vote()}{Vote()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Code\+A\+Friend.\+Api\+Service.\+Controllers.\+Problem\+Controller.\+Vote (\begin{DoxyParamCaption}\item[{string}]{problem\+Name,  }\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_vote}{Vote}}}]{vote }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em vote} & \\
+\hline
+{\em solution} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+apps/\+Code\+A\+Friend.\+Api\+Service/\+Controllers/\mbox{\hyperlink{_problem_controller_8cs}{Problem\+Controller.\+cs}}\end{DoxyCompactItemize}

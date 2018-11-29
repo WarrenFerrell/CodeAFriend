@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.DataModel</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.DataModel.Constants.DefaultExecutionParameters">
+            <summary>
+            Default execution parameters for any script running in an environment that does not specify the running parameters.
+            </summary>
+            <remarks>Will be deprecated in the future in favor of a method that pulls these values from a config file.</remarks>
+        </member>
+        <member name="F:CodeAFriend.DataModel.Constants.DefaultExecutionParameters.MAX_CPU_TIME">
+            <summary>
+            Default maximum cpu time.
+            </summary>
+        </member>
+        <member name="F:CodeAFriend.DataModel.Constants.DefaultExecutionParameters.MAX_MEMORY">
+            <summary>
+            Default maximum memory usage.
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Constants.DefaultExecutionParameters.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.DataModel.Constants.DefaultExecutionParameters.#ctor(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.SupportedLanguage">
+            <summary>
+            All currently supported Languages in the CodeAFriend system 
+            </summary>
+        </member>
+        <member name="F:CodeAFriend.DataModel.SupportedLanguage.Python27">
+            <summary>Python 2.7</summary>
+        </member>
+        <member name="F:CodeAFriend.DataModel.SupportedLanguage.Python37">
+            <summary>Python 3.7</summary>
+        </member>
+        <member name="T:CodeAFriend.DataModel.DeleteResult`1">
+            <summary>
+            Represents an entity that has been deleted.
+            </summary>
+            <typeparam name="TValue">Type of the deleted entity</typeparam>
+        </member>
+        <member name="T:CodeAFriend.DataModel.DbContextExtensions">
+            <summary>
+            Extension methods for <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.DbContextExtensions.AddAndReturnAsync``1(Microsoft.EntityFrameworkCore.DbContext,``0)">
+            <summary>
+            Asynchronously save a new <typeparamref name="TValue"/> to a context and return the result.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <param name="context">context to save to.</param>
+            <param name="value">object to save.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeAFriend.DataModel.DbContextExtensions.UpdateAsync``1(Microsoft.EntityFrameworkCore.DbContext,``0,System.String[])">
+            <summary>
+            Asynchronously update a <typeparamref name="TValue"/> in a <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> and return the result.
+            </summary>
+            <typeparam name="TValue">Type of the stored entity.</typeparam>
+            <param name="context">context to save to.</param>
+            <param name="value">object to save.</param>
+            <param name="propertiesToUpdate">Name of each property that should be updated. If none are provided then ALL PROPERTIES WILL BE UPDATED.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeAFriend.DataModel.DbContextCollectionExtensions">
+            <summary>
+            Set of methods for helping implement DDD-style design
+            </summary>
+            <remarks>some code from https://github.com/JonPSmith/EfCore.GenericBizRunner/blob/master/DataLayer/EfClasses/Book.cs </remarks>
+        </member>
+        <member name="M:CodeAFriend.DataModel.DbContextCollectionExtensions.Add``2(``0,System.Collections.Generic.ICollection{``1},``1,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Add a new entity, <paramref name="newChild"/>, to a <paramref name="parent"/> entity <paramref name="collection"/> of <see cref="!:TChild"/>.
+            </summary>
+            <typeparam name="TParent">Type of the parent entity.</typeparam>
+            <typeparam name="TChild">Type of the child entity</typeparam>
+            <param name="parent">Parent entity instance.</param>
+            <param name="collection">Collection of dependent entities.</param>
+            <param name="newChild">New dependent entity.</param>
+            <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+        </member>
+        <member name="T:CodeAFriend.DataModel.ICommand`1">
+            <summary>
+            An operation to perform on the CodeAFriend backend.
+            </summary>
+            <typeparam name="TReturn">Type that will be returned by the execute.</typeparam>
+        </member>
+        <member name="M:CodeAFriend.DataModel.ICommand`1.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Asynchronously execute this command and return the resulting <typeparamref name="TReturn"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CodeAFriend.DataModel.Problem">
+            <summary>
+            A problem with a set of <see cref="T:CodeAFriend.DataModel.TestCase"/>s to determine if a <see cref="T:CodeAFriend.DataModel.Script"/> solves the <see cref="T:CodeAFriend.DataModel.Problem"/>.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Problem.Name">
+            <summary>Unique name of the Problem.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Problem.Description">
+            <summary>Description of this <see cref="T:CodeAFriend.DataModel.Problem"/>.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Problem.User">
+            <summary>User who submitted this <see cref="T:CodeAFriend.DataModel.Problem"/>.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Problem.TestCases">
+            <summary><see cref="T:CodeAFriend.DataModel.TestCase"/>s for this problem.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Problem.Solutions">
+            <summary><see cref="T:CodeAFriend.DataModel.Script"/>s that passed all <see cref="P:CodeAFriend.DataModel.Problem.TestCases"/>.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Problem.Tags">
+            <summary>Optional tags to use to search for this problem.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Problem.#ctor">
+            <summary>Parameterless Constructor required for EF.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Problem.#ctor(System.String,System.String,CodeAFriend.DataModel.User)">
+            <summary>Constructor for creating new <see cref="T:CodeAFriend.DataModel.Problem"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Problem.TestScript(CodeAFriend.DataModel.Script,CodeAFriend.DataModel.ILanguageInterpreter)">
+            <summary>
+            Test if a script is a <see cref="T:CodeAFriend.DataModel.ProblemSolution"/>.
+            </summary>
+            <param name="script"><see cref="T:CodeAFriend.DataModel.Script"/> to run.</param>
+            <param name="interpreter"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Problem.Add(CodeAFriend.DataModel.TestCase,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Add a <see cref="T:CodeAFriend.DataModel.TestCase"/> to this <see cref="T:CodeAFriend.DataModel.Problem"/>.
+            </summary>
+            <param name="testCase"><see cref="T:CodeAFriend.DataModel.TestCase"/> to add.</param>
+            <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Problem.Add(CodeAFriend.DataModel.ProblemSolution,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Add a <see cref="T:CodeAFriend.DataModel.ProblemSolution"/> to this <see cref="T:CodeAFriend.DataModel.Problem"/>.
+            </summary>
+            <param name="solution"><see cref="T:CodeAFriend.DataModel.ProblemSolution"/> to add.</param>
+            <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Problem.Add(CodeAFriend.DataModel.Tag,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Add a <see cref="T:CodeAFriend.DataModel.Tag"/> to this <see cref="T:CodeAFriend.DataModel.Problem"/>.
+            </summary>
+            <param name="tag"><see cref="T:CodeAFriend.DataModel.Tag"/> to add.</param>
+            <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+        </member>
+        <member name="T:CodeAFriend.DataModel.ProblemSolution">
+            <summary>A script that ran and successfully passed all test cases for a <see cref="T:CodeAFriend.DataModel.Problem"/>.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ProblemSolution.Submitter">
+            <summary>User who submitted this <see cref="T:CodeAFriend.DataModel.ProblemSolution"/>.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ProblemSolution.Votes">
+            <summary>All votes submitted for this solution.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.ProblemSolution.#ctor">
+            <summary>Parameterless Constructor required for EF.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.ProblemSolution.#ctor(CodeAFriend.DataModel.User,CodeAFriend.DataModel.Script)">
+            <summary>Constructor for creating new <see cref="T:CodeAFriend.DataModel.ProblemSolution"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.ProblemSolution.Add(CodeAFriend.DataModel.Vote,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Add a <see cref="T:CodeAFriend.DataModel.Vote"/> to this <see cref="T:CodeAFriend.DataModel.ProblemSolution"/>.
+            </summary>
+            <param name="vote"><see cref="T:CodeAFriend.DataModel.Vote"/> to add.</param>
+            <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+        </member>
+        <member name="T:CodeAFriend.DataModel.Tag">
+            <summary>
+            Tag used to search for a <see cref="T:CodeAFriend.DataModel.Problem"/>.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Tag.Text">
+            <summary>
+            Text of this tag.
+            </summary>
+        </member>
+        <member name="T:CodeAFriend.DataModel.TestCase">
+            <summary>
+            A single test case to see if a specific <see cref="T:CodeAFriend.DataModel.Script"/> is a <see cref="T:CodeAFriend.DataModel.ProblemSolution"/>.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.TestCase.Number">
+            <summary>Order in which test case should be run.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.TestCase.Input">
+            <summary>Input for the test case.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.TestCase.ExpectedOutput">
+            <summary>Expected output from the program during execution.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.TestCase.#ctor">
+            <summary>Parameterless Constructor required for EF.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.TestCase.#ctor(System.UInt32,System.String,System.String)">
+            <summary>Constructor for creating new test case.</summary>
+        </member>
+        <member name="T:CodeAFriend.DataModel.Vote">
+            <summary>
+            Vote for the value for a specific <see cref="T:CodeAFriend.DataModel.ProblemSolution"/>.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Vote.Value">
+            <summary>Value of this vote.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Vote.Submitter">
+            <summary><see cref="T:CodeAFriend.DataModel.User"/> who submitted this vote.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Vote.Comment">
+            <summary>Optional comment that the submitter included with his vote.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Vote.#ctor">
+            <summary>Parameterless Constructor required for EF.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Vote.#ctor(System.Int16,CodeAFriend.DataModel.User,System.String)">
+            <summary>Constructor for creating new <see cref="T:CodeAFriend.DataModel.Vote"/>.</summary>
+        </member>
+        <member name="T:CodeAFriend.DataModel.ExecutionParameters">
+            <summary>
+            Parameters to use when executing code. 
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ExecutionParameters.MaxCpuTime">
+            <summary>
+            Maximum amount of time in ms that the code should be allowed to execute.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ExecutionParameters.MaxMemory">
+            <summary>
+            Maximum amount of memory (in kB) that the code should be allowed to allocate during execution. 
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ExecutionParameters.Input">
+            <summary>
+            Input to provide to stdin during program execution. 
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.ExecutionParameters.#ctor(System.Double,System.Int64,System.String)">
+            <summary>
+            All Properties constructor.
+            </summary>
+        </member>
+        <member name="T:CodeAFriend.DataModel.ILanguageInterpreter">
+            <summary>
+            Exposes the ability to compile and execute a specific language.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ILanguageInterpreter.Name">
+            <summary>
+            The language this <see cref="T:CodeAFriend.DataModel.ILanguageInterpreter"/> interprets.
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.ILanguageInterpreter.ExecuteAsync(System.String,CodeAFriend.DataModel.ExecutionParameters)">
+            <summary>
+            Execute code written in <see cref="P:CodeAFriend.DataModel.ILanguageInterpreter.Name"/> language using the specified <see cref="T:CodeAFriend.DataModel.ExecutionParameters"/>. 
+            </summary>
+            <param name="body"></param>
+            <param name="parameters">The <see cref="T:CodeAFriend.DataModel.ExecutionParameters"/> to use for code compilation and execution.</param>
+            <returns>ScriptEvaluation</returns>
+        </member>
+        <member name="T:CodeAFriend.DataModel.Script">
+            <summary>
+            A piece of code to be compiled in a specified language.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Script.Id">
+            <summary>Unique Id assigned to the Script during creation.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Script.Name">
+            <summary>Name given to this script by the user who created it.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Script.Body">
+            <summary>Code.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.Script.Language">
+            <summary>Language to compile code in.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Script.#ctor">
+            <summary>Parameterless Constructor required for EF.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Script.#ctor(System.String,System.String,CodeAFriend.DataModel.SupportedLanguage)">
+            <summary>Constructor for creating new <see cref="T:CodeAFriend.DataModel.Script"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.Script.Clone">
+            <summary>
+            Create a deep copy of this <see cref="T:CodeAFriend.DataModel.Script"/>. 
+            </summary>
+            <remarks>Employs the Prototype design pattern.</remarks>
+            <returns><see cref="T:CodeAFriend.DataModel.Script"/> object that is a deep copy of this <see cref="T:CodeAFriend.DataModel.Script"/>.</returns>
+        </member>
+        <member name="T:CodeAFriend.DataModel.ScriptEvaluation">
+            <summary>
+            Results from executing a <see cref="T:CodeAFriend.DataModel.Script"/> using specified <see cref="T:CodeAFriend.DataModel.ExecutionParameters"/>.
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.ScriptEvaluation.#ctor(System.String,System.Double,System.Int64)">
+            <summary>
+            All Properties constructor.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ScriptEvaluation.Output">
+            <summary>
+            Characters printed to stdout by the program during execution. 
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ScriptEvaluation.CpuTime">
+            <summary>
+            Amount of time that the program took to complete execution.
+            </summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.ScriptEvaluation.MemoryUsage">
+            <summary>
+            Peak memory usage, by the program, during execution.
+            </summary>
+        </member>
+        <member name="T:CodeAFriend.DataModel.User">
+            <summary>User in the CodeAFriend system.</summary>
+            <summary>User in the CodeAFriend system.</summary>
+            <summary>User in the CodeAFriend system.</summary>
+            <summary>User in the CodeAFriend system.</summary>
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.CreateCommand">
+            <summary>Properties someone can specify on user creation.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.CreateCommand.#ctor(System.String)">
+            <summary>All properties constructor.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.CreateCommand.Name">
+            <summary>Name to be used to create the user.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.CreateCommand.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.ForUserCommand`1">
+            <inheritdoc />
+            <summary>Command being performed on behalf of a specific user.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.ForUserCommand`1.#ctor(System.String)">
+            <summary>All properties constructor.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.ForUserCommand`1.Username">
+            <summary>Name of the user this operation is for.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.ForUserCommand`1.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.Name">
+            <summary>This user's unique name.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.Scripts">
+            <summary><see cref="T:CodeAFriend.DataModel.UserScript"/>s that this user has written.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.Problems">
+            <summary><see cref="T:CodeAFriend.DataModel.Problem"/>s that this user has written.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.#ctor">
+            <summary>Parameterless Constructor required for EF.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.#ctor(System.String)">
+            <summary>Constructor for creating new <see cref="T:CodeAFriend.DataModel.User"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.AddAsync(CodeAFriend.DataModel.User.AddScriptCommand,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Add a <see cref="T:CodeAFriend.DataModel.UserScript"/> to this <see cref="T:CodeAFriend.DataModel.User"/>.
+            </summary>
+            <param name="script"><see cref="T:CodeAFriend.DataModel.UserScript"/> to add.</param>
+            <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.AddAsync(CodeAFriend.DataModel.User.AddProblemCommand,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Add a <see cref="T:CodeAFriend.DataModel.Problem"/> to this <see cref="T:CodeAFriend.DataModel.User"/>.
+            </summary>
+            <param name="problem"><see cref="T:CodeAFriend.DataModel.Problem"/> to add.</param>
+            <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.AddProblemCommand">
+            <summary>Properties someone can specify on <see cref="T:CodeAFriend.DataModel.Problem"/> creation.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.AddProblemCommand.#ctor(System.String,System.String,System.String)">
+            <summary>All properties constructor.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.AddProblemCommand.ProblemName">
+            <summary>Unique name.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.AddProblemCommand.Description">
+            <summary>Description of the <see cref="T:CodeAFriend.DataModel.Problem"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.AddProblemCommand.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.UpdateProblemCommand">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.UpdateProblemCommand.#ctor(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.UpdateProblemCommand.ProblemName">
+            <summary>Unique name.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.UpdateProblemCommand.Description">
+            <summary>Description of the <see cref="T:CodeAFriend.DataModel.Problem"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.UpdateProblemCommand.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.DeleteProblemCommand">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.DeleteProblemCommand.#ctor(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.DeleteProblemCommand.ProblemName">
+            <summary>Id of the <see cref="T:CodeAFriend.DataModel.Problem"/> to operate on.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.DeleteProblemCommand.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.AddScriptCommand">
+            <summary>Properties someone can specify on script creation.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.AddScriptCommand.#ctor(System.String,System.String,System.String,CodeAFriend.DataModel.SupportedLanguage)">
+            <inheritdoc />
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.AddScriptCommand.Name">
+            <summary>Name to be used to create the <see cref="T:CodeAFriend.DataModel.Script"/>.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.AddScriptCommand.Body">
+            <summary>Body of the new <see cref="T:CodeAFriend.DataModel.Script"/>.</summary>
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.AddScriptCommand.Language">
+            <summary>Language of the new <see cref="T:CodeAFriend.DataModel.Script"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.AddScriptCommand.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.UpdateScriptCommand">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.UpdateScriptCommand.#ctor(System.Guid,System.String,System.String,System.String,CodeAFriend.DataModel.SupportedLanguage)">
+            <inheritdoc />
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.UpdateScriptCommand.ScriptId">
+            <summary>Id of the <see cref="T:CodeAFriend.DataModel.Script"/> to operate on.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.UpdateScriptCommand.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.User.DeleteScriptCommand">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.DeleteScriptCommand.#ctor(System.Guid,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:CodeAFriend.DataModel.User.DeleteScriptCommand.ScriptId">
+            <summary>Id of the <see cref="T:CodeAFriend.DataModel.Script"/> to operate on.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.User.DeleteScriptCommand.ExecuteAsync(Microsoft.EntityFrameworkCore.DbContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.DataModel.UserScript">
+            <summary>
+            A <see cref="T:CodeAFriend.DataModel.Script"/> that belongs to a specific user.
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.UserScript.#ctor">
+            <summary>Parameterless Constructor required for EF.</summary>
+        </member>
+        <member name="M:CodeAFriend.DataModel.UserScript.#ctor(System.String,System.String,CodeAFriend.DataModel.SupportedLanguage)">
+            <summary>Constructor for creating new <see cref="T:CodeAFriend.DataModel.UserScript"/>.</summary>
+        </member>
+    </members>
+</doc>

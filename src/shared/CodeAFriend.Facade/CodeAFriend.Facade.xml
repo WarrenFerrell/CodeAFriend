@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.Facade</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.Facade.CodeAFriendFacade">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.#ctor(Microsoft.EntityFrameworkCore.DbContext,CodeAFriend.Languages.Core.IInterpreterFactory)">
+            <summary>DI Constructor</summary>
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.ExecuteCommandAsync``1(CodeAFriend.DataModel.ICommand{``0})">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.GetProblem(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.ExecuteScriptAsync(System.Guid,CodeAFriend.DataModel.ExecutionParameters)">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.ExecuteScriptAsync(System.Guid,CodeAFriend.DataModel.ExecutionParameters,System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.GetUser(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.GetScriptsForUser(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:CodeAFriend.Facade.CodeAFriendFacade.GetScriptAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="T:CodeAFriend.Facade.ICodeAFriendFacade">
+            <summary>
+            Exposes stored user objects for the CodeAFriend website.
+            </summary>
+            <remarks>Makes use of the facade design pattern.</remarks>
+        </member>
+        <member name="M:CodeAFriend.Facade.ICodeAFriendFacade.GetUser(System.String)">
+            <summary>Get a user by their username.</summary>
+        </member>
+        <member name="M:CodeAFriend.Facade.ICodeAFriendFacade.GetScriptsForUser(System.String)">
+            <summary>Get all scripts for a user.</summary>
+        </member>
+        <member name="M:CodeAFriend.Facade.ICodeAFriendFacade.GetScriptAsync(System.Guid)">
+            <summary>Get a user script.</summary>
+        </member>
+        <member name="M:CodeAFriend.Facade.ICodeAFriendFacade.ExecuteScriptAsync(System.Guid,CodeAFriend.DataModel.ExecutionParameters)">
+            <summary>Execute a user <see cref="T:CodeAFriend.DataModel.Script"/> with the specified parameters.</summary>
+        </member>
+        <member name="M:CodeAFriend.Facade.ICodeAFriendFacade.ExecuteScriptAsync(System.Guid,CodeAFriend.DataModel.ExecutionParameters,System.String[])">
+            <summary>Execute a <see cref="T:CodeAFriend.DataModel.Script"/> several times with a specified set of inputs.</summary>
+        </member>
+        <member name="M:CodeAFriend.Facade.ICodeAFriendFacade.ExecuteCommandAsync``1(CodeAFriend.DataModel.ICommand{``0})">
+            <summary>Execute <see cref="T:CodeAFriend.DataModel.ICommand`1"/>.</summary>
+        </member>
+        <member name="M:CodeAFriend.Facade.ICodeAFriendFacade.GetProblem(System.String)">
+            <summary>Get a problem by its name.</summary>
+        </member>
+    </members>
+</doc>

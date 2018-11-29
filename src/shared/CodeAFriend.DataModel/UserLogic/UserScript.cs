@@ -20,6 +20,6 @@ namespace CodeAFriend.DataModel
 		{
 		}
 
-		internal UserScript(Guid id) : base (id, name) { }
+		internal UserScript(Guid id) : base (id) { }
 	}
 }

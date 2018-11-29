@@ -7,7 +7,7 @@
     <LangVersion>latest</LangVersion>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <Win32Resource />
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Python2\CodeAFriend.Languages.Python2.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
