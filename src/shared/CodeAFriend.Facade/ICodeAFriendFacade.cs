@@ -32,6 +32,8 @@ namespace CodeAFriend.Facade
 		/// <summary>Execute <see cref="ICommand{TReturn}"/>.</summary>
 		Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command);
 
+		/// <summary>Get a problem by its name.</summary>
+		Task<Problem> GetProblem(string problemName);
 
 	}
 }

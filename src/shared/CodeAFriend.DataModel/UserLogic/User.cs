@@ -55,7 +55,7 @@ namespace CodeAFriend.DataModel
 		/// <param name="context">Database to save the updated state to. (When SaveChanges is called).</param>
 		public async Task<Problem> AddAsync(AddProblemCommand problem, DbContext context = null)
 		{
-			var entity = new Problem(problem.Name, problem.Description, this);
+			var entity = new Problem(problem.ProblemName, problem.Description, this);
 			this.Add(_problems, entity, context);
 			if (context != null) await context.SaveChangesAsync();
 			return entity;

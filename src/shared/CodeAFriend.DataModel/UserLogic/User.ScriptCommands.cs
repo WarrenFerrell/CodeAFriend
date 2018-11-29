@@ -60,7 +60,7 @@ namespace CodeAFriend.DataModel
 		}
 
 		/// <inheritdoc />
-		public class DeleteScriptCommand : User.ForUserCommand<DeleteResult<UserScript>>
+		public class DeleteScriptCommand : ForUserCommand<DeleteResult<UserScript>>
 		{
 			/// <inheritdoc />
 			public DeleteScriptCommand(Guid scriptId, string username) : base(username)

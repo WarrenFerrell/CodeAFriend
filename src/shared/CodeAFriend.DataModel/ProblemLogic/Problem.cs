@@ -37,7 +37,7 @@ namespace CodeAFriend.DataModel
 		private Problem() { }
 
 		/// <summary>Constructor for creating new <see cref="Problem"/>.</summary>
-		public Problem(string name, string description, User user)
+		public Problem(string name, string description, User user) 
 		{
 			Name = name;
 			Description = description;
@@ -46,6 +46,11 @@ namespace CodeAFriend.DataModel
 			_solutions = new HashSet<ProblemSolution>();
 			_tags = new HashSet<Tag>();
 		}
+
+		internal Problem(string name, string description = null) : this(name, description, null) { }
+
+		internal Problem(string name) : this(name, null, null) { }
+
 
 		/// <summary>
 		/// Test if a script is a <see cref="ProblemSolution"/>.

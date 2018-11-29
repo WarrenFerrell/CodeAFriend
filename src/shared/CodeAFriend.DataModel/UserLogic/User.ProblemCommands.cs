@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System.Threading.Tasks;
-using CodeAFriend.DataModel.Constants;
 
 namespace CodeAFriend.DataModel
 {
@@ -14,14 +10,14 @@ namespace CodeAFriend.DataModel
 		public class AddProblemCommand : ForUserCommand<Problem>
 		{
 			/// <summary>All properties constructor.</summary>
-			public AddProblemCommand(string username, string name, string description) : base(username)
+			public AddProblemCommand(string username, string problemName, string description) : base(username)
 			{
-				Name = name;
+				ProblemName = problemName;
 				Description = description;
 			}
 
 			/// <summary>Unique name.</summary>
-			public string Name { get; set; }
+			public string ProblemName { get; set; }
 
 			/// <summary>Description of the <see cref="Problem"/>.</summary>
 			public string Description { get; set; }
@@ -32,6 +28,51 @@ namespace CodeAFriend.DataModel
 				var user = await context.FindAsync<User>(Username);
 				var newScript = await user.AddAsync(this, context);
 				return newScript;
+			}
+		}
+
+		/// <inheritdoc />
+		public class UpdateProblemCommand : ForUserCommand<Problem>
+		{
+			/// <inheritdoc />
+			public UpdateProblemCommand(string username, string problemName, string description) : base(username)
+			{
+				ProblemName = problemName;
+				Description = description;
+			}
+
+			/// <summary>Unique name.</summary>
+			public string ProblemName { get; set; }
+
+			/// <summary>Description of the <see cref="Problem"/>.</summary>
+			public string Description { get; set; }
+
+			/// <inheritdoc />
+			public override async Task<Problem> ExecuteAsync(DbContext context)
+			{
+				var result = await context.UpdateAsync(new Problem(ProblemName, Description), nameof(Problem.Description));
+				return result;
+			}
+		}
+
+		/// <inheritdoc />
+		public class DeleteProblemCommand : ForUserCommand<DeleteResult<Problem>>
+		{
+			/// <inheritdoc />
+			public DeleteProblemCommand(string problemName, string username) : base(username)
+			{
+				ProblemName = problemName;
+			}
+
+			/// <summary>Id of the <see cref="Problem"/> to operate on.</summary>
+			public string ProblemName { get; set; }
+
+			/// <inheritdoc />
+			public override async Task<DeleteResult<Problem>> ExecuteAsync(DbContext context)
+			{
+				context.Remove(new Problem(ProblemName));
+				await context.SaveChangesAsync();
+				return new DeleteResult<Problem>();
 			}
 		}
 	}

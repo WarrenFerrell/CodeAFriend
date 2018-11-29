@@ -32,24 +32,7 @@ namespace CodeAFriend.Facade
 			return entity.Entity;
 		}
 
-		private async Task<TEntity> UpdateAsync<TEntity>(TEntity entity, IEnumerable<string> propertiesToUpdate = null) where TEntity : class
-		{
-			EntityEntry<TEntity> updateEntity;
-			if (propertiesToUpdate == null) updateEntity =  _dbContext.Update(entity);
-			else if (propertiesToUpdate.Count() == 0)  throw new InvalidOperationException("Must change at least one property");
-			else
-			{
-				updateEntity = _dbContext.Attach(entity);
-				updateEntity.State = EntityState.Modified;
-				foreach (string propertyName in propertiesToUpdate)
-				{
-					PropertyEntry property = updateEntity.Properties.Single(p => p.Metadata.Name.Equals(propertyName, StringComparison.OrdinalIgnoreCase));
-					property.IsModified = true;
-				}
-			}
-			await _dbContext.SaveChangesAsync();
-			return updateEntity.Entity;
-		}
+
 
 
 		/// <inheritdoc />
