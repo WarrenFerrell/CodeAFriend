@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.DataModel\CodeAFriend.DataModel.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

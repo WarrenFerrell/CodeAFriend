@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.Languages.Core</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.Languages.Core.IInterpreterFactory">
+            <summary>
+            Factory to get the proper interpreter given a supplied language
+            </summary>
+        </member>
+        <member name="M:CodeAFriend.Languages.Core.IInterpreterFactory.GetInterpreter(CodeAFriend.DataModel.SupportedLanguage)">
+            <summary>
+            Get an appropriate <see cref="T:CodeAFriend.DataModel.ILanguageInterpreter"/>.
+            </summary>
+            <param name="language">Language to grab <see cref="T:CodeAFriend.DataModel.ILanguageInterpreter"/> for.</param>
+            <returns>Appropriate <see cref="T:CodeAFriend.DataModel.ILanguageInterpreter"/>.</returns>
+        </member>
+        <member name="P:CodeAFriend.Languages.Core.InterpreterTemplate.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:CodeAFriend.Languages.Core.InterpreterTemplate.ExecuteAsync(System.String,CodeAFriend.DataModel.ExecutionParameters)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

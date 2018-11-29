@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.Core\CodeAFriend.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.Core\CodeAFriend.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

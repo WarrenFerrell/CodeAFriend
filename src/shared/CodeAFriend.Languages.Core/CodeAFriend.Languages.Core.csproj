@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

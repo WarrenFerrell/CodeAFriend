@@ -4,6 +4,14 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.Facade\CodeAFriend.Facade.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>S:\Github\CodeAFriend\src\shared\CodeAFriend.Facade\CodeAFriend.Facade.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\CodeAFriend.DataModel\CodeAFriend.DataModel.csproj" />
     <ProjectReference Include="..\CodeAFriend.Languages.Core\CodeAFriend.Languages.Core.csproj" />

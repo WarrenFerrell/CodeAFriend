@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>S:\Github\CodeAFriend\src\apps\CodeAFriend.ApiService\CodeAFriend.ApiService.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.Languages.Factory</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.Languages.Core.InterpreterFactory">
+            <inheritdoc />
+            <remarks>Uses a cache where appropriate.</remarks>
+        </member>
+        <member name="M:CodeAFriend.Languages.Core.InterpreterFactory.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>DI constructor.</summary>
+        </member>
+        <member name="M:CodeAFriend.Languages.Core.InterpreterFactory.GetInterpreter(CodeAFriend.DataModel.SupportedLanguage)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

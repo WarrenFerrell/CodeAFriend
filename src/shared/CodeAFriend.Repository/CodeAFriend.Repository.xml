@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeAFriend.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:CodeAFriend.Repository.CodeAFriendContext">
+            <inheritdoc/>
+            <summary>EF Core object used to configure and access stored business objects in the CodeAFriend system.</summary>
+        </member>
+        <member name="F:CodeAFriend.Repository.CodeAFriendContext.ProblemName">
+            <summary>Name that should be given to any column that refers back to a Problem.</summary>
+        </member>
+        <member name="F:CodeAFriend.Repository.CodeAFriendContext.UserName">
+            <summary>Name that should be given to any column that refers back to a User.</summary>
+        </member>
+        <member name="F:CodeAFriend.Repository.CodeAFriendContext.ProblemSolutionId">
+            <summary>Name that should be given to any column that refers back to a User.</summary>
+        </member>
+        <member name="M:CodeAFriend.Repository.CodeAFriendContext.#ctor">
+            <inheritdoc/>
+            <summary></summary>
+        </member>
+        <member name="M:CodeAFriend.Repository.CodeAFriendContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{CodeAFriend.Repository.CodeAFriendContext})">
+            <inheritdoc/>
+        </member>
+        <member name="P:CodeAFriend.Repository.CodeAFriendContext.Problems">
+            <summary>Table that holds Problems.</summary>
+        </member>
+        <member name="P:CodeAFriend.Repository.CodeAFriendContext.ProblemSolutions">
+            <summary>Table that holds Problem Solutions.</summary>
+        </member>
+        <member name="P:CodeAFriend.Repository.CodeAFriendContext.ProblemSolutionVotes">
+            <summary>Table that holds Problem Solutions.</summary>
+        </member>
+        <member name="P:CodeAFriend.Repository.CodeAFriendContext.ProblemTestCases">
+            <summary>Table that holds Problem TestCases.</summary>
+        </member>
+        <member name="P:CodeAFriend.Repository.CodeAFriendContext.ProblemTags">
+            <summary>Table that holds Problem Tags.</summary>
+        </member>
+        <member name="P:CodeAFriend.Repository.CodeAFriendContext.Users">
+            <summary>Table that holds Users.</summary>
+        </member>
+        <member name="P:CodeAFriend.Repository.CodeAFriendContext.UserScripts">
+            <summary>Table that holds User Scripts.</summary>
+        </member>
+        <member name="M:CodeAFriend.Repository.CodeAFriendContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CodeAFriend.Repository.CodeAFriendContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>
