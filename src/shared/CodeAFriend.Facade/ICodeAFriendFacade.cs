@@ -14,20 +14,19 @@ namespace CodeAFriend.Facade
 	/// <remarks>Makes use of the facade design pattern.</remarks>
 	public interface ICodeAFriendFacade
 	{
-		/// <summary>Create a user.</summary>
-		Task<User> CreateUser(User.CreateCommand user);
-
 		/// <summary>Get a user by their username.</summary>
 		Task<User> GetUser(string username);
 
-		/// <summary>Add script for a user.</summary>
-		Task<Script> AddScriptForUser(string username, UserScript.CreateCommand script);
+		/// <summary>Get all scripts for a user.</summary>
+		Task<IEnumerable<Script>> GetScriptsForUser(string username);
 
 		/// <summary>Get a user script.</summary>
-		Task<Script> GetScriptForUser(string username, Guid scriptId);
+		Task<Script> GetScriptAsync(Guid scriptId);
 
 		/// <summary>Get a user script.</summary>
-		Task<ScriptEvaluation> ExecuteScriptForUser(string username, Guid scriptId, RuntimeParameters parameters);
+		Task<ScriptEvaluation> ExecuteScript(Guid scriptId, ExecutionParameters parameters);
+
+		Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command);
 
 
 	}

@@ -6,16 +6,10 @@ using System.Collections.Generic;
 namespace CodeAFriend.DataModel
 {
 	/// <summary>
-	/// Code to compile and and Parameters to use when executing code. 
+	/// Parameters to use when executing code. 
 	/// </summary>
-	public class RuntimeParameters
+	public class ExecutionParameters
 	{
-
-		/// <summary>
-		/// Code to compile.
-		/// </summary>
-		public string ScriptBody { get; set; }
-
 		/// <summary>
 		/// Maximum amount of time in ms that the code should be allowed to execute.
 		/// </summary>
@@ -31,9 +25,11 @@ namespace CodeAFriend.DataModel
 		/// </summary>
 		public string Input { get; set; }
 
-		public RuntimeParameters(string scriptBody, double maxCpuTime, long maxMemory, string input)
+		/// <summary>
+		/// All Properties constructor.
+		/// </summary>
+		public ExecutionParameters(double maxCpuTime, long maxMemory, string input)
 		{
-			ScriptBody = scriptBody;
 			MaxCpuTime = maxCpuTime;
 			MaxMemory = maxMemory;
 			Input = input;

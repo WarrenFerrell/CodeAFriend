@@ -10,7 +10,7 @@ namespace CodeAFriend.DataModel
 	/// <summary>
 	/// A piece of code to be compiled in a specified language.
 	/// </summary>
-	public class Script
+	public partial class Script
 	{
 		/// <summary>Unique Id assigned to the Script during creation.</summary>
 		public Guid Id { get; private set; }
