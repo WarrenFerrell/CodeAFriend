@@ -1,0 +1,73 @@
+\hypertarget{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter}{}\section{Code\+A\+Friend.\+Data\+Model.\+I\+Language\+Interpreter Interface Reference}
+\label{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter}\index{Code\+A\+Friend.\+Data\+Model.\+I\+Language\+Interpreter@{Code\+A\+Friend.\+Data\+Model.\+I\+Language\+Interpreter}}
+
+
+Exposes the ability to compile and execute a specific language.  
+
+
+Inheritance diagram for Code\+A\+Friend.\+Data\+Model.\+I\+Language\+Interpreter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.560976cm]{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}} $>$ \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_a3003897aaa13ee672b6157c584e46898}{Execute\+Async}} (string body, \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}} parameters)
+\begin{DoxyCompactList}\small\item\em Execute code written in \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_ab8d4ee55278929fb59f3f015789aaa36}{Name}} language using the specified \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_code_a_friend_1_1_data_model_a13e088c525db1b03a4de75420ced79b2}{Supported\+Language}} \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_ab8d4ee55278929fb59f3f015789aaa36}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The language this \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter}{I\+Language\+Interpreter}} interprets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exposes the ability to compile and execute a specific language. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_a3003897aaa13ee672b6157c584e46898}\label{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_a3003897aaa13ee672b6157c584e46898}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter@{Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter}!Execute\+Async@{Execute\+Async}}
+\index{Execute\+Async@{Execute\+Async}!Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter@{Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter}}
+\subsubsection{\texorpdfstring{Execute\+Async()}{ExecuteAsync()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}}$>$ Code\+A\+Friend.\+Data\+Model.\+I\+Language\+Interpreter.\+Execute\+Async (\begin{DoxyParamCaption}\item[{string}]{body,  }\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}}]{parameters }\end{DoxyParamCaption})}
+
+
+
+Execute code written in \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_ab8d4ee55278929fb59f3f015789aaa36}{Name}} language using the specified \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em body} & \\
+\hline
+{\em parameters} & The \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_execution_parameters}{Execution\+Parameters}} to use for code compilation and execution.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script_evaluation}{Script\+Evaluation}}
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_code_a_friend_1_1_languages_1_1_core_1_1_interpreter_template_ae2cf761e61f7b6b6fc553703ea3ba3c5}{Code\+A\+Friend.\+Languages.\+Core.\+Interpreter\+Template}}.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_ab8d4ee55278929fb59f3f015789aaa36}\label{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter_ab8d4ee55278929fb59f3f015789aaa36}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter@{Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter}!Name@{Name}}
+\index{Name@{Name}!Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter@{Code\+A\+Friend\+::\+Data\+Model\+::\+I\+Language\+Interpreter}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_code_a_friend_1_1_data_model_a13e088c525db1b03a4de75420ced79b2}{Supported\+Language}} Code\+A\+Friend.\+Data\+Model.\+I\+Language\+Interpreter.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The language this \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter}{I\+Language\+Interpreter}} interprets. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shared/\+Code\+A\+Friend.\+Data\+Model/\+Script\+Logic/\mbox{\hyperlink{_i_language_interpreter_8cs}{I\+Language\+Interpreter.\+cs}}\end{DoxyCompactItemize}

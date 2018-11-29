@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['codaafriendcontroller_2ecs',['CodaAFriendController.cs',['../_coda_a_friend_controller_8cs.html',1,'']]],
+  ['codeafriend_2eapiservice_2eassemblyinfo_2ecs',['CodeAFriend.ApiService.AssemblyInfo.cs',['../_code_a_friend_8_api_service_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2eapiservice_2erazorassemblyinfo_2ecs',['CodeAFriend.ApiService.RazorAssemblyInfo.cs',['../_code_a_friend_8_api_service_8_razor_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2ecore_2eassemblyinfo_2ecs',['CodeAFriend.Core.AssemblyInfo.cs',['../_code_a_friend_8_core_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2edatamodel_2eassemblyinfo_2ecs',['CodeAFriend.DataModel.AssemblyInfo.cs',['../_code_a_friend_8_data_model_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2efacade_2eassemblyinfo_2ecs',['CodeAFriend.Facade.AssemblyInfo.cs',['../_code_a_friend_8_facade_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2elanguages_2ecore_2eassemblyinfo_2ecs',['CodeAFriend.Languages.Core.AssemblyInfo.cs',['../_code_a_friend_8_languages_8_core_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2elanguages_2efactory_2eassemblyinfo_2ecs',['CodeAFriend.Languages.Factory.AssemblyInfo.cs',['../_code_a_friend_8_languages_8_factory_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2elanguages_2epython2_2eassemblyinfo_2ecs',['CodeAFriend.Languages.Python2.AssemblyInfo.cs',['../_code_a_friend_8_languages_8_python2_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2elanguages_2epython3_2eassemblyinfo_2ecs',['CodeAFriend.Languages.Python3.AssemblyInfo.cs',['../_code_a_friend_8_languages_8_python3_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriend_2erepository_2eassemblyinfo_2ecs',['CodeAFriend.Repository.AssemblyInfo.cs',['../_code_a_friend_8_repository_8_assembly_info_8cs.html',1,'']]],
+  ['codeafriendcontext_2ecs',['CodeAFriendContext.cs',['../_code_a_friend_context_8cs.html',1,'']]],
+  ['codeafriendcontextmodelsnapshot_2ecs',['CodeAFriendContextModelSnapshot.cs',['../_code_a_friend_context_model_snapshot_8cs.html',1,'']]],
+  ['codeafriendfacade_2ecs',['CodeAFriendFacade.cs',['../_code_a_friend_facade_8cs.html',1,'']]],
+  ['codeafriendfacade_2eproblems_2ecs',['CodeAFriendFacade.Problems.cs',['../_code_a_friend_facade_8_problems_8cs.html',1,'']]],
+  ['codeafriendfacade_2escripts_2ecs',['CodeAFriendFacade.Scripts.cs',['../_code_a_friend_facade_8_scripts_8cs.html',1,'']]],
+  ['codeafriendfacade_2eusers_2ecs',['CodeAFriendFacade.Users.cs',['../_code_a_friend_facade_8_users_8cs.html',1,'']]]
+];

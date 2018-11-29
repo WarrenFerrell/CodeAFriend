@@ -1,0 +1,201 @@
+\hypertarget{class_code_a_friend_1_1_data_model_1_1_problem}{}\section{Code\+A\+Friend.\+Data\+Model.\+Problem Class Reference}
+\label{class_code_a_friend_1_1_data_model_1_1_problem}\index{Code\+A\+Friend.\+Data\+Model.\+Problem@{Code\+A\+Friend.\+Data\+Model.\+Problem}}
+
+
+A problem with a set of \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}}s to determine if a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}} solves the \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a0bd8bd69a5f4d301be856222262fe7fc}{Problem}} (string name, string description, \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Constructor for creating new \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.\end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a9b792cd3ea05e6efcd351cf138d06516}{Test\+Script}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}} script, \mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter}{I\+Language\+Interpreter}} interpreter)
+\begin{DoxyCompactList}\small\item\em Test if a script is a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a3ca779158ac6d2f5ca49206214722d27}{Add}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}} test\+Case, Db\+Context context=null)
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a72e426e2924615d8fc813de8303bc16b}{Add}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}} solution, Db\+Context context=null)
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_ab8ba911fa018638164edf5fe6d0076ec}{Add}} (\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_tag}{Tag}} tag, Db\+Context context=null)
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_tag}{Tag}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+virtual I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_af4a665cdf0e4349c57e8588e95ad9717}{Test\+Cases}} =$>$ \+\_\+test\+Cases?.To\+List()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}}s for this problem.\end{DoxyCompactList}\item 
+virtual I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a3bebdf4e45042e9476fd7ae7cf38738b}{Solutions}} =$>$ \+\_\+solutions?.To\+List()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}}s that passed all \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_af4a665cdf0e4349c57e8588e95ad9717}{Test\+Cases}}.\end{DoxyCompactList}\item 
+virtual I\+Enumerable$<$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_tag}{Tag}} $>$ \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_ad5c3e1b321171d7c7723df70e99cf88d}{Tags}} =$>$ \+\_\+tags?.To\+List()
+\begin{DoxyCompactList}\small\item\em Optional tags to use to search for this problem.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a32bbc148bbaffc060632720e2ab860fb}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unique name of the \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.\end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a62094d748f4eed72d44f25bdab3047dc}{Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Description of this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.\end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_a16adf7da62fca6b430006e5d0c099c96}{User}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} who submitted this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A problem with a set of \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}}s to determine if a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}} solves the \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a0bd8bd69a5f4d301be856222262fe7fc}\label{class_code_a_friend_1_1_data_model_1_1_problem_a0bd8bd69a5f4d301be856222262fe7fc}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Problem@{Problem}}
+\index{Problem@{Problem}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Problem()}{Problem()}}
+{\footnotesize\ttfamily Code\+A\+Friend.\+Data\+Model.\+Problem.\+Problem (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{description,  }\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Constructor for creating new \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a3ca779158ac6d2f5ca49206214722d27}\label{class_code_a_friend_1_1_data_model_1_1_problem_a3ca779158ac6d2f5ca49206214722d27}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Add@{Add}}
+\index{Add@{Add}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Code\+A\+Friend.\+Data\+Model.\+Problem.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}}}]{test\+Case,  }\item[{Db\+Context}]{context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test\+Case} & \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}} to add.\\
+\hline
+{\em context} & Database to save the updated state to. (When Save\+Changes is called).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a72e426e2924615d8fc813de8303bc16b}\label{class_code_a_friend_1_1_data_model_1_1_problem_a72e426e2924615d8fc813de8303bc16b}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Add@{Add}}
+\index{Add@{Add}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Code\+A\+Friend.\+Data\+Model.\+Problem.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}}}]{solution,  }\item[{Db\+Context}]{context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution} & \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}} to add.\\
+\hline
+{\em context} & Database to save the updated state to. (When Save\+Changes is called).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_ab8ba911fa018638164edf5fe6d0076ec}\label{class_code_a_friend_1_1_data_model_1_1_problem_ab8ba911fa018638164edf5fe6d0076ec}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Add@{Add}}
+\index{Add@{Add}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Code\+A\+Friend.\+Data\+Model.\+Problem.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_tag}{Tag}}}]{tag,  }\item[{Db\+Context}]{context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Add a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_tag}{Tag}} to this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_tag}{Tag}} to add.\\
+\hline
+{\em context} & Database to save the updated state to. (When Save\+Changes is called).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a9b792cd3ea05e6efcd351cf138d06516}\label{class_code_a_friend_1_1_data_model_1_1_problem_a9b792cd3ea05e6efcd351cf138d06516}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Test\+Script@{Test\+Script}}
+\index{Test\+Script@{Test\+Script}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Test\+Script()}{TestScript()}}
+{\footnotesize\ttfamily async Task$<$bool$>$ Code\+A\+Friend.\+Data\+Model.\+Problem.\+Test\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}}}]{script,  }\item[{\mbox{\hyperlink{interface_code_a_friend_1_1_data_model_1_1_i_language_interpreter}{I\+Language\+Interpreter}}}]{interpreter }\end{DoxyParamCaption})}
+
+
+
+Test if a script is a \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}} to run.\\
+\hline
+{\em interpreter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a3bebdf4e45042e9476fd7ae7cf38738b}\label{class_code_a_friend_1_1_data_model_1_1_problem_a3bebdf4e45042e9476fd7ae7cf38738b}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Solutions@{Solutions}}
+\index{Solutions@{Solutions}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Solutions}{Solutions}}
+{\footnotesize\ttfamily virtual I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_solution}{Problem\+Solution}}$>$ Code\+A\+Friend.\+Data\+Model.\+Problem.\+Solutions =$>$ \+\_\+solutions?.To\+List()}
+
+
+
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_script}{Script}}s that passed all \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem_af4a665cdf0e4349c57e8588e95ad9717}{Test\+Cases}}.
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_ad5c3e1b321171d7c7723df70e99cf88d}\label{class_code_a_friend_1_1_data_model_1_1_problem_ad5c3e1b321171d7c7723df70e99cf88d}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Tags@{Tags}}
+\index{Tags@{Tags}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Tags}{Tags}}
+{\footnotesize\ttfamily virtual I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_tag}{Tag}}$>$ Code\+A\+Friend.\+Data\+Model.\+Problem.\+Tags =$>$ \+\_\+tags?.To\+List()}
+
+
+
+Optional tags to use to search for this problem.
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_af4a665cdf0e4349c57e8588e95ad9717}\label{class_code_a_friend_1_1_data_model_1_1_problem_af4a665cdf0e4349c57e8588e95ad9717}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Test\+Cases@{Test\+Cases}}
+\index{Test\+Cases@{Test\+Cases}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Test\+Cases}{TestCases}}
+{\footnotesize\ttfamily virtual I\+Enumerable$<$\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}}$>$ Code\+A\+Friend.\+Data\+Model.\+Problem.\+Test\+Cases =$>$ \+\_\+test\+Cases?.To\+List()}
+
+
+
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_test_case}{Test\+Case}}s for this problem.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a62094d748f4eed72d44f25bdab3047dc}\label{class_code_a_friend_1_1_data_model_1_1_problem_a62094d748f4eed72d44f25bdab3047dc}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Description@{Description}}
+\index{Description@{Description}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily virtual string Code\+A\+Friend.\+Data\+Model.\+Problem.\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Description of this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a32bbc148bbaffc060632720e2ab860fb}\label{class_code_a_friend_1_1_data_model_1_1_problem_a32bbc148bbaffc060632720e2ab860fb}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!Name@{Name}}
+\index{Name@{Name}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily virtual string Code\+A\+Friend.\+Data\+Model.\+Problem.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Unique name of the \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.
+
+\mbox{\Hypertarget{class_code_a_friend_1_1_data_model_1_1_problem_a16adf7da62fca6b430006e5d0c099c96}\label{class_code_a_friend_1_1_data_model_1_1_problem_a16adf7da62fca6b430006e5d0c099c96}} 
+\index{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}!User@{User}}
+\index{User@{User}!Code\+A\+Friend\+::\+Data\+Model\+::\+Problem@{Code\+A\+Friend\+::\+Data\+Model\+::\+Problem}}
+\subsubsection{\texorpdfstring{User}{User}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} Code\+A\+Friend.\+Data\+Model.\+Problem.\+User\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+\mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_user}{User}} who submitted this \mbox{\hyperlink{class_code_a_friend_1_1_data_model_1_1_problem}{Problem}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shared/\+Code\+A\+Friend.\+Data\+Model/\+Problem\+Logic/\mbox{\hyperlink{_problem_8cs}{Problem.\+cs}}\end{DoxyCompactItemize}
