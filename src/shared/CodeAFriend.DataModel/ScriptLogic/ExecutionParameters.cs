@@ -16,7 +16,7 @@ namespace CodeAFriend.DataModel
 		public double MaxCpuTime { get; set; }
 
 		/// <summary>
-		/// Maximum amount of memory that the code should be allowed to allocate during execution. 
+		/// Maximum amount of memory (in kB) that the code should be allowed to allocate during execution. 
 		/// </summary>
 		public long MaxMemory { get; set; }
 

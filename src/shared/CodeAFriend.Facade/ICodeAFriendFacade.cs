@@ -23,9 +23,13 @@ namespace CodeAFriend.Facade
 		/// <summary>Get a user script.</summary>
 		Task<Script> GetScriptAsync(Guid scriptId);
 
-		/// <summary>Get a user script.</summary>
-		Task<ScriptEvaluation> ExecuteScript(Guid scriptId, ExecutionParameters parameters);
+		/// <summary>Execute a user <see cref="Script"/> with the specified parameters.</summary>
+		Task<ScriptEvaluation> ExecuteScriptAsync(Guid scriptId, ExecutionParameters parameters);
 
+		/// <summary>Execute a <see cref="Script"/> several times with a specified set of inputs.</summary>
+		Task<IEnumerable<ScriptEvaluation>> ExecuteScriptAsync(Guid scriptId, ExecutionParameters parameters, params string[] inputs);
+
+		/// <summary>Execute <see cref="ICommand{TReturn}"/>.</summary>
 		Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command);
 
 

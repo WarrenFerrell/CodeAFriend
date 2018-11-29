@@ -19,10 +19,8 @@ namespace CodeAFriend.DataModel
 				Name = name;
 			}
 
-
 			/// <summary>Name to be used to create the user.</summary>
 			public string Name { get; set; }
-
 
 			/// <inheritdoc />
 			public async Task<User> ExecuteAsync(DbContext context)
@@ -33,6 +31,21 @@ namespace CodeAFriend.DataModel
 			}
 		}
 
-		
+		/// <inheritdoc />
+		/// <summary>Command being performed on behalf of a specific user.</summary>
+		public abstract class ForUserCommand<TResult> : ICommand<TResult>
+		{
+			/// <summary>All properties constructor.</summary>
+			protected ForUserCommand(string username)
+			{
+				Username = username;
+			}
+
+			/// <summary>Name of the user this operation is for.</summary>
+			public string Username { get; set; }
+
+			/// <inheritdoc />
+			public abstract Task<TResult> ExecuteAsync(DbContext context);
+		}
 	}
 }

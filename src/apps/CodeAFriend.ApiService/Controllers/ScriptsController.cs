@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CodeAFriend.DataModel;
+using CodeAFriend.DataModel.Constants;
 using CodeAFriend.Facade;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,6 @@ namespace CodeAFriend.ApiService.Controllers
 	[Route("[controller]")]
 	public class ScriptsController : CodaAFriendController
 	{
-
 		/// <summary>
 		/// Add a script for a particular user
 		/// </summary>
@@ -44,34 +44,38 @@ namespace CodeAFriend.ApiService.Controllers
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="script"></param>
-		/// <returns>UserScript</returns>
+		/// <param name="command">Operation to perform</param>
+		/// <returns><see cref="Script"/>.</returns>
 		[HttpPut]
-		public async Task<IActionResult> UpdateScript(Script script)
+		public async Task<IActionResult> UpdateUserScript(User.UpdateScriptCommand command)
 		{
-			throw new Exception("The method or operation is not implemented.");
+			var result = await Facade.ExecuteCommandAsync(command);
+			return Ok(result);
 		}
 
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="id"></param>
+		/// <param name="command">Operation to perform</param>
 		/// <returns></returns>
 		[HttpDelete]
-		public async Task<IActionResult> DeleteScript(Guid id)
+		public async Task<IActionResult> DeleteScript(User.DeleteScriptCommand command)
 		{
-			throw new Exception("The method or operation is not implemented.");
+			var result = await Facade.ExecuteCommandAsync(command);
+			return NoContent();
 		}
 
 		/// <summary>
-		/// 
+		/// Execute a script and see its outputs for a set of specified inputs.
 		/// </summary>
-		/// <param name="scriptId"></param>
-		/// <returns><see cref="ScriptEvaluation"/></returns>
+		/// <param name="scriptId">Id of the script to use for execution.</param>
+		/// <param name="inputs">set of inputs to run the script with.</param>
+		/// <returns><see cref="IEnumerable{ScriptEvaluation}"/></returns>
 		[HttpPost]
-		public async Task<IActionResult> ExecuteScript(Guid scriptId, [FromBody] TestCase[] testCases)
+		public async Task<IActionResult> ExecuteScript(Guid scriptId, [FromBody] string[] inputs)
 		{
-			throw new Exception("The method or operation is not implemented.");
+			var result = await Facade.ExecuteScriptAsync(scriptId, new DefaultExecutionParameters(), inputs);
+			return Ok(result);
 		}
 
 		/// <inheritdoc />

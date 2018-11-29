@@ -35,10 +35,5 @@ namespace CodeAFriend.Facade
 			return result;
 		}
 
-		/// <inheritdoc />
-		public async Task<ScriptEvaluation> ExecuteScript(string username, Guid scriptId, ExecutionParameters parameters)
-		{
-			throw new NotImplementedException();
-		}
 	}
 }
